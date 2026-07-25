@@ -39,12 +39,13 @@ title: false
 </div>
 
 <!-- 第一次來，建議從這裡開始 -->
+<!-- HOMEPAGE-FEATURED-REGENERATED-2026-07-25-v3 -->
 <div class="wrap" id="start-here">
   <section class="tight">
     <div class="section-head">
       <div>
         <h2>第一次來，建議從這裡開始</h2>
-        <p>從這些文章開始，認識 Lucia 的紫微斗數觀點。</p>
+        <p>從這三篇開始，認識 Lucia 如何結合紫微斗數、現代學科與理性判斷。</p>
       </div>
     </div>
     {% assign publishedPosts = site.posts | where: "published", true %}
@@ -56,6 +57,7 @@ title: false
         {% assign featuredPosts = featuredPosts | push: matchedPost %}
       {% endif %}
     {% endfor %}
+
     {% if featuredPosts.size > 0 %}
     <div class="featured-wrap">
       {% assign first = featuredPosts | first %}
@@ -71,6 +73,7 @@ title: false
           <p class="meta">{{ first.readingTime }} 分鐘閱讀{% if first.series != "" %}・{{ first.series }}{% endif %}</p>
         </div>
       </a>
+
       <div class="featured-pair">
         {% for a in featuredPosts offset:1 limit:2 %}
         {% assign acat = site.categories_order | where: "key", a.category | first %}
@@ -90,39 +93,36 @@ title: false
   </section>
 </div>
 
-<!-- 最新文章 -->
+<!-- 六大分類最新文章：每個分類固定只顯示一篇 -->
 <div class="wrap" id="latest">
   <section>
     <div class="section-head">
       <div>
         <h2>六大分類最新文章</h2>
-        <p>每個分類各一篇最新文章，讓首頁永遠維持六篇。</p>
+        <p>每個分類各一篇最新文章，首頁永遠維持六篇。</p>
       </div>
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
-      {% comment %}
-      首頁固定只顯示六篇：六大分類各取一篇最新文章。
-      排除 featured=true，避免和上方三篇推薦重複。
-      {% endcomment %}
       {% for c in site.categories_order %}
         {% assign categoryPosts = publishedPosts | where: "category", c.key | sort: "date" | reverse %}
-        {% assign a = false %}
+        {% assign newestInCategory = false %}
         {% for candidate in categoryPosts %}
           {% unless featuredUrls contains candidate.permalink %}
-            {% assign a = candidate %}
+            {% assign newestInCategory = candidate %}
             {% break %}
           {% endunless %}
         {% endfor %}
-        {% if a %}
-        <a href="{{ a.url | relative_url }}" class="card">
-          {% if a.image and a.image != "" %}
-          <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+
+        {% if newestInCategory %}
+        <a href="{{ newestInCategory.url | relative_url }}" class="card">
+          {% if newestInCategory.image and newestInCategory.image != "" %}
+          <div class="card-thumb"><img src="{{ newestInCategory.image | relative_url }}" alt="{{ newestInCategory.imageAlt | default: newestInCategory.title }}" loading="lazy"></div>
           {% endif %}
           <span class="tag">{{ c.label }}</span>
-          <h3>{{ a.title }}</h3>
-          <p class="excerpt">{{ a.excerpt }}</p>
-          <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
+          <h3>{{ newestInCategory.title }}</h3>
+          <p class="excerpt">{{ newestInCategory.excerpt }}</p>
+          <p class="meta">{{ newestInCategory.readingTime }} 分鐘閱讀</p>
         </a>
         {% endif %}
       {% endfor %}
