@@ -75,14 +75,16 @@ title: false
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
+      {% assign featuredUrls = "/articles/threads-005/|/articles/threads-039/|/articles/threads-176/" | split: "|" %}
       {% for c in site.categories_order %}
         {% assign catPosts = publishedPosts | where: "category", c.key %}
         {% assign picked = nil %}
         {% for cp in catPosts %}
-          {% if cp.permalink != "/articles/threads-005/" and cp.permalink != "/articles/threads-039/" and cp.permalink != "/articles/threads-176/" %}
+          {% assign candidateUrl = cp.url | default: cp.permalink %}
+          {% unless featuredUrls contains candidateUrl %}
             {% assign picked = cp %}
             {% break %}
-          {% endif %}
+          {% endunless %}
         {% endfor %}
         {% if picked %}{% include article-card.html post=picked %}{% endif %}
       {% endfor %}
