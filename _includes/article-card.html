@@ -5,11 +5,12 @@
   圖片判斷邏輯統一在這裡：post.image 有值才顯示 .card-thumb，否則完全不輸出圖片相關標籤。
 {% endcomment %}
 {% assign p = include.post %}
+{% assign cardImage = include.image | default: p.image %}
 {% assign cardCat = site.categories_order | where: "key", p.category | first %}
 {% if include.variant == "feature" %}
 <a href="{{ p.url | relative_url }}" class="card feature">
-  {% if p.image and p.image != "" %}
-  <div class="card-thumb"><img src="{{ p.image | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="lazy"></div>
+  {% if cardImage and cardImage != "" %}
+  <div class="card-thumb"><img src="{{ cardImage | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="eager"></div>
   {% endif %}
   <div class="fc-text">
     {% if cardCat %}<span class="tag">{{ cardCat.label }}</span>{% endif %}
@@ -20,8 +21,8 @@
 </a>
 {% else %}
 <a href="{{ p.url | relative_url }}" class="card">
-  {% if p.image and p.image != "" %}
-  <div class="card-thumb"><img src="{{ p.image | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="lazy"></div>
+  {% if cardImage and cardImage != "" %}
+  <div class="card-thumb"><img src="{{ cardImage | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="lazy"></div>
   {% endif %}
   {% if cardCat %}<span class="tag">{{ cardCat.label }}</span>{% endif %}
   <h3>{{ p.title }}</h3>

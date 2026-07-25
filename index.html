@@ -53,11 +53,11 @@ title: false
       </div>
     </div>
     <div class="featured-wrap">
-      {% if pin1 %}{% include article-card.html post=pin1 variant="feature" %}{% endif %}
+      {% if pin1 %}{% include article-card.html post=pin1 variant="feature" image="/assets/media/threads/17967140496077442.webp" %}{% endif %}
       {% if pin2 or pin3 %}
       <div class="featured-pair">
-        {% if pin2 %}{% include article-card.html post=pin2 %}{% endif %}
-        {% if pin3 %}{% include article-card.html post=pin3 %}{% endif %}
+        {% if pin2 %}{% include article-card.html post=pin2 image="/assets/media/threads/18143114779412612.jpg" %}{% endif %}
+        {% if pin3 %}{% include article-card.html post=pin3 image="/assets/media/threads/18076107124895296.jpg" %}{% endif %}
       </div>
       {% endif %}
     </div>
@@ -79,10 +79,10 @@ title: false
         {% assign catPosts = publishedPosts | where: "category", c.key %}
         {% assign picked = nil %}
         {% for cp in catPosts %}
-          {% unless cp.permalink == pin1.permalink or cp.permalink == pin2.permalink or cp.permalink == pin3.permalink %}
+          {% if cp.permalink != "/articles/threads-005/" and cp.permalink != "/articles/threads-039/" and cp.permalink != "/articles/threads-176/" %}
             {% assign picked = cp %}
             {% break %}
-          {% endunless %}
+          {% endif %}
         {% endfor %}
         {% if picked %}{% include article-card.html post=picked %}{% endif %}
       {% endfor %}
