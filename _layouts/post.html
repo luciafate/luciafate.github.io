@@ -46,13 +46,25 @@
     {% endif %}
   </div>
 
+  {% if page.series and page.series != "" %}
+  {% assign seriesPosts = site.posts | where: "series", page.series | sort: "seriesOrder" %}
+  {% assign firstSeriesPost = seriesPosts | first %}
+  <div class="series-guide">
+    <div><strong>{{ page.series }}系列{% if page.seriesOrder %}｜第 {{ page.seriesOrder }} 篇{% endif %}</strong><br>這篇可以獨立閱讀，也可以依序閱讀完整系列。</div>
+    <div class="series-guide-links">
+      <a href="{{ firstSeriesPost.url | relative_url }}">從第1篇開始</a>
+      <a href="#series-directory">查看完整系列</a>
+    </div>
+  </div>
+  <div class="series-directory" id="series-directory">
+    <h2>完整系列目錄</h2>
+    <ol>{% for sp in seriesPosts %}<li{% if sp.url == page.url %} class="current"{% endif %}><a href="{{ sp.url | relative_url }}">{{ sp.title }}</a></li>{% endfor %}</ol>
+  </div>
+  {% endif %}
+
   <div class="post-nav">
-    {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
-    {% else %}<span></span>{% endif %}
-    {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}" style="text-align:right;">{{ page.next.title }} →</a>
-    {% endif %}
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}" style="text-align:right;">{{ page.next.title }} →</a>{% endif %}
   </div>
 
   {% assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" | limit: 3 %}

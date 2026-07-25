@@ -47,7 +47,8 @@ title: false
         <p>從這些文章開始，認識 Lucia 的紫微斗數觀點。</p>
       </div>
     </div>
-    {% assign featuredPosts = site.posts | where: "featured", true | sort: "featuredOrder" %}
+    {% assign publishedPosts = site.posts | where: "published", true %}
+    {% assign featuredPosts = publishedPosts | where: "featured", true | sort: "featuredOrder" | limit: 3 %}
     {% if featuredPosts.size > 0 %}
     <div class="featured-wrap">
       {% assign first = featuredPosts | first %}
@@ -96,7 +97,7 @@ title: false
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
-      {% assign latest = site.posts | limit: 6 %}
+      {% assign latest = publishedPosts | where_exp: "p", "p.featured != true" | sort: "date" | reverse | limit: 6 %}
       {% for a in latest %}
       {% assign acat = site.categories_order | where: "key", a.category | first %}
       <a href="{{ a.url | relative_url }}" class="card">

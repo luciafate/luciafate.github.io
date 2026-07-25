@@ -445,3 +445,7 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
   html{scroll-behavior:auto;}
   *, *::before, *::after{scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; animation-iteration-count:1 !important;}
 }
+
+
+/* Threads 原始圖片、影片與系列導讀 */
+.post-media-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px 0}.post-media-gallery figure{margin:0}.post-media-gallery img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}.post-video-list{display:grid;gap:22px;margin:32px 0}.post-video-list video{width:100%;max-height:720px;background:#111;border-radius:14px}.series-guide{margin:36px auto 18px;max-width:760px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--mint-soft);display:flex;justify-content:space-between;gap:20px;align-items:center}.series-guide-links{display:flex;gap:10px;flex-wrap:wrap}.series-guide-links a{border:1px solid var(--navy);border-radius:999px;padding:8px 13px;font-weight:700;font-size:13px}.series-directory{max-width:760px;margin:0 auto 28px;padding:22px 26px;border:1px solid var(--line);border-radius:16px}.series-directory h2{font-size:20px;margin:0 0 12px}.series-directory ol{margin:0;padding-left:24px}.series-directory li{padding:5px 0}.series-directory li.current{font-weight:800;color:var(--teal)}@media(max-width:700px){.post-media-gallery{grid-template-columns:1fr}.series-guide{display:block}.series-guide-links{margin-top:14px}}

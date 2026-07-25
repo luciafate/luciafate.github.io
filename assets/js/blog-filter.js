@@ -45,7 +45,16 @@
 
   function render(){
     pillBar.innerHTML = pillBarHtml();
-    const filtered = currentCat === 'all' ? articleList : articleList.filter(a => a.category === currentCat);
+    const source = currentCat === 'all' ? [...articleList] : articleList.filter(a => a.category === currentCat);
+    const filtered = source.sort((a,b) => {
+      if(currentCat !== 'all'){
+        const af = a.categoryFeatured ? 0 : 1;
+        const bf = b.categoryFeatured ? 0 : 1;
+        if(af !== bf) return af - bf;
+        return (Number(a.categoryOrder)||9999) - (Number(b.categoryOrder)||9999);
+      }
+      return String(b.date).localeCompare(String(a.date));
+    });
     const shown = filtered.slice(0, visibleCount);
 
     blogGrid.innerHTML = shown.map(cardHtml).join('');
