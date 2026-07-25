@@ -662,3 +662,14 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
     padding:16px;
   }
 }
+
+
+/* 線上課程：五堂免費入門課影片 */
+.course-video-series{display:grid;gap:24px;}
+.course-video-series .course-video-feature{margin:0;}
+.course-article-link{display:inline-block;margin-top:10px;font-size:13px;font-weight:800;color:var(--teal-deep);}
+.course-video-frame-short{max-width:360px;justify-self:center;aspect-ratio:9 / 16;}
+@media (max-width:760px){
+  .course-video-series{gap:18px;}
+  .course-video-frame-short{width:min(100%,320px);}
+}

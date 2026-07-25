@@ -66,37 +66,67 @@ title: 線上課程
         <p>這組內容原本以系列文章呈現，現在統一移到線上課程頁，依序帶你認識紫微斗數、未來跡象、天干地支、宮位與星曜體系。</p>
       </div>
     </div>
-    <div class="course-video-feature">
-      <div class="course-video-copy">
-        <p class="eyebrow">第 1 課影片</p>
-        <h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3>
-        <p>先用影片建立基本概念，再依序閱讀下方五堂入門課。</p>
-      </div>
-      <div class="course-video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE"
-          title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-    </div>
+    <div class="course-video-series">
+      <article class="course-video-feature">
+        <div class="course-video-copy">
+          <p class="eyebrow">第 1 課</p>
+          <h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3>
+          <p>先建立紫微斗數的基本概念，理解命盤不是單純的性格標籤。</p>
+          <a class="course-article-link" href="{{ '/articles/threads-083/' | relative_url }}">閱讀課程文字 →</a>
+        </div>
+        <div class="course-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE" title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
-    <ol class="course-lesson-list">
-      {% for lesson in course_lessons limit: 5 %}
-      <li>
-        <a href="{{ lesson.url | relative_url }}">
-          <span class="course-lesson-number">{{ lesson.courseLessonOrder | default: forloop.index }}</span>
-          <span class="course-lesson-text">
-            <strong>{{ lesson.title }}</strong>
-            <span>{{ lesson.readingTime }} 分鐘閱讀</span>
-          </span>
-          <span class="course-lesson-arrow">進入課程 →</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ol>
+      <article class="course-video-feature">
+        <div class="course-video-copy">
+          <p class="eyebrow">第 2 課</p>
+          <h3>如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？</h3>
+          <p>理解命盤如何從條件、時間與變化中呈現未來可能出現的跡象。</p>
+          <a class="course-article-link" href="{{ '/articles/threads-081/' | relative_url }}">閱讀課程文字 →</a>
+        </div>
+        <div class="course-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/XZHyiy2ttcU" title="如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <article class="course-video-feature">
+        <div class="course-video-copy">
+          <p class="eyebrow">第 3 課</p>
+          <h3>如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言</h3>
+          <p>從天干地支開始，理解紫微斗數如何描述時間、空間與命盤結構。</p>
+          <a class="course-article-link" href="{{ '/articles/threads-079/' | relative_url }}">閱讀課程文字 →</a>
+        </div>
+        <div class="course-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/nNarzNBhqfw" title="如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <article class="course-video-feature">
+        <div class="course-video-copy">
+          <p class="eyebrow">第 4 課</p>
+          <h3>如何看懂自己的紫微斗數命盤④｜宮位體系</h3>
+          <p>理解十二宮位所代表的人生領域，以及宮位在判讀時扮演的角色。</p>
+          <a class="course-article-link" href="{{ '/articles/threads-074/' | relative_url }}">閱讀課程文字 →</a>
+        </div>
+        <div class="course-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/Ycz1Z5TfvOw" title="如何看懂自己的紫微斗數命盤④｜宮位體系" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <article class="course-video-feature">
+        <div class="course-video-copy">
+          <p class="eyebrow">第 5 課</p>
+          <h3>如何看懂自己的紫微斗數命盤⑤｜星曜體系</h3>
+          <p>認識星曜不是固定形容詞，而是在不同宮位與條件下產生作用的系統。</p>
+          <a class="course-article-link" href="{{ '/articles/threads-071/' | relative_url }}">閱讀課程文字 →</a>
+        </div>
+        <div class="course-video-frame course-video-frame-short">
+          <iframe src="https://www.youtube-nocookie.com/embed/m-B6wLgKBIY" title="如何看懂自己的紫微斗數命盤⑤｜星曜體系" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+    </div>
   </section>
 </div>
 {% endif %}
