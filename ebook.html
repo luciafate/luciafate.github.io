@@ -32,30 +32,45 @@ title: 電子書
     <div class="section-head"><div><h2>{% if site.data.ebooks.size > 1 %}全部電子書{% else %}從這一本開始{% endif %}</h2></div></div>
 
     {% for book in site.data.ebooks %}
-    <div class="ebook-detail">
-      <div class="ebook-detail-cover">
-        <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt }}">
-      </div>
-      <div class="ebook-detail-info">
-        <h3>{{ book.title }}</h3>
-        <p class="ebook-series">系列副標：{{ book.series }}</p>
-        <p class="ebook-volume">{{ book.volume }}</p>
-        <p class="ebook-desc">{{ book.description }}</p>
-
-        <div class="fit-reader-box">
-          <p class="fit-reader-title">這本書適合你，如果你想知道：</p>
-          <ul>
-            {% for p in book.fit_reader_points %}<li>{{ p }}</li>{% endfor %}
-          </ul>
+    <div class="ebook-block{% if book.video and book.video != '' %} has-video{% endif %}">
+      <div class="ebook-detail">
+        <div class="ebook-detail-cover">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt }}">
         </div>
+        <div class="ebook-detail-info">
+          <h3>{{ book.title }}</h3>
+          <p class="ebook-series">系列副標：{{ book.series }}</p>
+          <p class="ebook-volume">{{ book.volume }}</p>
+          <p class="ebook-desc">{{ book.description }}</p>
 
-        <p class="store-lead">選擇你習慣的閱讀平台</p>
-        <div class="store-links-buttons">
-          {% for st in book.stores %}
-          {% if st.url and st.url != "" %}<a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>{% endif %}
-          {% endfor %}
+          <div class="fit-reader-box">
+            <p class="fit-reader-title">這本書適合你，如果你想知道：</p>
+            <ul>
+              {% for p in book.fit_reader_points %}<li>{{ p }}</li>{% endfor %}
+            </ul>
+          </div>
+
+          <p class="store-lead">選擇你習慣的閱讀平台</p>
+          <div class="store-links-buttons">
+            {% for st in book.stores %}
+            {% if st.url and st.url != "" %}<a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>{% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
+
+      {% if book.video and book.video != "" %}
+      <div class="ebook-video-panel">
+        <video class="ebook-video" controls playsinline preload="metadata">
+          <source src="{{ book.video | relative_url }}" type="video/mp4">
+          您的瀏覽器不支援影片播放，請直接下載觀看。
+        </video>
+        {% if book.video_caption %}<p class="ebook-video-caption">{{ book.video_caption }}</p>{% endif %}
+        {% if book.trial_read_url and book.trial_read_url != "" %}
+        <a href="{{ book.trial_read_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ book.trial_read_label | default: "前往讀墨試讀" }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   </section>

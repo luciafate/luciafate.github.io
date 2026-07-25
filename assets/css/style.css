@@ -449,3 +449,105 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 
 /* Threads 原始圖片、影片與系列導讀 */
 .post-media-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px 0}.post-media-gallery figure{margin:0}.post-media-gallery img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}.post-video-list{display:grid;gap:22px;margin:32px 0}.post-video-list video{width:100%;max-height:720px;background:#111;border-radius:14px}.series-guide{margin:36px auto 18px;max-width:760px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--mint-soft);display:flex;justify-content:space-between;gap:20px;align-items:center}.series-guide-links{display:flex;gap:10px;flex-wrap:wrap}.series-guide-links a{border:1px solid var(--navy);border-radius:999px;padding:8px 13px;font-weight:700;font-size:13px}.series-directory{max-width:760px;margin:0 auto 28px;padding:22px 26px;border:1px solid var(--line);border-radius:16px}.series-directory h2{font-size:20px;margin:0 0 12px}.series-directory ol{margin:0;padding-left:24px}.series-directory li{padding:5px 0}.series-directory li.current{font-weight:800;color:var(--teal)}@media(max-width:700px){.post-media-gallery{grid-template-columns:1fr}.series-guide{display:block}.series-guide-links{margin-top:14px}}
+
+/* ===========================================================
+   2026-07-25：首頁響應式優化、電子書影片、LINE CTA 順序
+   =========================================================== */
+
+/* 桌機顯示六分類最新文章；手機改顯示六分類入口 */
+.desktop-latest-section{display:block;}
+.mobile-category-section{display:none;}
+
+/* LINE：QR Code 在上、按鈕在下，置中且不拉伸 */
+.line-btn-group{align-items:center; gap:16px;}
+.line-btn-group .qr-box{display:flex;}
+.line-btn-group .line-btn{width:auto; max-width:100%;}
+
+/* 電子書第一冊影片 */
+.ebook-block{margin-bottom:28px;}
+.ebook-block.has-video{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
+  gap:28px;
+  align-items:start;
+}
+.ebook-block .ebook-detail{margin-bottom:0;}
+.ebook-video-panel{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-self:start;
+  min-width:0;
+}
+.ebook-video{width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border-radius:10px; background:#000; display:block;}
+.ebook-video-caption{font-size:13.5px; color:var(--ink); opacity:.82; margin:0; line-height:1.8;}
+.ebook-video-panel .btn{align-self:flex-start; padding:12px 22px; font-size:13.5px;}
+
+@media(max-width:900px){
+  .ebook-block.has-video{grid-template-columns:1fr;}
+}
+
+@media(max-width:700px){
+  .desktop-latest-section{display:none;}
+  .mobile-category-section{display:block;}
+
+  /* 首屏與各區塊縮短，讓電子書更早出現 */
+  .home-hero{padding:34px 0 30px;}
+  .home-hero .eyebrow{margin-bottom:10px;}
+  .home-hero h1{font-size:clamp(25px,8vw,32px); line-height:1.35;}
+  .home-hero p.lead{font-size:15px; line-height:1.75; margin:14px auto 10px;}
+  .home-hero .hero-emotional{font-size:15.5px; line-height:1.7; margin-bottom:20px;}
+  .home-hero .hero-ctas{gap:10px;}
+  .home-hero .hero-ctas .btn{height:48px;}
+
+  .home-pillars section{padding-bottom:44px;}
+  .home-pillars .section-head{margin-bottom:20px; padding-bottom:16px;}
+  .home-pillars .pillar-grid{gap:12px;}
+  .home-pillars .pillar-card{padding:20px;}
+  .home-pillars .pillar-card h3{font-size:17px;}
+  .home-pillars .pillar-question{margin-bottom:8px;}
+
+  .home-start-section{padding-bottom:44px;}
+  .home-start-section .section-head{margin-bottom:20px; padding-bottom:16px;}
+  .home-start-section .featured-wrap,
+  .home-start-section .featured-pair{gap:12px;}
+  .home-start-section .card{padding:20px; gap:8px;}
+  .home-start-section .card.feature{padding:20px; gap:16px;}
+  .home-start-section .card.feature .card-thumb{aspect-ratio:16/9;}
+  .home-start-section .card h3{font-size:16.5px; line-height:1.55;}
+  .home-start-section .card.feature h3{font-size:19px; margin-top:4px;}
+  .home-start-section .card p.excerpt{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+    line-height:1.75;
+  }
+
+  .mobile-category-section section{padding:44px 0;}
+  .mobile-category-section .section-head{margin-bottom:18px; padding-bottom:16px;}
+  .mobile-category-section .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;}
+  .mobile-category-section .cat-card{padding:16px 14px; gap:6px; min-width:0;}
+  .mobile-category-section .cat-card h3{font-size:15.5px;}
+  .mobile-category-section .cat-card p{font-size:12.5px; line-height:1.55;}
+  .mobile-category-section .cat-card a.explore{font-size:11.5px; line-height:1.5;}
+
+  #offers section{padding:44px 0;}
+  #offers .section-head{margin-bottom:20px; padding-bottom:16px;}
+  #offers .ebook-feature{margin-bottom:16px;}
+  #offers .offer{padding:24px 20px;}
+
+  .ebook-video-panel{padding:20px;}
+  .ebook-video-panel .btn{width:100%; justify-content:center;}
+
+  .line-section section{padding:44px 0;}
+  .line-cta{gap:24px;}
+}
+
+@media(max-width:380px){
+  .mobile-category-section .cat-grid{grid-template-columns:1fr;}
+}

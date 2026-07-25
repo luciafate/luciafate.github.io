@@ -16,11 +16,11 @@
       </div>
       <div>
         <div class="line-btn-group">
-          <a href="{{ s.line.add_friend_url }}" class="line-btn" target="_blank" rel="noopener">{{ ctaBtn }}</a>
-          <div class="qr-box qr-desktop-only">
+          <div class="qr-box">
             <img src="{{ s.line.qr_image | relative_url }}" alt="{{ s.line.qr_alt }}" class="qr-img">
             <div style="font-size:12.5px;color:var(--navy);">LINE ID：{{ s.line.official_id }}<br>桌機版可掃描加入</div>
           </div>
+          <a href="{{ s.line.add_friend_url }}" class="line-btn" target="_blank" rel="noopener">{{ ctaBtn }}</a>
         </div>
       </div>
     </section>

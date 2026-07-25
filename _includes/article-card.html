@@ -1,0 +1,31 @@
+{% comment %}
+  共用文章卡片元件。
+  用法：{% include article-card.html post=某篇文章物件 variant="feature" %}
+  variant 可省略；省略時為一般卡片，"feature" 為首頁橫跨整列的大卡片。
+  圖片判斷邏輯統一在這裡：post.image 有值才顯示 .card-thumb，否則完全不輸出圖片相關標籤。
+{% endcomment %}
+{% assign p = include.post %}
+{% assign cardCat = site.categories_order | where: "key", p.category | first %}
+{% if include.variant == "feature" %}
+<a href="{{ p.url | relative_url }}" class="card feature">
+  {% if p.image and p.image != "" %}
+  <div class="card-thumb"><img src="{{ p.image | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="lazy"></div>
+  {% endif %}
+  <div class="fc-text">
+    {% if cardCat %}<span class="tag">{{ cardCat.label }}</span>{% endif %}
+    <h3>{{ p.title }}</h3>
+    <p class="excerpt">{{ p.excerpt }}</p>
+    <p class="meta">{{ p.readingTime }} 分鐘閱讀{% if p.series != "" %}・{{ p.series }}{% endif %}</p>
+  </div>
+</a>
+{% else %}
+<a href="{{ p.url | relative_url }}" class="card">
+  {% if p.image and p.image != "" %}
+  <div class="card-thumb"><img src="{{ p.image | relative_url }}" alt="{{ p.imageAlt | default: p.title }}" loading="lazy"></div>
+  {% endif %}
+  {% if cardCat %}<span class="tag">{{ cardCat.label }}</span>{% endif %}
+  <h3>{{ p.title }}</h3>
+  <p class="excerpt">{{ p.excerpt }}</p>
+  <p class="meta">{{ p.readingTime }} 分鐘閱讀</p>
+</a>
+{% endif %}

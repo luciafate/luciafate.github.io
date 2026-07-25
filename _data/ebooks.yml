@@ -10,6 +10,10 @@
   cover: "/assets/images/ebook-cover-vol1.jpg"
   cover_alt: "《紫微斗數不是算命，是演算法》電子書封面"
   description: "從紫微、天府、七殺這三顆主星出發，拆解「地位與權力」在命盤中的行為邏輯，回到古籍的成立條件，逐句對照現代語言的理解方式。"
+  video: "/assets/videos/ebook-vol1-intro.mp4"
+  video_caption: "如果你想先了解這本電子書的內容與閱讀方向，可以先看影片介紹。也可以到讀墨平台試讀，再決定是否購買。"
+  trial_read_url: "https://pse.is/8y489t"
+  trial_read_label: "前往讀墨試讀"
   fit_reader_points:
     - "十四主星不只是性格形容詞，實際會如何影響人的思考與行動。"
     - "同一顆星為什麼在不同位置與條件下，會有不同表現。"

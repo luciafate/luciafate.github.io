@@ -4,9 +4,10 @@ permalink: /
 title: false
 ---
 {% assign s = site.data['site-settings'] %}
+{% assign publishedPosts = site.posts | where: "published", true %}
 
 <!-- HERO -->
-<div class="wrap hero">
+<div class="wrap hero home-hero">
   <p class="eyebrow">{{ s.hero.eyebrow }}</p>
   <h1>{{ s.hero.title }}</h1>
   <p class="lead">{{ s.hero.lead }}</p>
@@ -18,7 +19,7 @@ title: false
 </div>
 
 <!-- 品牌三特色 -->
-<div class="wrap">
+<div class="wrap home-pillars">
   <section class="tight">
     <div class="section-head">
       <div>
@@ -38,107 +39,69 @@ title: false
   </section>
 </div>
 
-<!-- 第一次來，建議從這裡開始 -->
-<!-- HOMEPAGE-FEATURED-REGENERATED-2026-07-25-v3 -->
+<!-- 第一次來：固定三篇推薦，使用 permalink 作為穩定識別 -->
+{% assign pin1 = publishedPosts | where: "permalink", "/articles/threads-005/" | first %}
+{% assign pin2 = publishedPosts | where: "permalink", "/articles/threads-039/" | first %}
+{% assign pin3 = publishedPosts | where: "permalink", "/articles/threads-176/" | first %}
+
 <div class="wrap" id="start-here">
-  <section class="tight">
+  <section class="tight home-start-section">
     <div class="section-head">
       <div>
         <h2>第一次來，建議從這裡開始</h2>
-        <p>從這三篇開始，認識 Lucia 如何結合紫微斗數、現代學科與理性判斷。</p>
+        <p>從這些文章開始，認識 Lucia 的紫微斗數觀點。</p>
       </div>
     </div>
-    {% assign publishedPosts = site.posts | where: "published", true %}
-    {% assign featuredUrls = "/articles/threads-005/|/articles/threads-039/|/articles/threads-176/" | split: "|" %}
-    {% assign featuredPosts = "" | split: "|" %}
-    {% for featuredUrl in featuredUrls %}
-      {% assign matchedPost = publishedPosts | where: "permalink", featuredUrl | first %}
-      {% if matchedPost %}
-        {% assign featuredPosts = featuredPosts | push: matchedPost %}
-      {% endif %}
-    {% endfor %}
-
-    {% if featuredPosts.size > 0 %}
     <div class="featured-wrap">
-      {% assign first = featuredPosts | first %}
-      {% assign fcat = site.categories_order | where: "key", first.category | first %}
-      <a href="{{ first.url | relative_url }}" class="card feature">
-        {% if first.image and first.image != "" %}
-        <div class="card-thumb"><img src="{{ first.image | relative_url }}" alt="{{ first.imageAlt | default: first.title }}" loading="lazy"></div>
-        {% endif %}
-        <div class="fc-text">
-          {% if fcat %}<span class="tag">{{ fcat.label }}</span>{% endif %}
-          <h3>{{ first.title }}</h3>
-          <p class="excerpt">{{ first.excerpt }}</p>
-          <p class="meta">{{ first.readingTime }} 分鐘閱讀{% if first.series != "" %}・{{ first.series }}{% endif %}</p>
-        </div>
-      </a>
-
+      {% if pin1 %}{% include article-card.html post=pin1 variant="feature" %}{% endif %}
+      {% if pin2 or pin3 %}
       <div class="featured-pair">
-        {% for a in featuredPosts offset:1 limit:2 %}
-        {% assign acat = site.categories_order | where: "key", a.category | first %}
-        <a href="{{ a.url | relative_url }}" class="card">
-          {% if a.image and a.image != "" %}
-          <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
-          {% endif %}
-          {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
-          <h3>{{ a.title }}</h3>
-          <p class="excerpt">{{ a.excerpt }}</p>
-          <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
-        </a>
-        {% endfor %}
+        {% if pin2 %}{% include article-card.html post=pin2 %}{% endif %}
+        {% if pin3 %}{% include article-card.html post=pin3 %}{% endif %}
       </div>
+      {% endif %}
     </div>
-    {% endif %}
   </section>
 </div>
 
-<!-- 六大分類最新文章：每個分類固定只顯示一篇 -->
-<div class="wrap" id="latest">
+<!-- 桌機版：六大分類各一篇最新文章，排除上方三篇 -->
+<div class="wrap desktop-latest-section" id="latest">
   <section>
     <div class="section-head">
       <div>
-        <h2>六大分類最新文章</h2>
-        <p>每個分類各一篇最新文章，首頁永遠維持六篇。</p>
+        <h2>最新文章</h2>
+        <p>{{ s.latest_section.lead }}</p>
       </div>
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
       {% for c in site.categories_order %}
-        {% assign categoryPosts = publishedPosts | where: "category", c.key | sort: "date" | reverse %}
-        {% assign newestInCategory = false %}
-        {% for candidate in categoryPosts %}
-          {% unless featuredUrls contains candidate.permalink %}
-            {% assign newestInCategory = candidate %}
+        {% assign catPosts = publishedPosts | where: "category", c.key %}
+        {% assign picked = nil %}
+        {% for cp in catPosts %}
+          {% unless cp.permalink == pin1.permalink or cp.permalink == pin2.permalink or cp.permalink == pin3.permalink %}
+            {% assign picked = cp %}
             {% break %}
           {% endunless %}
         {% endfor %}
-
-        {% if newestInCategory %}
-        <a href="{{ newestInCategory.url | relative_url }}" class="card">
-          {% if newestInCategory.image and newestInCategory.image != "" %}
-          <div class="card-thumb"><img src="{{ newestInCategory.image | relative_url }}" alt="{{ newestInCategory.imageAlt | default: newestInCategory.title }}" loading="lazy"></div>
-          {% endif %}
-          <span class="tag">{{ c.label }}</span>
-          <h3>{{ newestInCategory.title }}</h3>
-          <p class="excerpt">{{ newestInCategory.excerpt }}</p>
-          <p class="meta">{{ newestInCategory.readingTime }} 分鐘閱讀</p>
-        </a>
-        {% endif %}
+        {% if picked %}{% include article-card.html post=picked %}{% endif %}
       {% endfor %}
     </div>
   </section>
 </div>
 
-<!-- 依主題探索 -->
-<div class="wrap">
+<!-- 手機版：只顯示六個分類入口，避免六張文章卡拉長首頁 -->
+<div class="wrap mobile-category-section">
   <section>
     <div class="section-head">
-      <div><h2>依主題探索</h2><p>六個固定分類，找到你現在最想看的那一類。</p></div>
+      <div>
+        <h2>依主題探索</h2>
+        <p>六個固定分類，找到你現在最想看的那一類。</p>
+      </div>
     </div>
     <div class="cat-grid">
       {% for c in site.categories_order %}
-      {% assign cnt = site.posts | where: "category", c.key | size %}
+      {% assign cnt = publishedPosts | where: "category", c.key | size %}
       <div class="cat-card">
         <h3>{{ c.label }}</h3>
         <p>{{ c.tagline }}</p>
@@ -149,8 +112,7 @@ title: false
   </section>
 </div>
 
-
-<!-- 電子書／線上課程／論命：首頁只放導引卡片，完整內容在各自的獨立頁面 -->
+<!-- 電子書／線上課程／論命 -->
 <div class="wrap" id="offers">
   <section>
     <div class="section-head">
