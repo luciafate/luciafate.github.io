@@ -63,11 +63,28 @@ title: 線上課程
       <div>
         <p class="eyebrow">免費入門課</p>
         <h2>如何看懂自己的紫微斗數命盤</h2>
-        <p>這組內容原本以系列文章呈現，現在統一移到線上課程頁，依序帶你認識紫微斗數、未來跡象、天干地支、宮位與星曜體系，再進入紫微星的實際理解。</p>
+        <p>這組內容原本以系列文章呈現，現在統一移到線上課程頁，依序帶你認識紫微斗數、未來跡象、天干地支、宮位與星曜體系。</p>
       </div>
     </div>
+    <div class="course-video-feature">
+      <div class="course-video-copy">
+        <p class="eyebrow">第 1 課影片</p>
+        <h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3>
+        <p>先用影片建立基本概念，再依序閱讀下方五堂入門課。</p>
+      </div>
+      <div class="course-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE"
+          title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
     <ol class="course-lesson-list">
-      {% for lesson in course_lessons %}
+      {% for lesson in course_lessons limit: 5 %}
       <li>
         <a href="{{ lesson.url | relative_url }}">
           <span class="course-lesson-number">{{ lesson.courseLessonOrder | default: forloop.index }}</span>
