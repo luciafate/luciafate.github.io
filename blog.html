@@ -1,0 +1,50 @@
+---
+layout: default
+permalink: /blog.html
+title: 文章
+---
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia 深度文章</p>
+    <h1>看懂命盤，也看懂自己正在做的選擇</h1>
+    <p>從紫微斗數的學理出發，結合心理學、健康科學與人文知識，拆解感情、工作和人生中的真實難題，找到可以實際採取的下一步。</p>
+  </div>
+
+  <section class="tight">
+    <div class="cat-grid blog-cat-grid" id="catCardGrid">
+      {% for c in site.categories_order %}
+      <button type="button" class="cat-card cat-card-btn" data-cat="{{ c.key }}" aria-pressed="false">
+        <span class="cat-card-title">{{ c.label }}</span>
+        <span class="cat-card-description">{{ c.tagline }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="pills" id="pillBar"></div>
+    <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">這個分類目前還沒有文章，先看看其他分類吧。</div>
+    <div class="load-more-wrap" id="loadMoreWrap">
+      <button class="btn-load" id="loadMoreBtn">載入更多文章</button>
+    </div>
+  </section>
+</div>
+
+<script>
+  window.CATEGORIES = {{ site.categories_order | jsonify }};
+  window.ARTICLES = [
+    {% for a in site.posts %}
+    {
+      title: {{ a.title | jsonify }},
+      url: {{ a.url | relative_url | jsonify }},
+      category: {{ a.category | jsonify }},
+      excerpt: {{ a.excerpt | jsonify }},
+      readingTime: {{ a.readingTime | jsonify }},
+      date: {{ a.date | date: "%Y-%m-%d" | jsonify }},
+      series: {{ a.series | default: "" | jsonify }},
+      seriesOrder: {{ a.seriesOrder | default: "null" }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+</script>
+<noscript><p class="empty-state">請啟用 JavaScript 以使用文章分類與載入功能。</p></noscript>
+<script src="{{ '/assets/js/blog-filter.js' | relative_url }}"></script>

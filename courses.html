@@ -1,0 +1,89 @@
+---
+layout: default
+permalink: /courses.html
+title: 線上課程
+---
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia 線上課程</p>
+    <h1>從看懂自己開始，建立讀懂命盤的能力</h1>
+    <p>紫微斗數不只是描述一個人「是什麼樣的人」，更可以幫助我們看見：自己習慣如何思考、面對壓力、做出選擇，又容易在哪些地方反覆走回相同的模式。</p>
+    <p>當你理解自己的命盤，就能在生活中多一份提醒。知道自己的優勢如何使用，也知道哪些慣性需要調整，不再只是被性格推著走。</p>
+    <p class="brand-line">看懂自己，不是為了替自己定型，而是為了多一點選擇。</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>免費短課｜先從命盤看懂自己</h2>
+        <p>透過短影片，從十四主星與宮位的基本觀念開始，認識命盤如何呈現一個人的思考、選擇與行動模式。星曜不是固定的性格標籤，而是人在不同情境中可能展現的作用方式；宮位則是人生中的環境與場域，也反映一個人面對該領域人事物時的態度、價值觀、行動方式與能力。你不需要先學會解整張命盤，也可以從一個概念、一顆星開始，更具體地理解自己。</p>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      {% for v in site.data['free-videos'] %}
+      <article class="video-card">
+        {% if v.url and v.url != "" %}
+        <a class="video-thumb video-thumb-link" href="{{ v.url }}" target="_blank" rel="noopener" aria-label="觀看：{{ v.title }}">
+          {% if v.thumbnail and v.thumbnail != "" %}<img src="{{ v.thumbnail | relative_url }}" alt="{{ v.title }}影片縮圖" loading="lazy">{% endif %}
+          <span class="play" aria-hidden="true">▶</span>
+        </a>
+        {% else %}
+        <div class="video-thumb">
+          {% if v.thumbnail and v.thumbnail != "" %}<img src="{{ v.thumbnail | relative_url }}" alt="{{ v.title }}影片縮圖" loading="lazy">{% endif %}
+          <span class="play" aria-hidden="true">▶</span>
+        </div>
+        {% endif %}
+        <div class="vinfo">
+          <h3>{{ v.title }}</h3>
+          <p class="vsummary">{{ v.summary }}</p>
+          {% if v.url and v.url != "" %}
+            <a class="vlink" href="{{ v.url }}" target="_blank" rel="noopener">觀看影片 →</a>
+          {% else %}
+            <p class="vpending">影片連結準備中</p>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>系統課程建構中</h2>
+        <p>Lucia 正在將長期研究、教學與命盤推導內容，逐步整理成可以循序學習的系統課程。目前規劃的方向，包括六十星系落入不同宮位時的解讀，以及官祿宮等主題課程。課程將從星曜與宮位的基本作用出發，逐步建立拆解命盤跡象與理解不同人生領域的能力。</p>
+        <p>實際課程名稱、內容範圍、上架時間、收費方式與使用平台仍在規劃中，未來會依照課程完成進度陸續公布。</p>
+      </div>
+    </div>
+    <p class="section-closing">先把每一個命盤跡象拆解清楚，才能為後續的整體解盤建立穩定根基。</p>
+
+    <div class="course-grid">
+      {% for c in site.data.courses %}
+      <article class="course-card">
+        {% if c.image and c.image != "" %}<img class="course-image" src="{{ c.image | relative_url }}" alt="{{ c.title }}課程圖片" loading="lazy">{% endif %}
+        {% if c.show_building_badge %}<span class="badge-soon">建構中</span>{% endif %}
+        <h3>{{ c.title }}</h3>
+        {% if c.subtitle and c.subtitle != "" %}<p class="course-subtitle">{{ c.subtitle }}</p>{% endif %}
+        <p>{{ c.description }}</p>
+        {% if c.platform and c.platform != "" %}<p class="course-platform">上架平台：{{ c.platform }}</p>{% endif %}
+
+        {% if c.status == "building" %}
+          {% assign s = site.data['site-settings'] %}
+          <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ c.button_text | default: "加入 LINE，接收課程消息" }}</a>
+        {% elsif c.show_buy_button and c.url and c.url != "" %}
+          <a href="{{ c.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ c.button_text | default: "前往課程" }}</a>
+        {% elsif c.status == "free" and c.url and c.url != "" %}
+          <a href="{{ c.url }}" class="link" target="_blank" rel="noopener">{{ c.button_text | default: "觀看課程" }} →</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% include line-cta.html heading="加入 LINE，接收課程消息" body="完整課程仍在規劃中，重要進度與開放消息會優先透過LINE通知。" btn="加入 LINE，接收課程消息" %}

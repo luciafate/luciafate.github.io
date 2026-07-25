@@ -1,0 +1,28 @@
+{% assign s = site.data['site-settings'] %}
+{% if include.heading %}
+  {% assign ctaHeading = include.heading %}
+{% else %}
+  {% capture ctaHeading %}領取《{{ s.line.gift_name }}》{% endcapture %}
+{% endif %}
+{% assign ctaBody = include.body | default: "一張圖快速理解14主星如何思考、做決定與採取行動。新文章發布時，也會直接收到完整閱讀連結，不必等待演算法推送。" %}
+{% assign ctaBtn = include.btn | default: s.line.hero_primary_btn_text %}
+<div class="line-section" id="line">
+  <div class="wrap">
+    <section class="line-cta">
+      <div>
+        <p class="eyebrow">加入LINE好友</p>
+        <h2>{{ ctaHeading }}</h2>
+        <p class="lead">{{ ctaBody }}</p>
+      </div>
+      <div>
+        <div class="line-btn-group">
+          <a href="{{ s.line.add_friend_url }}" class="line-btn" target="_blank" rel="noopener">{{ ctaBtn }}</a>
+          <div class="qr-box qr-desktop-only">
+            <img src="{{ s.line.qr_image | relative_url }}" alt="{{ s.line.qr_alt }}" class="qr-img">
+            <div style="font-size:12.5px;color:var(--navy);">LINE ID：{{ s.line.official_id }}<br>桌機版可掃描加入</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

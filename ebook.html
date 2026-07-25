@@ -1,0 +1,64 @@
+---
+layout: default
+permalink: /ebook.html
+title: 電子書
+---
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia 電子書</p>
+    <h1>讀懂命盤，也讀懂自己一路走來的邏輯</h1>
+    <p>從十四主星、性格、關係、工作、財富到人生選擇，Lucia 回到古籍的成立條件，結合現代學科與生活經驗，把複雜的紫微斗數，寫成能讀懂、能思考，也能真正帶回生活使用的書。</p>
+    <p class="brand-line">不是替你決定人生，而是讓你更清楚自己正在怎麼選。</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="tight">
+    <div class="recommend-block">
+      <p class="recommend-title">大耕老師推薦</p>
+      <blockquote class="recommend-quote">
+        「命理學是生活科學，也是生命的道理。<br>
+        用邏輯與現代科學語彙重新解釋，<br>
+        是我們這一代人的責任。<br>
+        <strong>綺真可以說是青出於藍，她寫的書值得買。</strong>」
+      </blockquote>
+      <p class="recommend-attr">—— 大耕老師　強力推薦</p>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head"><div><h2>{% if site.data.ebooks.size > 1 %}全部電子書{% else %}從這一本開始{% endif %}</h2></div></div>
+
+    {% for book in site.data.ebooks %}
+    <div class="ebook-detail">
+      <div class="ebook-detail-cover">
+        <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt }}">
+      </div>
+      <div class="ebook-detail-info">
+        <h3>{{ book.title }}</h3>
+        <p class="ebook-series">系列副標：{{ book.series }}</p>
+        <p class="ebook-volume">{{ book.volume }}</p>
+        <p class="ebook-desc">{{ book.description }}</p>
+
+        <div class="fit-reader-box">
+          <p class="fit-reader-title">這本書適合你，如果你想知道：</p>
+          <ul>
+            {% for p in book.fit_reader_points %}<li>{{ p }}</li>{% endfor %}
+          </ul>
+        </div>
+
+        <p class="store-lead">選擇你習慣的閱讀平台</p>
+        <div class="store-links-buttons">
+          {% for st in book.stores %}
+          {% if st.url and st.url != "" %}<a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>{% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</div>
+
+{% include line-cta.html %}

@@ -1,0 +1,49 @@
+title: "Lucia 紫微斗數"
+tagline: "推廣・教學・論命改運"
+description: "從紫微斗數的學理出發，結合心理學、健康科學與人文知識，拆解感情、工作和人生中的真實難題，找到可以實際採取的下一步。"
+url: "https://luciafate.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /articles/:slug/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+# 六大文章主分類，順序不得自行更改
+categories_order:
+  - key: learn
+    label: "學懂紫微"
+    tagline: "從星曜、宮位到命盤結構，理解每一個判斷如何成立。"
+  - key: relationship
+    label: "感情與關係"
+    tagline: "看懂愛情、親密、人際與家庭關係中的吸引、需求與界線。"
+  - key: career
+    label: "職涯與財富"
+    tagline: "從工作、天賦、金錢與行動模式，找到更適合自己的選擇。"
+  - key: wellbeing
+    label: "身心與成長"
+    tagline: "結合心理學、健康與生活科學，更深入地理解身體與自己。"
+  - key: fate
+    label: "命運與選擇"
+    tagline: "辨識人生中的時機、趨勢與風險，為仍然擁有的選擇做好準備。"
+  - key: culture
+    label: "人文與異聞"
+    tagline: "從歷史、文化、宗教與未知現象，重新思考人如何理解命運。"
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README-維護說明.md
+  - post-template.md
+  - Gemfile
+  - Gemfile.lock

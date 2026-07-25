@@ -1,0 +1,17 @@
+# ===========================================================
+# 課程清單。未來新增課程，直接在下面新增一筆即可，courses.html 會自動列出。
+# status: building（建構中，只顯示LINE通知按鈕）｜free（免費，顯示連結按鈕）｜paid（付費，顯示購買按鈕）
+# show_buy_button 為 false 時，即使填了 url 也不會顯示購買按鈕，避免尚未定案的課程被誤認為可購買。
+# ===========================================================
+
+- id: "sixty-xingxi-gongwei"
+  title: "系統課程持續整理中"
+  subtitle: ""
+  image: ""
+  description: "未來課程將從理解自己與命盤的基本結構開始，逐步延伸至六十星系、十二宮位、六條線與不同主題的命盤判讀。第一階段可能包含六十星系與宮位解讀，以及官祿宮相關主題；實際課程內容將依完成進度調整與公布。"
+  status: "building"
+  platform: ""
+  url: ""
+  button_text: "加入 LINE，接收課程消息"
+  show_buy_button: false
+  show_building_badge: true

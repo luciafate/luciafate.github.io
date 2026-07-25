@@ -1,0 +1,174 @@
+---
+layout: default
+permalink: /
+title: false
+---
+{% assign s = site.data['site-settings'] %}
+
+<!-- HERO -->
+<div class="wrap hero">
+  <div>
+    <p class="eyebrow">{{ s.hero.eyebrow }}</p>
+    <h1>{{ s.hero.title }}</h1>
+    <p class="lead">{{ s.hero.lead }}</p>
+    <p class="hero-emotional">{{ s.hero.emotional_line }}</p>
+    <div class="hero-ctas">
+      <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ s.line.hero_primary_btn_text }}</a>
+      <a href="#start-here" class="btn btn-ghost">{{ s.line.hero_secondary_btn_text }}</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="quote-panel">
+      <span class="brand-mark quote-mark"><img src="{{ s.brand.logo | relative_url }}" alt="{{ s.brand.logo_alt }}"></span>
+      <p class="quote-panel-title">{{ s.hero.quote_title }}</p>
+      {% for line in s.hero.quote_lines %}<p class="quote-panel-line">{{ line }}</p>{% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- 品牌三特色 -->
+<div class="wrap">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>{{ s.brand_pillars.heading }}</h2>
+        <p>{{ s.brand_pillars.subheading }}</p>
+      </div>
+    </div>
+    <div class="pillar-grid">
+      {% for item in s.brand_pillars.items %}
+      <div class="pillar-card">
+        <h3>{{ item.title }}</h3>
+        <p class="pillar-question">{{ item.question }}</p>
+        <p class="pillar-body">{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<!-- 第一次來，建議從這裡開始 -->
+<div class="wrap" id="start-here">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>第一次來，建議從這裡開始</h2>
+        <p>從這些文章開始，認識 Lucia 的紫微斗數觀點。</p>
+      </div>
+    </div>
+    {% assign featuredPosts = site.posts | where: "featured", true | sort: "featuredOrder" %}
+    {% if featuredPosts.size > 0 %}
+    <div class="featured-wrap">
+      {% assign first = featuredPosts | first %}
+      {% assign fcat = site.categories_order | where: "key", first.category | first %}
+      <a href="{{ first.url | relative_url }}" class="card feature">
+        <div class="fc-mark"><span>命</span></div>
+        <div class="fc-text">
+          {% if fcat %}<span class="tag">{{ fcat.label }}</span>{% endif %}
+          <h3>{{ first.title }}</h3>
+          <p class="excerpt">{{ first.excerpt }}</p>
+          <p class="meta">{{ first.readingTime }} 分鐘閱讀{% if first.series != "" %}・{{ first.series }}{% endif %}</p>
+        </div>
+      </a>
+      {% assign rest = featuredPosts | offset: 1 | limit: 2 %}
+      {% if rest.size > 0 %}
+      <div class="featured-pair">
+        {% for a in rest %}
+        {% assign acat = site.categories_order | where: "key", a.category | first %}
+        <a href="{{ a.url | relative_url }}" class="card">
+          {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
+          <h3>{{ a.title }}</h3>
+          <p class="excerpt">{{ a.excerpt }}</p>
+          <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </section>
+</div>
+
+<!-- 最新文章 -->
+<div class="wrap" id="latest">
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>最新文章</h2>
+        <p>{{ s.latest_section.lead }}</p>
+      </div>
+      <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
+    </div>
+    <div class="grid-articles">
+      {% assign latest = site.posts | limit: 6 %}
+      {% for a in latest %}
+      {% assign acat = site.categories_order | where: "key", a.category | first %}
+      <a href="{{ a.url | relative_url }}" class="card">
+        {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
+        <h3>{{ a.title }}</h3>
+        <p class="excerpt">{{ a.excerpt }}</p>
+        <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<!-- 依主題探索 -->
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div><h2>依主題探索</h2><p>六個固定分類，找到你現在最想看的那一類。</p></div>
+    </div>
+    <div class="cat-grid">
+      {% for c in site.categories_order %}
+      {% assign cnt = site.posts | where: "category", c.key | size %}
+      <div class="cat-card">
+        <h3>{{ c.label }}</h3>
+        <p>{{ c.tagline }}</p>
+        <a class="explore" href="{{ '/blog.html' | relative_url }}?cat={{ c.key }}">探索更多（{{ cnt }}） →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+
+<!-- 電子書／線上課程／論命：首頁只放導引卡片，完整內容在各自的獨立頁面 -->
+<div class="wrap" id="offers">
+  <section>
+    <div class="section-head">
+      <div><h2>電子書・線上課程・論命</h2><p>文章是起點，如果想走得更深，這裡有三種方式。</p></div>
+    </div>
+
+    {% assign firstBook = site.data.ebooks | first %}
+    <a href="{{ '/ebook.html' | relative_url }}" class="ebook-feature" id="ebook">
+      <div class="ebook-cover"><img src="{{ firstBook.cover | relative_url }}" alt="{{ firstBook.cover_alt }}"></div>
+      <div class="ebook-info">
+        <div class="oflabel">電子書</div>
+        <h3>{{ firstBook.title }}</h3>
+        <p class="ebook-series">系列副標：{{ firstBook.series }}</p>
+        <p class="ebook-volume">{{ firstBook.volume }}</p>
+        <span class="link">前往電子書頁 →</span>
+      </div>
+    </a>
+
+    <div class="offers offers-2col">
+      <a href="{{ '/courses.html' | relative_url }}" class="offer" id="course">
+        <div class="oflabel">線上課程</div>
+        <span class="badge-soon">建構中</span>
+        <h3>先從免費短課看懂自己</h3>
+        <p>五支基礎入門影片，加上正在整理中的系統課程規劃方向。</p>
+        <span class="link">前往線上課程頁 →</span>
+      </a>
+      <a href="{{ '/reading.html' | relative_url }}" class="offer" id="readings">
+        <div class="oflabel">{{ s.reading.title }}</div>
+        <h3>{{ s.reading.teaser_description }}</h3>
+        <p class="reading-price">{{ s.reading.subtitle }}</p>
+        <span class="link">前往論命頁 →</span>
+      </a>
+    </div>
+  </section>
+</div>
+
+{% include line-cta.html %}

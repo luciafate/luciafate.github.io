@@ -1,0 +1,36 @@
+{% assign s = site.data['site-settings'] %}
+<header class="site">
+  <div class="wrap">
+    <nav aria-label="主要導覽">
+      <a href="{{ '/' | relative_url }}" class="brand" aria-label="返回 Lucia 紫微斗數首頁">
+        <span class="brand-mark"><img src="{{ s.brand.logo | relative_url }}" alt="{{ s.brand.logo_alt }}"></span>
+        <span class="brand-word">{{ s.brand.name }}<small>{{ s.brand.tagline }}</small></span>
+      </a>
+
+      <ul class="navlinks" id="navlinksDesktop">
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>首頁</a></li>
+        <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' or page.layout == 'post' %} class="active" aria-current="page"{% endif %}>文章</a></li>
+        <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} class="active" aria-current="page"{% endif %}>電子書</a></li>
+        <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} class="active" aria-current="page"{% endif %}>線上課程</a></li>
+        <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} class="active" aria-current="page"{% endif %}>論命</a></li>
+      </ul>
+
+      <a href="{{ s.line.add_friend_url }}" class="nav-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
+
+      <button type="button" id="navToggle" class="navtoggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="開啟導覽選單">
+        <span class="navtoggle-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <ul class="mobile-menu-links">
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首頁</a></li>
+      <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' or page.layout == 'post' %} aria-current="page"{% endif %}>文章</a></li>
+      <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} aria-current="page"{% endif %}>電子書</a></li>
+      <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} aria-current="page"{% endif %}>線上課程</a></li>
+      <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} aria-current="page"{% endif %}>論命</a></li>
+    </ul>
+    <a href="{{ s.line.add_friend_url }}" class="line-btn mobile-menu-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
+  </div>
+</header>

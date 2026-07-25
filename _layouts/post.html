@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include header.html %}
+
+{% assign catObj = site.categories_order | where: "key", page.category | first %}
+
+<main>
+  <div class="post-header">
+    {% if catObj %}<span class="tag">{{ catObj.label }}</span>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta-row">
+      <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+      {% if page.readingTime %}<span>{{ page.readingTime }} 分鐘閱讀</span>{% endif %}
+      {% if page.series and page.series != "" %}<span>{{ page.series }}{% if page.seriesOrder %} {{ page.seriesOrder }}{% endif %}</span>{% endif %}
+    </div>
+  </div>
+
+  {% if page.image and page.image != "" %}
+  <div class="post-hero-img">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.imageAlt | default: page.title }}" class="post-hero-real">
+    {% if page.imageCaption and page.imageCaption != "" %}<p class="img-caption">{{ page.imageCaption }}</p>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="post-body">
+    {% if page.audio and page.audio != "" %}
+    <div class="audio-block">
+      <p class="audio-title">{{ page.audioTitle | default: "Lucia語音導讀" }}</p>
+      <audio controls preload="metadata" class="audio-player">
+        <source src="{{ page.audio | relative_url }}">
+        您的瀏覽器不支援音訊播放，請直接下載收聽。
+      </audio>
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for t in page.tags %}<span class="post-tag">{{ t }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="post-nav">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}" style="text-align:right;">{{ page.next.title }} →</a>
+    {% endif %}
+  </div>
+
+  {% assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" | limit: 3 %}
+  {% if related.size > 0 %}
+  <div class="related-wrap">
+    <div class="wrap">
+      <div class="section-head" style="border:none;"><div><h2>相關文章</h2></div></div>
+      <div class="blog-grid">
+        {% for a in related %}
+        {% assign rc = site.categories_order | where: "key", a.category | first %}
+        <a href="{{ a.url | relative_url }}" class="blog-card">
+          {% if rc %}<span class="tag">{{ rc.label }}</span>{% endif %}
+          <h3>{{ a.title }}</h3>
+          <p class="excerpt">{{ a.excerpt }}</p>
+          <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="post-line-cta">
+    {% assign s = site.data['site-settings'] %}
+    <div class="line-cta" style="background:var(--navy); color:#fff; border-radius:20px; padding:44px; display:grid; grid-template-columns:1fr; gap:20px;">
+      <div>
+        <p class="eyebrow" style="color:var(--teal-bright);">加入LINE好友</p>
+        <h2 style="color:#fff; font-size:22px;">領取《{{ s.line.gift_name }}》</h2>
+        <p style="color:rgba(255,255,255,.72); margin-top:10px; font-size:14.5px;">新文章發布時直接收到連結，不必等演算法推送。</p>
+      </div>
+      <a href="{{ s.line.add_friend_url }}" class="line-btn" style="width:fit-content;" target="_blank" rel="noopener">{{ s.line.hero_primary_btn_text }}</a>
+    </div>
+  </div>
+</main>
+
+{% include footer.html %}
+</body>
+</html>

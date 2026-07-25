@@ -1,0 +1,25 @@
+# ===========================================================
+# 電子書清單。未來新增電子書，直接在下面新增一筆（用 - 開頭）即可，
+# ebook.html 會自動列出每一本，不用重新設計頁面。
+# ===========================================================
+
+- id: "vol1-14zhuxing"
+  title: "紫微斗數不是算命，是演算法"
+  series: "十四主星行為邏輯全解"
+  volume: "Vol.1｜地位與權力：紫微・天府・七殺"
+  cover: "/assets/images/ebook-cover-vol1.jpg"
+  cover_alt: "《紫微斗數不是算命，是演算法》電子書封面"
+  description: "從紫微、天府、七殺這三顆主星出發，拆解「地位與權力」在命盤中的行為邏輯，回到古籍的成立條件，逐句對照現代語言的理解方式。"
+  fit_reader_points:
+    - "十四主星不只是性格形容詞，實際會如何影響人的思考與行動。"
+    - "同一顆星為什麼在不同位置與條件下，會有不同表現。"
+    - "如何不靠標籤與斷語，有系統地讀懂一張命盤。"
+  stores:
+    - name: "Google Play 圖書"
+      url: "https://pse.is/8y48y8"
+    - name: "台灣讀墨 readmoo"
+      url: "https://pse.is/8y489t"
+    - name: "Rakuten Kobo"
+      url: "https://pse.is/92cjuk"
+    - name: "Indigo.ca"
+      url: "https://pse.is/92cmbv"

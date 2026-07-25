@@ -1,0 +1,111 @@
+---
+layout: default
+permalink: /reading.html
+title: 論命
+---
+{% assign s = site.data['site-settings'] %}
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia 一對一書面論命</p>
+    <h1>當生活遇到難題，從命盤看清問題與不同選擇的可能</h1>
+    <p>紫微斗數命盤依照出生時間排定，呈現一個人這一生所帶的資源、慣性與功課。</p>
+    <p>當生活裡有些事情怎麼想都想不通，或站在不同選擇之間遲遲無法決定，我會結合你的命盤與現實處境，一起看清問題的核心、可能的發展，以及需要留意的地方，並提供我的建議作為參考。</p>
+    <p class="brand-line">我不替你決定答案，而是陪你看清不同選擇可能走向哪裡，讓你更有依據地作出自己的決定。</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>把眼前的難題拆開，看清不同選擇的可能</h2>
+        <p>你可以提出三個具體問題。我會依照你的命盤與現實處境，協助你看清問題的核心、不同方向可能的發展，以及需要留意的地方，並提供我的建議作為參考。</p>
+      </div>
+    </div>
+
+    <div class="reading-card">
+      <div class="oflabel">{{ s.reading.title }}</div>
+      <h3>{{ s.reading.subtitle }}</h3>
+      <ul class="reading-points">
+        {% for p in s.reading.points %}<li>{{ p }}</li>{% endfor %}
+      </ul>
+      <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ s.line.reading_btn_text }}</a>
+    </div>
+
+    <div class="fee-block">
+      <h3>一對一書面論命｜總額 NT$1,500</h3>
+      <div class="fee-row"><span>論命服務費</span><strong>NT$1,000</strong></div>
+      <div class="fee-row"><span>慈善捐款</span><strong>NT$500</strong></div>
+      <p class="fee-note">
+        論命服務費 NT$1,000 由 Lucia 收取，分為：確認資料與問題後，支付訂金 NT$500；PDF書面報告完成並交付後，支付尾款 NT$500。<br><br>
+        另外 NT$500，請命主以自己的名義捐贈給慈善機構。慈善機構由命主自行決定，不需要提供捐款證明，完成後告知 Lucia 即可。<br><br>
+        <strong>這筆 NT$500 捐款不經由 Lucia 代收，由命主自行選擇機構並完成捐贈。</strong>
+      </p>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div><h2>從提出問題，到收到書面分析</h2></div>
+    </div>
+
+    <ol class="step-list">
+      <li>
+        <div class="step-body">
+          <h4>提供基本資料與問題</h4>
+          <p>請提供：國曆出生年月日、出生時辰、生理性別、稱呼、想詢問的三個問題。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>確認資料與問題</h4>
+          <p>Lucia 會先確認命盤資料與問題內容。若問題需要補充背景或進一步聚焦，會先與命主確認。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>支付訂金</h4>
+          <p>資料與三個問題確認後，支付論命服務訂金 NT$500。收到訂金後，Lucia 開始排盤與撰寫報告。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>完成並交付報告</h4>
+          <p>報告製作時間約為 3–5 個工作天。完成後，Lucia 會提供完整的 PDF 書面報告。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>閱讀報告並支付尾款</h4>
+          <p>命主看完 PDF 書面報告後，再支付論命服務尾款 NT$500。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>完成慈善捐款</h4>
+          <p>另外 NT$500，由命主自行選擇慈善機構，並以自己的名義完成捐贈。不需要提供捐款證明，完成後告知 Lucia 即可。</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>針對本次內容追問</h4>
+          <p>若對本次分析仍有不清楚的地方，可於報告交付後一週內，針對本次回覆內容追問一次。</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="tip-box">
+      <p class="tip-title">問題越具體，分析越能回到你真正需要處理的事情</p>
+      <p>三個問題建議先想清楚，並盡量寫出目前的情況、已經發生的問題，以及正在考慮的不同選擇。</p>
+      <div class="tip-example">
+        <p class="bad">✕ 我的工作運好不好？</p>
+        <p class="good">✓ 我目前在原職位已經三年，近期得到另一個工作機會，但新工作的薪資較高、穩定性較低。我想了解繼續留任與轉職，分別可能面臨哪些發展及風險？</p>
+      </div>
+      <p style="margin-top:14px;">問題越聚焦，Lucia 越能針對命主的現實處境，提供具體而有用的分析。</p>
+    </div>
+  </section>
+</div>
+
+{% include line-cta.html heading="加LINE了解與預約" body="想預約書面論命，或想先問問看適不適合，都可以直接私訊LINE聊聊。" btn=s.line.reading_btn_text %}

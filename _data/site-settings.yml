@@ -1,0 +1,72 @@
+# ===========================================================
+# 全站集中設定檔
+# 以後要換LINE贈品名稱、按鈕文字、LINE網址、首頁文案或論命方案，
+# 只要改這個檔案，全站相關位置會自動同步，不用逐頁修改HTML。
+# 電子書、課程與免費影片分別由 ebooks.yml、courses.yml、free-videos.yml 管理。
+# ===========================================================
+
+brand:
+  name: "Lucia 紫微斗數"
+  tagline: "推廣・教學・論命改運"
+  logo: "/assets/images/logo.png"
+  logo_alt: "Lucia 紫微斗數品牌標誌"
+
+line:
+  add_friend_url: "https://lin.ee/P3hMk4B"
+  official_id: "@400pbrxh"
+  qr_image: "/assets/images/line-qr.jpg"
+  qr_alt: "加入Lucia命理決策師LINE官方帳號的QR Code"
+  gift_name: "14主星決策模式速查圖"
+  hero_primary_btn_text: "加LINE領14主星速查圖"
+  hero_secondary_btn_text: "先讀精選文章"
+  nav_btn_text: "加LINE好友"
+  reading_btn_text: "加LINE了解與預約"
+
+hero:
+  eyebrow: "紫微斗數 × 心理學 × 理性決策"
+  title: "人生沒有標準答案，透過紫微斗數理解自己，為下一步找到更清楚的判斷依據。"
+  lead: "透過紫微斗數的命盤線索，結合古籍的成立條件與現代學科，理解一路走來的選擇模式，辨識下一步可能的時機與風險。"
+  emotional_line: "在命運的迷霧裡，照亮你仍然擁有的選擇。"
+  quote_title: "Lucia觀點"
+  quote_lines:
+    - "命盤給的是跡象，不是判決。"
+    - "選擇與行動，才決定結果。"
+
+brand_pillars:
+  heading: "看懂自己｜看清選擇｜看見趨勢"
+  subheading: "從理解過去、處理現在，到為未來做好準備。"
+  items:
+    - key: self
+      title: "看懂自己"
+      question: "我為什麼會走到這裡？"
+      body: "不靠一顆星替你貼標籤，而是看見想法如何成為行動、行動如何形成習慣，又如何在性格、關係與選擇中反覆出現，帶你一步步走到今天。"
+    - key: choice
+      title: "看清選擇"
+      question: "眼前真正要處理的是什麼？"
+      body: "回到古籍的成立條件，再結合心理學、神經生理學與行為科學，把糾結在一起的問題逐層拆開，找出真正影響選擇的關鍵。"
+    - key: trend
+      title: "看見趨勢"
+      question: "接下來有哪些時機與風險？"
+      body: "從命盤辨識未來可能的時機、趨勢與風險，知道何時把握、何時避讓，為自己趨吉避凶。命盤給的是跡象，不是判決；選擇仍然在你手上。"
+
+latest_section:
+  lead: "從命盤出發，走進關係、工作與人生現場；每一篇，都陪你把複雜的問題看得更清楚。"
+
+# 電子書清單改放在 _data/ebooks.yml（未來新增書籍直接在該檔案新增一筆即可）
+# 課程清單改放在 _data/courses.yml（未來新增課程直接在該檔案新增一筆即可）
+# 免費入門影片清單放在 _data/free-videos.yml
+
+reading:
+  title: "一對一書面論命"
+  teaser_description: "把眼前的難題拆開，看清不同選擇的可能。"
+  subtitle: "總額 NT$1,500｜可詢問三個問題"
+  points:
+    - "PDF 書面分析"
+    - "約 3–5 個工作天完成"
+    - "論命服務費 NT$1,000"
+    - "另由命主自行捐贈慈善機構 NT$500"
+    - "報告交付後一週內，可針對本次內容追問一次"
+
+social:
+  threads: "https://www.threads.com/@lucia_fatedesigner155"
+  instagram: "https://www.instagram.com/lucia_fatedesigner155/"
