@@ -64,6 +64,9 @@
         {% for a in related %}
         {% assign rc = site.categories_order | where: "key", a.category | first %}
         <a href="{{ a.url | relative_url }}" class="blog-card">
+          {% if a.image and a.image != "" %}
+          <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+          {% endif %}
           {% if rc %}<span class="tag">{{ rc.label }}</span>{% endif %}
           <h3>{{ a.title }}</h3>
           <p class="excerpt">{{ a.excerpt }}</p>

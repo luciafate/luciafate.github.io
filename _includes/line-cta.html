@@ -4,7 +4,7 @@
 {% else %}
   {% capture ctaHeading %}領取《{{ s.line.gift_name }}》{% endcapture %}
 {% endif %}
-{% assign ctaBody = include.body | default: "一張圖快速理解14主星如何思考、做決定與採取行動。新文章發布時，也會直接收到完整閱讀連結，不必等待演算法推送。" %}
+{% assign ctaBody = include.body | default: "加入 Lucia 官方LINE，免費領取《紫微斗數小秘笈》。新文章發布或有最新課程消息時，也會直接收到通知。" %}
 {% assign ctaBtn = include.btn | default: s.line.hero_primary_btn_text %}
 <div class="line-section" id="line">
   <div class="wrap">

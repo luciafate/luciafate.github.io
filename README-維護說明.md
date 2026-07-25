@@ -123,11 +123,11 @@ line:
   add_friend_url: "https://lin.ee/P3hMk4B"     # LINE正式加好友網址
   official_id: "@400pbrxh"
   qr_image: "/assets/images/line-qr.jpg"        # QR Code圖片路徑
-  gift_name: "14主星決策模式速查圖"              # 贈品名稱
-  hero_primary_btn_text: "加LINE領14主星速查圖"  # 首屏主要按鈕文字
+  gift_name: "紫微斗數小秘笈"                    # 贈品名稱
+  hero_primary_btn_text: "加LINE領取斗數小秘笈"  # 首屏主要按鈕文字
   hero_secondary_btn_text: "先讀精選文章"
   nav_btn_text: "加LINE好友"                     # 導覽列按鈕文字
-  reading_btn_text: "加LINE了解與預約"           # 論命區按鈕文字
+  reading_btn_text: "加入 LINE 了解與預約"        # 論命區按鈕文字
 ```
 
 改這個檔案裡的文字，**全站所有用到的地方會自動同步**（導覽列、首屏、LINE行動區、論命區、每篇文章結尾），不用逐頁修改。

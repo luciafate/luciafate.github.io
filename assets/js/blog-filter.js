@@ -31,7 +31,11 @@
   function cardHtml(a){
     const catLabel = getCategoryLabel(a.category);
     const seriesLabel = a.series ? `・${a.series}${a.seriesOrder ? ' '+a.seriesOrder : ''}` : '';
+    const thumb = (a.image && a.image !== '')
+      ? `<div class="card-thumb"><img src="${escapeHtml(a.image)}" alt="${escapeHtml(a.imageAlt || a.title)}" loading="lazy"></div>`
+      : '';
     return `<a href="${escapeHtml(a.url)}" class="blog-card">
+      ${thumb}
       <span class="tag">${escapeHtml(catLabel)}</span>
       <h3>${escapeHtml(a.title)}</h3>
       <p class="excerpt">${escapeHtml(a.excerpt)}</p>

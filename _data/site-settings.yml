@@ -16,21 +16,17 @@ line:
   official_id: "@400pbrxh"
   qr_image: "/assets/images/line-qr.jpg"
   qr_alt: "加入Lucia命理決策師LINE官方帳號的QR Code"
-  gift_name: "14主星決策模式速查圖"
-  hero_primary_btn_text: "加LINE領14主星速查圖"
+  gift_name: "紫微斗數小秘笈"
+  hero_primary_btn_text: "加LINE領取斗數小秘笈"
   hero_secondary_btn_text: "先讀精選文章"
   nav_btn_text: "加LINE好友"
-  reading_btn_text: "加LINE了解與預約"
+  reading_btn_text: "加入 LINE 了解與預約"
 
 hero:
-  eyebrow: "紫微斗數 × 心理學 × 理性決策"
+  eyebrow: "紫微斗數 × 現代學科 × 理性決策"
   title: "人生沒有標準答案，透過紫微斗數理解自己，為下一步找到更清楚的判斷依據。"
-  lead: "透過紫微斗數的命盤線索，結合古籍的成立條件與現代學科，理解一路走來的選擇模式，辨識下一步可能的時機與風險。"
+  lead: "運用紫微斗數的判讀方法，參照現代學科重新理解命盤，幫助你看懂一路走來的選擇模式，辨識下一步可能的時機與風險。"
   emotional_line: "在命運的迷霧裡，照亮你仍然擁有的選擇。"
-  quote_title: "Lucia觀點"
-  quote_lines:
-    - "命盤給的是跡象，不是判決。"
-    - "選擇與行動，才決定結果。"
 
 brand_pillars:
   heading: "看懂自己｜看清選擇｜看見趨勢"
@@ -39,15 +35,15 @@ brand_pillars:
     - key: self
       title: "看懂自己"
       question: "我為什麼會走到這裡？"
-      body: "不靠一顆星替你貼標籤，而是看見想法如何成為行動、行動如何形成習慣，又如何在性格、關係與選擇中反覆出現，帶你一步步走到今天。"
+      body: "不靠一顆星替你貼標籤，而是看見想法如何成為行動、行動如何形成習慣，又如何在性格、關係與選擇中反覆出現。"
     - key: choice
       title: "看清選擇"
       question: "眼前真正要處理的是什麼？"
-      body: "回到古籍的成立條件，再結合心理學、神經生理學與行為科學，把糾結在一起的問題逐層拆開，找出真正影響選擇的關鍵。"
+      body: "回到古籍的成立條件，再結合心理學、神經生理學與行為科學等現代觀點，把糾結在一起的問題逐層拆開，看清真正影響選擇的關鍵。"
     - key: trend
       title: "看見趨勢"
       question: "接下來有哪些時機與風險？"
-      body: "從命盤辨識未來可能的時機、趨勢與風險，知道何時把握、何時避讓，為自己趨吉避凶。命盤給的是跡象，不是判決；選擇仍然在你手上。"
+      body: "辨識未來可能的時機、趨勢與風險，知道何時把握、何時避讓。命盤給的是跡象，不是判決；選擇仍然在你手上。"
 
 latest_section:
   lead: "從命盤出發，走進關係、工作與人生現場；每一篇，都陪你把複雜的問題看得更清楚。"

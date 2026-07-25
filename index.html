@@ -7,22 +7,13 @@ title: false
 
 <!-- HERO -->
 <div class="wrap hero">
-  <div>
-    <p class="eyebrow">{{ s.hero.eyebrow }}</p>
-    <h1>{{ s.hero.title }}</h1>
-    <p class="lead">{{ s.hero.lead }}</p>
-    <p class="hero-emotional">{{ s.hero.emotional_line }}</p>
-    <div class="hero-ctas">
-      <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ s.line.hero_primary_btn_text }}</a>
-      <a href="#start-here" class="btn btn-ghost">{{ s.line.hero_secondary_btn_text }}</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="quote-panel">
-      <span class="brand-mark quote-mark"><img src="{{ s.brand.logo | relative_url }}" alt="{{ s.brand.logo_alt }}"></span>
-      <p class="quote-panel-title">{{ s.hero.quote_title }}</p>
-      {% for line in s.hero.quote_lines %}<p class="quote-panel-line">{{ line }}</p>{% endfor %}
-    </div>
+  <p class="eyebrow">{{ s.hero.eyebrow }}</p>
+  <h1>{{ s.hero.title }}</h1>
+  <p class="lead">{{ s.hero.lead }}</p>
+  <p class="hero-emotional">{{ s.hero.emotional_line }}</p>
+  <div class="hero-ctas">
+    <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ s.line.hero_primary_btn_text }}</a>
+    <a href="#start-here" class="btn btn-ghost">{{ s.line.hero_secondary_btn_text }}</a>
   </div>
 </div>
 
@@ -62,7 +53,9 @@ title: false
       {% assign first = featuredPosts | first %}
       {% assign fcat = site.categories_order | where: "key", first.category | first %}
       <a href="{{ first.url | relative_url }}" class="card feature">
-        <div class="fc-mark"><span>命</span></div>
+        {% if first.image and first.image != "" %}
+        <div class="card-thumb"><img src="{{ first.image | relative_url }}" alt="{{ first.imageAlt | default: first.title }}" loading="lazy"></div>
+        {% endif %}
         <div class="fc-text">
           {% if fcat %}<span class="tag">{{ fcat.label }}</span>{% endif %}
           <h3>{{ first.title }}</h3>
@@ -76,6 +69,9 @@ title: false
         {% for a in rest %}
         {% assign acat = site.categories_order | where: "key", a.category | first %}
         <a href="{{ a.url | relative_url }}" class="card">
+          {% if a.image and a.image != "" %}
+          <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+          {% endif %}
           {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
           <h3>{{ a.title }}</h3>
           <p class="excerpt">{{ a.excerpt }}</p>
@@ -104,6 +100,9 @@ title: false
       {% for a in latest %}
       {% assign acat = site.categories_order | where: "key", a.category | first %}
       <a href="{{ a.url | relative_url }}" class="card">
+        {% if a.image and a.image != "" %}
+        <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+        {% endif %}
         {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
         <h3>{{ a.title }}</h3>
         <p class="excerpt">{{ a.excerpt }}</p>
@@ -171,4 +170,4 @@ title: false
   </section>
 </div>
 
-{% include line-cta.html %}
+{% include line-cta.html heading="想提升紫微斗數功力？這份小秘笈送給你" body="加入 Lucia 官方LINE，免費領取《紫微斗數小秘笈》。新文章發布或有最新課程消息時，也會直接收到通知。" btn="加LINE領取斗數小秘笈" %}

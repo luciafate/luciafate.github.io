@@ -41,7 +41,9 @@ title: 文章
       readingTime: {{ a.readingTime | jsonify }},
       date: {{ a.date | date: "%Y-%m-%d" | jsonify }},
       series: {{ a.series | default: "" | jsonify }},
-      seriesOrder: {{ a.seriesOrder | default: "null" }}
+      seriesOrder: {{ a.seriesOrder | default: "null" }},
+      image: {{ a.image | default: "" | jsonify }},
+      imageAlt: {{ a.imageAlt | default: a.title | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
