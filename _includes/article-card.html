@@ -1,6 +1,6 @@
 {% comment %}
   共用文章卡片元件。
-  用法：{% include article-card.html post=某篇文章物件 variant="feature" %}
+  用法：由頁面傳入文章物件；variant 可設為 feature。
   variant 可省略；省略時為一般卡片，"feature" 為首頁橫跨整列的大卡片。
   圖片判斷邏輯統一在這裡：post.image 有值才顯示 .card-thumb，否則完全不輸出圖片相關標籤。
 {% endcomment %}
