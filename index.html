@@ -48,7 +48,14 @@ title: false
       </div>
     </div>
     {% assign publishedPosts = site.posts | where: "published", true %}
-    {% assign featuredPosts = publishedPosts | where: "featured", true | sort: "featuredOrder" | limit: 3 %}
+    {% assign featuredUrls = "/articles/threads-005/|/articles/threads-039/|/articles/threads-176/" | split: "|" %}
+    {% assign featuredPosts = "" | split: "|" %}
+    {% for featuredUrl in featuredUrls %}
+      {% assign matchedPost = publishedPosts | where: "permalink", featuredUrl | first %}
+      {% if matchedPost %}
+        {% assign featuredPosts = featuredPosts | push: matchedPost %}
+      {% endif %}
+    {% endfor %}
     {% if featuredPosts.size > 0 %}
     <div class="featured-wrap">
       {% assign first = featuredPosts | first %}
@@ -64,10 +71,8 @@ title: false
           <p class="meta">{{ first.readingTime }} 分鐘閱讀{% if first.series != "" %}・{{ first.series }}{% endif %}</p>
         </div>
       </a>
-      {% assign rest = featuredPosts | offset: 1 | limit: 2 %}
-      {% if rest.size > 0 %}
       <div class="featured-pair">
-        {% for a in rest %}
+        {% for a in featuredPosts offset:1 limit:2 %}
         {% assign acat = site.categories_order | where: "key", a.category | first %}
         <a href="{{ a.url | relative_url }}" class="card">
           {% if a.image and a.image != "" %}
@@ -80,7 +85,6 @@ title: false
         </a>
         {% endfor %}
       </div>
-      {% endif %}
     </div>
     {% endif %}
   </section>
@@ -91,24 +95,36 @@ title: false
   <section>
     <div class="section-head">
       <div>
-        <h2>最新文章</h2>
-        <p>{{ s.latest_section.lead }}</p>
+        <h2>六大分類最新文章</h2>
+        <p>每個分類各一篇最新文章，讓首頁永遠維持六篇。</p>
       </div>
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
-      {% assign latest = publishedPosts | where_exp: "p", "p.featured != true" | sort: "date" | reverse | limit: 6 %}
-      {% for a in latest %}
-      {% assign acat = site.categories_order | where: "key", a.category | first %}
-      <a href="{{ a.url | relative_url }}" class="card">
-        {% if a.image and a.image != "" %}
-        <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+      {% comment %}
+      首頁固定只顯示六篇：六大分類各取一篇最新文章。
+      排除 featured=true，避免和上方三篇推薦重複。
+      {% endcomment %}
+      {% for c in site.categories_order %}
+        {% assign categoryPosts = publishedPosts | where: "category", c.key | sort: "date" | reverse %}
+        {% assign a = false %}
+        {% for candidate in categoryPosts %}
+          {% unless featuredUrls contains candidate.permalink %}
+            {% assign a = candidate %}
+            {% break %}
+          {% endunless %}
+        {% endfor %}
+        {% if a %}
+        <a href="{{ a.url | relative_url }}" class="card">
+          {% if a.image and a.image != "" %}
+          <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title }}" loading="lazy"></div>
+          {% endif %}
+          <span class="tag">{{ c.label }}</span>
+          <h3>{{ a.title }}</h3>
+          <p class="excerpt">{{ a.excerpt }}</p>
+          <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
+        </a>
         {% endif %}
-        {% if acat %}<span class="tag">{{ acat.label }}</span>{% endif %}
-        <h3>{{ a.title }}</h3>
-        <p class="excerpt">{{ a.excerpt }}</p>
-        <p class="meta">{{ a.readingTime }} 分鐘閱讀</p>
-      </a>
       {% endfor %}
     </div>
   </section>
