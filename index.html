@@ -78,15 +78,19 @@ title: false
     <div class="grid-articles">
       {% assign featuredUrls = "/articles/threads-005/|/articles/threads-039/|/articles/threads-176/" | split: "|" %}
       {% for c in site.categories_order %}
-        {% assign catPosts = publishedPosts | where: "category", c.key %}
         {% assign picked = nil %}
-        {% for cp in catPosts %}
-          {% assign candidateUrl = cp.url | default: cp.permalink %}
-          {% unless featuredUrls contains candidateUrl %}
-            {% assign picked = cp %}
-            {% break %}
-          {% endunless %}
-        {% endfor %}
+        {% if c.key == "learn" %}
+          {% assign picked = publishedPosts | where: "permalink", "/articles/threads-021/" | first %}
+        {% else %}
+          {% assign catPosts = publishedPosts | where: "category", c.key %}
+          {% for cp in catPosts %}
+            {% assign candidateUrl = cp.url | default: cp.permalink %}
+            {% unless featuredUrls contains candidateUrl %}
+              {% assign picked = cp %}
+              {% break %}
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
         {% if picked %}{% include article-card.html post=picked %}{% endif %}
       {% endfor %}
     </div>
