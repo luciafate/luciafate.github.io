@@ -21,6 +21,22 @@ title: 文章
     </div>
 
     <div class="pills" id="pillBar"></div>
+
+    <section class="category-directory" id="categoryDirectory" aria-live="polite" hidden>
+      <div class="category-directory-head">
+        <div>
+          <p class="eyebrow">分類文章目錄</p>
+          <h2 id="directoryTitle"></h2>
+          <p id="directoryLead"></p>
+        </div>
+        <span class="category-directory-count" id="directoryCount"></span>
+      </div>
+      <ol class="category-directory-list" id="directoryList"></ol>
+    </section>
+
+    <div class="article-results-head" id="articleResultsHead">
+      <h2>文章列表</h2>
+    </div>
     <div class="blog-grid" id="blogGrid" aria-live="polite"></div>
     <div id="emptyState" class="empty-state" style="display:none;">這個分類目前還沒有文章，先看看其他分類吧。</div>
     <div class="load-more-wrap" id="loadMoreWrap">
@@ -31,8 +47,9 @@ title: 文章
 
 <script>
   window.CATEGORIES = {{ site.categories_order | jsonify }};
+  {% assign blogPosts = site.posts | where_exp: "p", "p.excludeFromBlog != true" %}
   window.ARTICLES = [
-    {% for a in site.posts %}
+    {% for a in blogPosts %}
     {
       title: {{ a.title | jsonify }},
       url: {{ a.url | relative_url | jsonify }},

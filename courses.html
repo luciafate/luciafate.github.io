@@ -13,6 +13,8 @@ title: 線上課程
   </div>
 </div>
 
+{% assign free_videos = site.data['free-videos'] %}
+{% if free_videos and free_videos.size > 0 %}
 <div class="wrap">
   <section>
     <div class="section-head">
@@ -50,6 +52,37 @@ title: 線上課程
     </div>
   </section>
 </div>
+
+{% endif %}
+
+{% assign course_lessons = site.posts | where: "courseLesson", true | sort: "courseLessonOrder" %}
+{% if course_lessons and course_lessons.size > 0 %}
+<div class="wrap">
+  <section class="course-series-section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">免費入門課</p>
+        <h2>如何看懂自己的紫微斗數命盤</h2>
+        <p>這組內容原本以系列文章呈現，現在統一移到線上課程頁，依序帶你認識紫微斗數、未來跡象、天干地支、宮位與星曜體系，再進入紫微星的實際理解。</p>
+      </div>
+    </div>
+    <ol class="course-lesson-list">
+      {% for lesson in course_lessons %}
+      <li>
+        <a href="{{ lesson.url | relative_url }}">
+          <span class="course-lesson-number">{{ lesson.courseLessonOrder | default: forloop.index }}</span>
+          <span class="course-lesson-text">
+            <strong>{{ lesson.title }}</strong>
+            <span>{{ lesson.readingTime }} 分鐘閱讀</span>
+          </span>
+          <span class="course-lesson-arrow">進入課程 →</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</div>
+{% endif %}
 
 <div class="wrap">
   <section>

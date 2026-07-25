@@ -3,7 +3,7 @@
 <head>
 {% include head.html %}
 </head>
-<body>
+<body class="protected-article">
 {% include header.html %}
 
 {% assign catObj = site.categories_order | where: "key", page.category | first %}
@@ -67,7 +67,8 @@
     {% if page.next %}<a href="{{ page.next.url | relative_url }}" style="text-align:right;">{{ page.next.title }} →</a>{% endif %}
   </div>
 
-  {% assign related = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" | limit: 3 %}
+  {% assign categoryRelated = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" %}
+  {% assign related = categoryRelated | where_exp: "p", "p.excludeFromBlog != true" | limit: 3 %}
   {% if related.size > 0 %}
   <div class="related-wrap">
     <div class="wrap">
@@ -104,5 +105,22 @@
 </main>
 
 {% include footer.html %}
+<script>
+(function(){
+  const article = document.querySelector('.post-body');
+  if(!article) return;
+  ['copy','cut','contextmenu','dragstart','selectstart'].forEach(function(eventName){
+    article.addEventListener(eventName, function(event){ event.preventDefault(); });
+  });
+  document.addEventListener('keydown', function(event){
+    const key = String(event.key || '').toLowerCase();
+    if((event.ctrlKey || event.metaKey) && ['a','c','p','s','u'].includes(key)){
+      const active = document.activeElement;
+      const editable = active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.isContentEditable);
+      if(!editable){ event.preventDefault(); }
+    }
+  });
+})();
+</script>
 </body>
 </html>

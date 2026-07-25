@@ -4,7 +4,8 @@ permalink: /
 title: false
 ---
 {% assign s = site.data['site-settings'] %}
-{% assign publishedPosts = site.posts | where: "published", true %}
+{% assign allPublishedPosts = site.posts | where: "published", true %}
+{% assign publishedPosts = allPublishedPosts | where_exp: "p", "p.excludeFromBlog != true" %}
 
 <!-- HERO -->
 <div class="wrap hero home-hero">

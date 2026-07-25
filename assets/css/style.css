@@ -551,3 +551,76 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 @media(max-width:380px){
   .mobile-category-section .cat-grid{grid-template-columns:1fr;}
 }
+
+
+/* ===========================================================
+   2026-07-25：分類文章目錄、免費入門課、文章內容保護
+   =========================================================== */
+.category-directory{
+  margin:30px 0 42px;
+  padding:30px 32px;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+.category-directory[hidden]{display:none;}
+.category-directory-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;padding-bottom:22px;margin-bottom:8px;border-bottom:1px solid var(--line);}
+.category-directory-head h2{font-size:24px;margin:4px 0 8px;}
+.category-directory-head p:not(.eyebrow){font-size:14px;color:var(--ink);opacity:.72;max-width:60ch;margin:0;}
+.category-directory-count{flex:none;background:var(--navy);color:#fff;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;}
+.category-directory-list{list-style:none;padding:14px 0 0;margin:0;columns:2;column-gap:34px;}
+.category-directory-list li{break-inside:avoid;margin:0 0 4px;}
+.category-directory-list a{display:flex;gap:12px;padding:11px 8px;border-radius:10px;align-items:flex-start;}
+.category-directory-list a:hover{background:var(--teal-pale);}
+.directory-index{flex:none;font-family:'Noto Serif TC',serif;color:var(--teal-deep);font-weight:900;font-size:12px;padding-top:2px;}
+.directory-item-main{display:flex;flex-direction:column;gap:4px;min-width:0;}
+.directory-item-main strong{font-size:13.5px;line-height:1.55;color:var(--navy);}
+.directory-item-main small{font-size:11.5px;color:var(--ink);opacity:.55;}
+.article-results-head{display:flex;align-items:center;justify-content:space-between;margin:38px 0 18px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+.article-results-head h2{font-size:22px;margin:0;}
+
+.course-series-section{padding-bottom:28px;}
+.course-lesson-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--white);}
+.course-lesson-list li+li{border-top:1px solid var(--line);}
+.course-lesson-list a{display:grid;grid-template-columns:46px 1fr auto;gap:16px;align-items:center;padding:20px 24px;}
+.course-lesson-list a:hover{background:var(--teal-pale);}
+.course-lesson-number{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--teal-bright);font-family:'Noto Serif TC',serif;font-weight:900;}
+.course-lesson-text{display:flex;flex-direction:column;gap:5px;min-width:0;}
+.course-lesson-text strong{font-size:15px;line-height:1.55;color:var(--navy);}
+.course-lesson-text span{font-size:12px;color:var(--ink);opacity:.55;}
+.course-lesson-arrow{font-size:12.5px;font-weight:800;color:var(--teal-deep);white-space:nowrap;}
+
+/* 文章內容保護：降低直接全選、複製與列印的便利性 */
+.protected-article .post-body{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+}
+@media print{
+  .protected-article body,
+  .protected-article main,
+  .protected-article .post-body,
+  .protected-article .post-header,
+  .protected-article .post-hero-img,
+  .protected-article .related-wrap,
+  .protected-article .post-line-cta{display:none !important;}
+  .protected-article::before{
+    content:'本文章內容不提供列印。';
+    display:block;
+    padding:40px;
+    font-size:18px;
+    color:#071952;
+  }
+}
+
+@media(max-width:700px){
+  .category-directory{padding:22px 18px;margin:22px 0 30px;}
+  .category-directory-head{display:block;padding-bottom:16px;}
+  .category-directory-count{display:inline-block;margin-top:12px;}
+  .category-directory-list{columns:1;padding-top:8px;}
+  .category-directory-list a{padding:10px 4px;}
+  .article-results-head{margin-top:28px;}
+  .course-lesson-list a{grid-template-columns:38px 1fr;padding:16px;gap:12px;}
+  .course-lesson-number{width:34px;height:34px;}
+  .course-lesson-arrow{grid-column:2;margin-top:2px;}
+}

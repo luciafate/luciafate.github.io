@@ -6,7 +6,13 @@
   const emptyState = document.getElementById('emptyState');
   const loadMoreWrap = document.getElementById('loadMoreWrap');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
-  if(!pillBar || !blogGrid || !emptyState || !loadMoreWrap || !loadMoreBtn) return;
+  const categoryDirectory = document.getElementById('categoryDirectory');
+  const directoryTitle = document.getElementById('directoryTitle');
+  const directoryLead = document.getElementById('directoryLead');
+  const directoryCount = document.getElementById('directoryCount');
+  const directoryList = document.getElementById('directoryList');
+  const articleResultsHead = document.getElementById('articleResultsHead');
+  if(!pillBar || !blogGrid || !emptyState || !loadMoreWrap || !loadMoreBtn || !categoryDirectory || !directoryList) return;
 
   function escapeHtml(value){
     return String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
@@ -43,6 +49,30 @@
     </a>`;
   }
 
+  function renderDirectory(filtered){
+    if(currentCat === 'all'){
+      categoryDirectory.hidden = true;
+      if(articleResultsHead) articleResultsHead.querySelector('h2').textContent = '全部文章';
+      return;
+    }
+    const cat = categoryList.find(c => c.key === currentCat);
+    categoryDirectory.hidden = false;
+    directoryTitle.textContent = cat ? cat.label : currentCat;
+    directoryLead.textContent = cat ? cat.tagline : '';
+    directoryCount.textContent = `${filtered.length} 篇`;
+    directoryList.innerHTML = filtered.map((a, index) => `
+      <li>
+        <a href="${escapeHtml(a.url)}">
+          <span class="directory-index">${String(index + 1).padStart(2,'0')}</span>
+          <span class="directory-item-main">
+            <strong>${escapeHtml(a.title)}</strong>
+            <small>${escapeHtml(a.date)}・${escapeHtml(a.readingTime)} 分鐘閱讀</small>
+          </span>
+        </a>
+      </li>`).join('');
+    if(articleResultsHead) articleResultsHead.querySelector('h2').textContent = `${cat ? cat.label : currentCat}｜文章內容`;
+  }
+
   function render(){
     pillBar.innerHTML = pillBarHtml();
     const source = currentCat === 'all' ? [...articleList] : articleList.filter(a => a.category === currentCat);
@@ -56,6 +86,7 @@
       return String(b.date).localeCompare(String(a.date));
     });
     const shown = filtered.slice(0, visibleCount);
+    renderDirectory(filtered);
 
     blogGrid.innerHTML = shown.map(cardHtml).join('');
     emptyState.style.display = filtered.length ? 'none' : 'block';
@@ -80,7 +111,7 @@
     else url.searchParams.set('cat', currentCat);
     history.replaceState(null, '', url);
     render();
-    if(shouldScroll) blogGrid.scrollIntoView({behavior:'smooth', block:'start'});
+    if(shouldScroll) (currentCat === 'all' ? blogGrid : categoryDirectory).scrollIntoView({behavior:'smooth', block:'start'});
   }
 
   document.querySelectorAll('.cat-card-btn').forEach(btn=>{
