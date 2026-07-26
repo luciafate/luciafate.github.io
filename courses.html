@@ -13,47 +13,30 @@ title: 線上課程
   </div>
 </div>
 
-{% assign free_videos = site.data['free-videos'] %}
-{% if free_videos and free_videos.size > 0 %}
 <div class="wrap">
-  <section>
+  <section class="free-video-section">
     <div class="section-head">
       <div>
         <h2>免費短課｜先從命盤看懂自己</h2>
-        <p>透過短影片，從十四主星與宮位的基本觀念開始，認識命盤如何呈現一個人的思考、選擇與行動模式。星曜不是固定的性格標籤，而是人在不同情境中可能展現的作用方式；宮位則是人生中的環境與場域，也反映一個人面對該領域人事物時的態度、價值觀、行動方式與能力。你不需要先學會解整張命盤，也可以從一個概念、一顆星開始，更具體地理解自己。</p>
+        <p>先從前三堂短課建立紫微斗數、未來跡象與天干地支的基本概念。影片可直接在頁面播放，不必跳離網站。</p>
       </div>
     </div>
-
-    <div class="video-grid">
-      {% for v in site.data['free-videos'] %}
-      <article class="video-card">
-        {% if v.url and v.url != "" %}
-        <a class="video-thumb video-thumb-link" href="{{ v.url }}" target="_blank" rel="noopener" aria-label="觀看：{{ v.title }}">
-          {% if v.thumbnail and v.thumbnail != "" %}<img src="{{ v.thumbnail | relative_url }}" alt="{{ v.title }}影片縮圖" loading="lazy">{% endif %}
-          <span class="play" aria-hidden="true">▶</span>
-        </a>
-        {% else %}
-        <div class="video-thumb">
-          {% if v.thumbnail and v.thumbnail != "" %}<img src="{{ v.thumbnail | relative_url }}" alt="{{ v.title }}影片縮圖" loading="lazy">{% endif %}
-          <span class="play" aria-hidden="true">▶</span>
-        </div>
-        {% endif %}
-        <div class="vinfo">
-          <h3>{{ v.title }}</h3>
-          <p class="vsummary">{{ v.summary }}</p>
-          {% if v.url and v.url != "" %}
-            <a class="vlink" href="{{ v.url }}" target="_blank" rel="noopener">觀看影片 →</a>
-          {% else %}
-            <p class="vpending">影片連結準備中</p>
-          {% endif %}
-        </div>
+    <div class="video-grid video-grid-embedded">
+      <article class="video-card video-card-embedded">
+        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE" title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3><p class="vsummary">先建立紫微斗數的基本概念，理解命盤不是單純的性格標籤。</p><a class="vlink" href="{{ '/articles/threads-083/' | relative_url }}">閱讀課程文字 →</a></div>
       </article>
-      {% endfor %}
+      <article class="video-card video-card-embedded">
+        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/XZHyiy2ttcU" title="如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？</h3><p class="vsummary">理解命盤如何從條件、時間與變化中呈現未來可能出現的跡象。</p><a class="vlink" href="{{ '/articles/threads-081/' | relative_url }}">閱讀課程文字 →</a></div>
+      </article>
+      <article class="video-card video-card-embedded">
+        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/nNarzNBhqfw" title="如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言</h3><p class="vsummary">從天干地支開始，理解紫微斗數如何描述時間、空間與命盤結構。</p><a class="vlink" href="{{ '/articles/threads-079/' | relative_url }}">閱讀課程文字 →</a></div>
+      </article>
     </div>
   </section>
 </div>
-
-{% endif %}
 
 {% assign course_lessons = site.posts | where: "courseLesson", true | sort: "courseLessonOrder" %}
 {% if course_lessons and course_lessons.size > 0 %}
