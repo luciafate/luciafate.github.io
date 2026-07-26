@@ -13,6 +13,7 @@
         <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} class="active" aria-current="page"{% endif %}>電子書</a></li>
         <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} class="active" aria-current="page"{% endif %}>線上課程</a></li>
         <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} class="active" aria-current="page"{% endif %}>論命</a></li>
+        <li><a href="{{ '/search.html' | relative_url }}" class="nav-search-link{% if page.url == '/search.html' %} active{% endif %}"{% if page.url == '/search.html' %} aria-current="page"{% endif %}><span aria-hidden="true">⌕</span> 搜尋</a></li>
       </ul>
 
       <a href="{{ s.line.add_friend_url }}" class="nav-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
@@ -30,6 +31,7 @@
       <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} aria-current="page"{% endif %}>電子書</a></li>
       <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} aria-current="page"{% endif %}>線上課程</a></li>
       <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} aria-current="page"{% endif %}>論命</a></li>
+      <li><a href="{{ '/search.html' | relative_url }}"{% if page.url == '/search.html' %} aria-current="page"{% endif %}>搜尋文章</a></li>
     </ul>
     <a href="{{ s.line.add_friend_url }}" class="line-btn mobile-menu-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
   </div>

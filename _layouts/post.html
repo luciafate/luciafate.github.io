@@ -68,7 +68,7 @@
   </div>
 
   {% assign categoryRelated = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" %}
-  {% assign related = categoryRelated | where_exp: "p", "p.excludeFromBlog != true" | limit: 3 %}
+  {% assign related = categoryRelated | where_exp: "p", "p.excludeFromBlog != true and p.url != '/articles/tanlang-taohua/' and p.permalink != '/articles/tanlang-taohua/'" | limit: 3 %}
   {% if related.size > 0 %}
   <div class="related-wrap">
     <div class="wrap">

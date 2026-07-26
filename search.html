@@ -1,0 +1,65 @@
+---
+layout: default
+title: "搜尋文章"
+permalink: /search.html
+---
+<section class="search-page">
+  <div class="wrap search-wrap">
+    <p class="eyebrow">搜尋 Lucia 的文章</p>
+    <h1>找你正在思考的問題</h1>
+    <p class="search-intro">可搜尋文章標題、摘要與內文關鍵字，例如：貪狼、財帛宮、工作、感情、睡眠。</p>
+
+    <label class="search-box" for="siteSearchInput">
+      <span aria-hidden="true">⌕</span>
+      <input id="siteSearchInput" type="search" placeholder="輸入關鍵字" autocomplete="off" autofocus>
+    </label>
+    <p id="searchStatus" class="search-status" aria-live="polite">輸入關鍵字後開始搜尋。</p>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const posts = [
+  {% assign searchable_posts = site.posts | where: "published", true %}
+  {% for post in searchable_posts %}
+    {% unless post.excludeFromBlog == true or post.url == '/articles/tanlang-taohua/' %}
+    {
+      title: {{ post.title | jsonify }},
+      url: {{ post.url | relative_url | jsonify }},
+      excerpt: {{ post.excerpt | default: '' | strip_html | strip_newlines | jsonify }},
+      content: {{ post.content | strip_html | strip_newlines | jsonify }},
+      category: {{ post.category | jsonify }},
+      date: {{ post.date | date: "%Y-%m-%d" | jsonify }}
+    },
+    {% endunless %}
+  {% endfor %}
+  ];
+  const labels = {
+    learn: '學懂紫微', relationship: '感情與關係', career: '職涯與財富',
+    wellbeing: '身心與成長', destiny: '命運與選擇', culture: '人文與異聞'
+  };
+  const input = document.getElementById('siteSearchInput');
+  const status = document.getElementById('searchStatus');
+  const results = document.getElementById('searchResults');
+  const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+  const normalize = (value) => String(value || '').toLocaleLowerCase('zh-Hant').replace(/\s+/g,'');
+  function render(){
+    const raw = input.value.trim();
+    const q = normalize(raw);
+    results.innerHTML = '';
+    if(!q){ status.textContent = '輸入關鍵字後開始搜尋。'; return; }
+    const matches = posts.filter(post => normalize(post.title + post.excerpt + post.content).includes(q)).slice(0,60);
+    status.textContent = matches.length ? `找到 ${matches.length} 篇相關文章` : '沒有找到符合的文章，請換一個關鍵字。';
+    results.innerHTML = matches.map(post => `
+      <a class="search-result-card" href="${post.url}">
+        <div class="search-result-meta"><span>${escapeHtml(labels[post.category] || '文章')}</span><time>${escapeHtml(post.date)}</time></div>
+        <h2>${escapeHtml(post.title)}</h2>
+        <p>${escapeHtml(post.excerpt)}</p>
+      </a>`).join('');
+  }
+  input.addEventListener('input', render);
+  const params = new URLSearchParams(location.search);
+  if(params.get('q')){ input.value = params.get('q'); render(); }
+})();
+</script>
