@@ -67,14 +67,17 @@
     {% if page.next %}<a href="{{ page.next.url | relative_url }}" style="text-align:right;">{{ page.next.title }} →</a>{% endif %}
   </div>
 
-  {% assign categoryRelated = site.posts | where: "category", page.category | where_exp: "p", "p.url != page.url" %}
-  {% assign related = categoryRelated | where_exp: "p", "p.excludeFromBlog != true and p.url != '/articles/tanlang-taohua/' and p.permalink != '/articles/tanlang-taohua/'" | limit: 3 %}
+  {% assign categoryRelated = site.posts | where: "category", page.category %}
+  {% assign related = categoryRelated | where_exp: "p", "p.url != page.url" %}
+  {% assign related = related | where_exp: "p", "p.excludeFromBlog != true" %}
+  {% assign related = related | where_exp: "p", "p.url != '/articles/tanlang-taohua/'" %}
+  {% assign related = related | where_exp: "p", "p.permalink != '/articles/tanlang-taohua/'" %}
   {% if related.size > 0 %}
   <div class="related-wrap">
     <div class="wrap">
       <div class="section-head" style="border:none;"><div><h2>相關文章</h2></div></div>
       <div class="blog-grid">
-        {% for a in related %}
+        {% for a in related limit:3 %}
         {% assign rc = site.categories_order | where: "key", a.category | first %}
         <a href="{{ a.url | relative_url }}" class="blog-card">
           {% if a.image and a.image != "" %}
