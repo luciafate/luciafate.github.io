@@ -1,12 +1,19 @@
-本修正包只包含 3 個實際變更：
-1. 新增文章：_posts/2026-08-01-toxic-people-part-1.md
-2. 新增文章圖片：assets/images/posts/toxic-people-part-1.jpg
-3. 移除電子書頁面的 Indigo.ca（CA）失效連結：_data/ebooks.yml
+Lucia 網站｜新文章〈你的業障在哪？〉上架包
+
+本包只新增：
+1. _posts/2026-08-18-your-karma.md
+2. assets/images/posts/your-karma-dala.png
+3. assets/images/posts/sadhguru-karma-book.webp
 
 使用方式：
-將 ZIP 解壓後，把 _posts、assets、_data 三個資料夾複製到 GitHub 專案根目錄，
-Windows 詢問時選擇合併／取代同名檔案。
-GitHub Desktop 應顯示 3 changed files。
+- 解壓後，把 _posts 與 assets 兩個資料夾複製到 luciafate.github.io 專案根目錄。
+- Windows 詢問時選「合併／取代目的地中的檔案」。
+- GitHub Desktop 預計顯示 3 個新增／變更檔案。
+- Commit 後 Push origin。
 
-建議 Commit 訊息：
-新增有毒的人（上）並移除電子書失效CA連結
+文章網址：
+https://luciafate.github.io/articles/your-karma/
+
+文章分類：命運與選擇（fate）
+主圖：陀螺圖
+文內配圖：《業力》書封
