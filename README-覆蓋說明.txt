@@ -1,2 +1,21 @@
-只需覆蓋 _posts/2026-09-28-tianxiang-seal.md
-固定網址不變：https://luciafate.github.io/articles/tianxiang-seal/
+這次只修改電子書頁文字，不碰試讀器、不碰其他網站內容。
+
+修改內容：
+1. 刪除 Vol.1「你怎麼站位、掌局、出手？」那句。
+2. Vol.1 紅框改成三個真正的書籍賣點：
+   - 字源、化氣、古籍推導
+   - 同宮／對宮／星系結構
+   - 位置、資源、風險與停損的真實決策
+3. Vol.2 紅框改成：
+   - 五行、化氣與文化脈絡重讀六顆桃花星
+   - 夫妻宮／子女宮／僕役宮三種關係場域
+   - 期待、支持、責任、界線與退場
+4. 紅框標題統一改成「你會在這本書裡看懂什麼？」
+
+覆蓋檔案：
+ebook.html
+_data/ebooks.yml
+
+使用方式：
+解壓縮後，把 ebook.html 與 _data 資料夾複製到 luciafate.github.io 根目錄，
+選擇覆蓋，再 GitHub Desktop Commit → Push origin。
