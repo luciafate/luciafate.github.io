@@ -4,8 +4,7 @@ permalink: /
 title: false
 ---
 {% assign s = site.data['site-settings'] %}
-{% assign allPublishedPosts = site.posts | where: "published", true %}
-{% assign publishedPosts = allPublishedPosts | where_exp: "p", "p.excludeFromBlog != true" %}
+{% assign publishedPosts = site.posts | where: "published", true %}
 
 <!-- HERO -->
 <div class="wrap hero home-hero">
@@ -54,11 +53,11 @@ title: false
       </div>
     </div>
     <div class="featured-wrap">
-      {% if pin1 %}{% include article-card.html post=pin1 variant="feature" image="/assets/media/threads/17967140496077442.webp" %}{% endif %}
+      {% if pin1 %}{% include article-card.html post=pin1 variant="feature" %}{% endif %}
       {% if pin2 or pin3 %}
       <div class="featured-pair">
-        {% if pin2 %}{% include article-card.html post=pin2 image="/assets/media/threads/18143114779412612.jpg" %}{% endif %}
-        {% if pin3 %}{% include article-card.html post=pin3 image="/assets/media/threads/18076107124895296.jpg" %}{% endif %}
+        {% if pin2 %}{% include article-card.html post=pin2 %}{% endif %}
+        {% if pin3 %}{% include article-card.html post=pin3 %}{% endif %}
       </div>
       {% endif %}
     </div>
@@ -76,13 +75,11 @@ title: false
       <a href="{{ '/blog.html' | relative_url }}" class="see-all">看全部文章 →</a>
     </div>
     <div class="grid-articles">
-      {% assign featuredUrls = "/articles/threads-005/|/articles/threads-039/|/articles/threads-176/" | split: "|" %}
       {% for c in site.categories_order %}
-        {% assign picked = nil %}
         {% assign catPosts = publishedPosts | where: "category", c.key %}
+        {% assign picked = nil %}
         {% for cp in catPosts %}
-          {% assign candidateUrl = cp.url | default: cp.permalink %}
-          {% unless featuredUrls contains candidateUrl %}
+          {% unless cp.permalink == pin1.permalink or cp.permalink == pin2.permalink or cp.permalink == pin3.permalink %}
             {% assign picked = cp %}
             {% break %}
           {% endunless %}
@@ -123,14 +120,17 @@ title: false
     </div>
 
     {% assign firstBook = site.data.ebooks | first %}
+    {% assign secondBook = site.data.ebooks | slice: 1, 1 | first %}
     <a href="{{ '/ebook.html' | relative_url }}" class="ebook-feature" id="ebook">
-      <div class="ebook-cover"><img src="{{ firstBook.cover | relative_url }}" alt="{{ firstBook.cover_alt }}"></div>
+      <div class="ebook-cover">
+        <img src="{{ firstBook.cover | relative_url }}" alt="{{ firstBook.cover_alt }}">
+      </div>
       <div class="ebook-info">
-        <div class="oflabel">電子書</div>
-        <h3>{{ firstBook.title }}</h3>
-        <p class="ebook-series">系列副標：{{ firstBook.series }}</p>
-        <p class="ebook-volume">{{ firstBook.volume }}</p>
-        <span class="link">前往電子書頁 →</span>
+        <div class="oflabel">電子書系列</div>
+        <h3>紫微斗數不是算命，是演算法</h3>
+        <p class="ebook-series">十四主星行為邏輯系列</p>
+        <p class="ebook-volume">Vol.1 地位與權力｜Vol.2 情感與連結</p>
+        <span class="link">線上試讀・購買電子書 →</span>
       </div>
     </a>
 

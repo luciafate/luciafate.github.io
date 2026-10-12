@@ -1,6 +1,5 @@
 # ===========================================================
-# 電子書清單。未來新增電子書，直接在下面新增一筆（用 - 開頭）即可，
-# ebook.html 會自動列出每一本，不用重新設計頁面。
+# 電子書清單。ebook.html 會依這份資料自動列出每一本。
 # ===========================================================
 
 - id: "vol1-14zhuxing"
@@ -8,20 +7,51 @@
   series: "十四主星行為邏輯全解"
   volume: "Vol.1｜地位與權力：紫微・天府・七殺"
   cover: "/assets/images/ebook-cover-vol1.jpg"
-  cover_alt: "《紫微斗數不是算命，是演算法》電子書封面"
-  description: "從紫微、天府、七殺這三顆主星出發，拆解「地位與權力」在命盤中的行為邏輯，回到古籍的成立條件，逐句對照現代語言的理解方式。"
+  cover_alt: "《紫微斗數不是算命，是演算法 Vol.1 地位與權力》電子書封面"
+  positioning: "你怎麼站位、掌局、出手？"
+  description: "從紫微、天府、七殺三顆主星出發，拆解位置、資源、主控與決斷背後的行為邏輯。"
+  preview_url: "/preview/vol1/"
+  preview_label: "線上試讀 Vol.1"
   video: "/assets/videos/ebook-vol1-intro.mp4"
-  video_caption: "如果你想先了解這本電子書的內容與閱讀方向，可以先看影片介紹。也可以到讀墨平台試讀，再決定是否購買。"
-  trial_read_url: "https://pse.is/8y489t"
-  trial_read_label: "前往讀墨試讀"
+  video_caption: "想先了解第一冊的內容與閱讀方向，可以先看影片介紹；也可以直接進入官網線上試讀。"
   fit_reader_points:
-    - "十四主星不只是性格形容詞，實際會如何影響人的思考與行動。"
-    - "同一顆星為什麼在不同位置與條件下，會有不同表現。"
-    - "如何不靠標籤與斷語，有系統地讀懂一張命盤。"
+    - "想理解紫微的「尊」、天府的「權」、七殺的「殺」，而不是只背性格標籤。"
+    - "想看懂人在位置、資源、壓力與決斷面前，為什麼會做出不同選擇。"
+    - "已學過紫微斗數，但想從底層邏輯重新建立可推演的閱讀框架。"
   stores:
     - name: "Google Play 圖書"
       url: "https://pse.is/8y48y8"
-    - name: "台灣讀墨 readmoo"
+      status: "available"
+    - name: "台灣讀墨 Readmoo"
       url: "https://pse.is/8y489t"
+      status: "available"
     - name: "Rakuten Kobo"
       url: "https://pse.is/92cjuk"
+      status: "available"
+
+- id: "vol2-peach-stars"
+  title: "紫微斗數不是算命，是演算法"
+  series: "Vol.2 情感與連結：六顆桃花星"
+  volume: "從伴侶、親子到友情：看懂你如何走向另一個人"
+  cover: "/assets/images/ebook-cover-vol2.png"
+  cover_alt: "《紫微斗數不是算命，是演算法 Vol.2 情感與連結：六顆桃花星》電子書封面"
+  positioning: "你怎麼靠近一個人，又不失去自己？"
+  description: "從太陰、天同、天相、破軍、貪狼、巨門六顆水性桃花星，拆解伴侶、親子與友情裡的靠近、需要、支持、界線與連結。"
+  preview_url: "/preview/vol2/"
+  preview_label: "線上試讀 Vol.2"
+  video: ""
+  video_caption: ""
+  fit_reader_points:
+    - "想理解自己在伴侶、親子與友情中，如何建立連結與表達需要。"
+    - "想知道同一顆桃花星落在夫妻宮、子女宮、僕役宮時，為什麼會呈現不同關係模式。"
+    - "想把桃花星從「感情好不好」的標籤，重新讀成可理解、可調整的互動邏輯。"
+  stores:
+    - name: "台灣讀墨 Readmoo"
+      url: "https://readmoo.com/book/210501725000101"
+      status: "available"
+    - name: "Rakuten Kobo"
+      url: "https://www.kobo.com/tw/zh/ebook/vol-2-86"
+      status: "available"
+    - name: "Google Play Books｜即將上架"
+      url: ""
+      status: "soon"

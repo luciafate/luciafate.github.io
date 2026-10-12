@@ -6,9 +6,9 @@ title: 電子書
 <div class="wrap">
   <div class="page-header">
     <p class="eyebrow">Lucia 電子書</p>
-    <h1>讀懂命盤，也讀懂自己一路走來的邏輯</h1>
-    <p>從十四主星、性格、關係、工作、財富到人生選擇，Lucia 回到古籍的成立條件，結合現代學科與生活經驗，把複雜的紫微斗數，寫成能讀懂、能思考，也能真正帶回生活使用的書。</p>
-    <p class="brand-line">不是替你決定人生，而是讓你更清楚自己正在怎麼選。</p>
+    <h1>紫微斗數不是算命，是演算法</h1>
+    <p>十四主星行為邏輯系列，不背誦星曜標籤，而是回到每顆星真正的行為結構：人在什麼位置、面對什麼壓力、如何做選擇，又會承受什麼後果。</p>
+    <p class="brand-line"><strong>Vol.1 看位置、資源與決斷；Vol.2 看情感、關係與連結。</strong></p>
   </div>
 </div>
 
@@ -29,7 +29,12 @@ title: 電子書
 
 <div class="wrap">
   <section>
-    <div class="section-head"><div><h2>{% if site.data.ebooks.size > 1 %}全部電子書{% else %}從這一本開始{% endif %}</h2></div></div>
+    <div class="section-head">
+      <div>
+        <h2>系列電子書</h2>
+        <p>先試讀，再選擇你習慣的平台購買完整版。</p>
+      </div>
+    </div>
 
     {% for book in site.data.ebooks %}
     <div class="ebook-block{% if book.video and book.video != '' %} has-video{% endif %}">
@@ -39,9 +44,16 @@ title: 電子書
         </div>
         <div class="ebook-detail-info">
           <h3>{{ book.title }}</h3>
-          <p class="ebook-series">系列副標：{{ book.series }}</p>
+          <p class="ebook-series">{{ book.series }}</p>
           <p class="ebook-volume">{{ book.volume }}</p>
+          {% if book.positioning %}<p class="brand-line"><strong>{{ book.positioning }}</strong></p>{% endif %}
           <p class="ebook-desc">{{ book.description }}</p>
+
+          {% if book.preview_url and book.preview_url != "" %}
+          <div style="margin:18px 0 22px;">
+            <a href="{{ book.preview_url | relative_url }}" class="btn btn-primary">{{ book.preview_label | default: "官方線上試讀" }} →</a>
+          </div>
+          {% endif %}
 
           <div class="fit-reader-box">
             <p class="fit-reader-title">這本書適合你，如果你想知道：</p>
@@ -50,10 +62,14 @@ title: 電子書
             </ul>
           </div>
 
-          <p class="store-lead">選擇你習慣的閱讀平台</p>
+          <p class="store-lead">購買完整版</p>
           <div class="store-links-buttons">
             {% for st in book.stores %}
-            {% if st.url and st.url != "" %}<a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>{% endif %}
+              {% if st.url and st.url != "" %}
+                <a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>
+              {% else %}
+                <span class="btn btn-ghost" aria-disabled="true" style="opacity:.55;cursor:default;pointer-events:none;">{{ st.name }}</span>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
@@ -63,11 +79,11 @@ title: 電子書
       <div class="ebook-video-panel">
         <video class="ebook-video" controls playsinline preload="metadata">
           <source src="{{ book.video | relative_url }}" type="video/mp4">
-          您的瀏覽器不支援影片播放，請直接下載觀看。
+          您的瀏覽器不支援影片播放。
         </video>
         {% if book.video_caption %}<p class="ebook-video-caption">{{ book.video_caption }}</p>{% endif %}
-        {% if book.trial_read_url and book.trial_read_url != "" %}
-        <a href="{{ book.trial_read_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ book.trial_read_label | default: "前往讀墨試讀" }}</a>
+        {% if book.preview_url and book.preview_url != "" %}
+        <a href="{{ book.preview_url | relative_url }}" class="btn btn-ghost">直接線上試讀 →</a>
         {% endif %}
       </div>
       {% endif %}
