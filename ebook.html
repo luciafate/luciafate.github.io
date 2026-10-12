@@ -37,7 +37,7 @@ title: 電子書
     </div>
 
     {% for book in site.data.ebooks %}
-    <div class="ebook-block{% if book.video and book.video != '' %} has-video{% endif %}">
+    <div class="ebook-block">
       <div class="ebook-detail">
         <div class="ebook-detail-cover">
           <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt }}">

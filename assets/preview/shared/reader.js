@@ -15,15 +15,14 @@
   let scale = 1;
   const sources = cfg.sources;
   const preload = (i) => { if (i>=0 && i<sources.length) { const p=new Image(); p.src=sources[i]; } };
-  function render(dir=0){
-    if(dir){ wrap.classList.add(dir>0?'turn-next':'turn-prev'); setTimeout(()=>wrap.classList.remove('turn-next','turn-prev'),260); }
+  function render(){
     img.src=sources[page]; img.alt=`${cfg.title} 試讀第 ${page+1} 頁`;
     num.textContent=page+1; total.textContent=sources.length; jump.value=page+1;
     bar.style.width=`${((page+1)/sources.length)*100}%`;
     prev.disabled=page===0; next.disabled=page===sources.length-1;
     preload(page+1); preload(page-1);
   }
-  function go(n){ const target=Math.max(0,Math.min(sources.length-1,n)); if(target===page)return; const d=target>page?1:-1; page=target; render(d); window.scrollTo({top:0,behavior:'smooth'}); }
+  function go(n){ const target=Math.max(0,Math.min(sources.length-1,n)); if(target===page)return; page=target; render(); }
   prev.onclick=()=>go(page-1); next.onclick=()=>go(page+1);
   jump.addEventListener('change',()=>go((parseInt(jump.value,10)||1)-1));
   document.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'||e.key==='PageDown')go(page+1); if(e.key==='ArrowLeft'||e.key==='PageUp')go(page-1); });
