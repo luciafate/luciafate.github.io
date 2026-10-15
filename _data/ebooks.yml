@@ -14,6 +14,7 @@
   preview_label: "線上試讀 Vol.1"
   video: ""
   video_caption: ""
+  price_note: ""
   fit_reader_points:
     - "從字源、化氣與古籍重新推導星曜：看懂紫微的「尊」、天府的「權」、七殺的「殺」從哪裡來，不再只背性格標籤。"
     - "看懂星曜組合怎麼運作：雙星不是 1＋1，透過同宮、對宮與星系結構，理解不同星曜相遇後產生的「新體質」。"
@@ -41,6 +42,7 @@
   preview_label: "線上試讀 Vol.2"
   video: ""
   video_caption: ""
+  price_note: "Google Play Books 顯示售價可能因平台稅費與定價機制略有差異。"
   fit_reader_points:
     - "從五行、化氣與文化脈絡重讀六顆桃花星：桃花不只是異性緣，而是一個人如何感受他人、表達需要、回應關係與建立連結。"
     - "把星曜放回不同關係場域：夫妻宮看伴侶、子女宮看親子、僕役宮看友情與後天支持網絡；同一顆星，面對不同關係，課題也不同。"
@@ -52,6 +54,6 @@
     - name: "Rakuten Kobo"
       url: "https://www.kobo.com/tw/zh/ebook/vol-2-86"
       status: "available"
-    - name: "Google Play Books｜即將上架"
-      url: ""
-      status: "soon"
+    - name: "Google Play Books"
+      url: "https://play.google.com/store/books/details?id=rQ0aEgAAQBAJ"
+      status: "available"
