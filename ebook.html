@@ -63,6 +63,17 @@ title: 電子書
           </div>
 
           <p class="store-lead">購買完整版</p>
+
+          {% if book.id == "vol2-peach-stars" %}
+          <div class="store-links-buttons">
+            <a href="https://readmoo.com/book/210501725000101" class="btn btn-primary" target="_blank" rel="noopener">台灣讀墨 Readmoo →</a>
+            <a href="https://www.kobo.com/tw/zh/ebook/vol-2-86" class="btn btn-primary" target="_blank" rel="noopener">Rakuten Kobo →</a>
+            <a href="https://play.google.com/store/books/details?id=rQ0aEgAAQBAJ" class="btn btn-primary" target="_blank" rel="noopener">Google Play Books →</a>
+          </div>
+          <p style="margin:10px 0 0;font-size:.82rem;line-height:1.6;color:#6f6a61;">
+            ※ Google Play Books 顯示售價可能因平台稅費與定價機制略有差異。
+          </p>
+          {% else %}
           <div class="store-links-buttons">
             {% for st in book.stores %}
               {% if st.url and st.url != "" %}
@@ -72,10 +83,6 @@ title: 電子書
               {% endif %}
             {% endfor %}
           </div>
-          {% if book.price_note and book.price_note != "" %}
-          <p style="margin:10px 0 0;font-size:.82rem;line-height:1.6;color:#6f6a61;">
-            ※ {{ book.price_note }}
-          </p>
           {% endif %}
         </div>
       </div>
