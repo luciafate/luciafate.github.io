@@ -116,7 +116,7 @@ title: false
 <div class="wrap" id="offers">
   <section>
     <div class="section-head">
-      <div><h2>電子書・線上課程・論命</h2><p>文章是起點，如果想走得更深，這裡有三種方式。</p></div>
+      <div><h2>電子書・免費課程・論命</h2><p>文章是起點，如果想走得更深，這裡有三種方式。</p></div>
     </div>
 
     {% assign firstBook = site.data.ebooks | first %}
@@ -135,12 +135,11 @@ title: false
     </a>
 
     <div class="offers offers-2col">
-      <a href="{{ '/courses.html' | relative_url }}" class="offer" id="course">
-        <div class="oflabel">線上課程</div>
-        <span class="badge-soon">建構中</span>
-        <h3>先從免費短課看懂自己</h3>
-        <p>五支基礎入門影片，加上正在整理中的系統課程規劃方向。</p>
-        <span class="link">前往線上課程頁 →</span>
+      <a href="{{ '/courses.html#lesson-1' | relative_url }}" class="offer free-course-offer" id="course">
+        <div class="oflabel">免費學紫微斗數</div>
+        <h3>輕鬆入門紫微斗數</h3>
+        <p>沒學過也沒關係，每集幾分鐘，從生活出發，一步一步認識命盤。</p>
+        <span class="link">從第一課開始 →</span>
       </a>
       <a href="{{ '/reading.html' | relative_url }}" class="offer" id="readings">
         <div class="oflabel">{{ s.reading.title }}</div>

@@ -1,152 +1,50 @@
 ---
 layout: default
 permalink: /courses.html
-title: 線上課程
+title: 輕鬆入門紫微斗數
 ---
+{% assign beginner_lessons = site.data['beginner-course'] | sort: "order" %}
+
 <div class="wrap">
-  <div class="page-header">
-    <p class="eyebrow">Lucia 線上課程</p>
-    <h1>從看懂自己開始，建立讀懂命盤的能力</h1>
-    <p>紫微斗數不只是描述一個人「是什麼樣的人」，更可以幫助我們看見：自己習慣如何思考、面對壓力、做出選擇，又容易在哪些地方反覆走回相同的模式。</p>
-    <p>當你理解自己的命盤，就能在生活中多一份提醒。知道自己的優勢如何使用，也知道哪些慣性需要調整，不再只是被性格推著走。</p>
-    <p class="brand-line">看懂自己，不是為了替自己定型，而是為了多一點選擇。</p>
+  <div class="page-header beginner-course-header">
+    <p class="eyebrow">免費學紫微斗數</p>
+    <h1>輕鬆入門紫微斗數</h1>
+    <p>沒學過紫微斗數，也可以從這裡開始。</p>
+    <p>我是 Lucia，透過簡單易懂的影片，帶你逐步認識宮位、星曜與命盤的基本觀念。</p>
+    <p>建議從第一課依序觀看，每集幾分鐘，持續更新。</p>
+    <div class="beginner-course-actions"><a href="#lesson-1" class="btn btn-primary">從第一課開始</a></div>
   </div>
 </div>
 
 <div class="wrap">
-  <section class="free-video-section">
-    <div class="section-head">
-      <div>
-        <h2>免費短課｜先從命盤看懂自己</h2>
-        <p>先從前三堂短課建立紫微斗數、未來跡象與天干地支的基本概念。影片可直接在頁面播放，不必跳離網站。</p>
-      </div>
+  <section class="beginner-course-section">
+    <div class="beginner-course-sequence" aria-label="課程觀看順序">
+      {% for lesson in beginner_lessons %}
+      <a href="#lesson-{{ lesson.order }}" class="beginner-course-chip"><span>第 {{ lesson.order }} 課</span><strong>{{ lesson.title }}</strong></a>
+      {% endfor %}
     </div>
-    <div class="video-grid video-grid-embedded">
-      <article class="video-card video-card-embedded">
-        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE" title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3><p class="vsummary">先建立紫微斗數的基本概念，理解命盤不是單純的性格標籤。</p><a class="vlink" href="{{ '/articles/threads-083/' | relative_url }}">閱讀課程文字 →</a></div>
-      </article>
-      <article class="video-card video-card-embedded">
-        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/XZHyiy2ttcU" title="如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？</h3><p class="vsummary">理解命盤如何從條件、時間與變化中呈現未來可能出現的跡象。</p><a class="vlink" href="{{ '/articles/threads-081/' | relative_url }}">閱讀課程文字 →</a></div>
-      </article>
-      <article class="video-card video-card-embedded">
-        <div class="embedded-video"><iframe src="https://www.youtube-nocookie.com/embed/nNarzNBhqfw" title="如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        <div class="vinfo"><h3>如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言</h3><p class="vsummary">從天干地支開始，理解紫微斗數如何描述時間、空間與命盤結構。</p><a class="vlink" href="{{ '/articles/threads-079/' | relative_url }}">閱讀課程文字 →</a></div>
-      </article>
-    </div>
-  </section>
-</div>
-
-{% assign course_lessons = site.posts | where: "courseLesson", true | sort: "courseLessonOrder" %}
-{% if course_lessons and course_lessons.size > 0 %}
-<div class="wrap">
-  <section class="course-series-section">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">免費入門課</p>
-        <h2>如何看懂自己的紫微斗數命盤</h2>
-        <p>這組內容原本以系列文章呈現，現在統一移到線上課程頁，依序帶你認識紫微斗數、未來跡象、天干地支、宮位與星曜體系。</p>
-      </div>
-    </div>
-    <div class="course-video-series">
-      <article class="course-video-feature">
-        <div class="course-video-copy">
-          <p class="eyebrow">第 1 課</p>
-          <h3>如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？</h3>
-          <p>先建立紫微斗數的基本概念，理解命盤不是單純的性格標籤。</p>
-          <a class="course-article-link" href="{{ '/articles/threads-083/' | relative_url }}">閱讀課程文字 →</a>
+    <div class="beginner-course-list">
+      {% for lesson in beginner_lessons %}
+      <article class="beginner-lesson-card" id="lesson-{{ lesson.order }}">
+        <div class="beginner-lesson-copy">
+          <p class="beginner-lesson-kicker">第 {{ lesson.order }} 課</p>
+          <h2>{{ lesson.title }}</h2>
+          <p>{{ lesson.summary }}</p>
         </div>
-        <div class="course-video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/wu2aZCBeHtE" title="如何看懂自己的紫微斗數命盤①｜紫微斗數是什麼？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="beginner-video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ lesson.youtube_id }}" title="第 {{ lesson.order }} 課｜{{ lesson.title }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-      </article>
-
-      <article class="course-video-feature">
-        <div class="course-video-copy">
-          <p class="eyebrow">第 2 課</p>
-          <h3>如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？</h3>
-          <p>理解命盤如何從條件、時間與變化中呈現未來可能出現的跡象。</p>
-          <a class="course-article-link" href="{{ '/articles/threads-081/' | relative_url }}">閱讀課程文字 →</a>
-        </div>
-        <div class="course-video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/XZHyiy2ttcU" title="如何看懂自己的紫微斗數命盤②｜為什麼紫微斗數能判斷未來跡象？" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </article>
-
-      <article class="course-video-feature">
-        <div class="course-video-copy">
-          <p class="eyebrow">第 3 課</p>
-          <h3>如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言</h3>
-          <p>從天干地支開始，理解紫微斗數如何描述時間、空間與命盤結構。</p>
-          <a class="course-article-link" href="{{ '/articles/threads-079/' | relative_url }}">閱讀課程文字 →</a>
-        </div>
-        <div class="course-video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/nNarzNBhqfw" title="如何看懂自己的紫微斗數命盤③｜天干地支：時間與空間的語言" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </article>
-
-      <article class="course-video-feature">
-        <div class="course-video-copy">
-          <p class="eyebrow">第 4 課</p>
-          <h3>如何看懂自己的紫微斗數命盤④｜宮位體系</h3>
-          <p>理解十二宮位所代表的人生領域，以及宮位在判讀時扮演的角色。</p>
-          <a class="course-article-link" href="{{ '/articles/threads-074/' | relative_url }}">閱讀課程文字 →</a>
-        </div>
-        <div class="course-video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/Ycz1Z5TfvOw" title="如何看懂自己的紫微斗數命盤④｜宮位體系" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </article>
-
-      <article class="course-video-feature">
-        <div class="course-video-copy">
-          <p class="eyebrow">第 5 課</p>
-          <h3>如何看懂自己的紫微斗數命盤⑤｜星曜體系</h3>
-          <p>認識星曜不是固定形容詞，而是在不同宮位與條件下產生作用的系統。</p>
-          <a class="course-article-link" href="{{ '/articles/threads-071/' | relative_url }}">閱讀課程文字 →</a>
-        </div>
-        <div class="course-video-frame course-video-frame-short">
-          <iframe src="https://www.youtube-nocookie.com/embed/m-B6wLgKBIY" title="如何看懂自己的紫微斗數命盤⑤｜星曜體系" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </article>
-    </div>
-  </section>
-</div>
-{% endif %}
-
-<div class="wrap">
-  <section>
-    <div class="section-head">
-      <div>
-        <h2>系統課程建構中</h2>
-        <p>Lucia 正在將長期研究、教學與命盤推導內容，逐步整理成可以循序學習的系統課程。目前規劃的方向，包括六十星系落入不同宮位時的解讀，以及官祿宮等主題課程。課程將從星曜與宮位的基本作用出發，逐步建立拆解命盤跡象與理解不同人生領域的能力。</p>
-        <p>實際課程名稱、內容範圍、上架時間、收費方式與使用平台仍在規劃中，未來會依照課程完成進度陸續公布。</p>
-      </div>
-    </div>
-    <p class="section-closing">先把每一個命盤跡象拆解清楚，才能為後續的整體解盤建立穩定根基。</p>
-
-    <div class="course-grid">
-      {% for c in site.data.courses %}
-      <article class="course-card">
-        {% if c.image and c.image != "" %}<img class="course-image" src="{{ c.image | relative_url }}" alt="{{ c.title }}課程圖片" loading="lazy">{% endif %}
-        {% if c.show_building_badge %}<span class="badge-soon">建構中</span>{% endif %}
-        <h3>{{ c.title }}</h3>
-        {% if c.subtitle and c.subtitle != "" %}<p class="course-subtitle">{{ c.subtitle }}</p>{% endif %}
-        <p>{{ c.description }}</p>
-        {% if c.platform and c.platform != "" %}<p class="course-platform">上架平台：{{ c.platform }}</p>{% endif %}
-
-        {% if c.status == "building" %}
-          {% assign s = site.data['site-settings'] %}
-          <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ c.button_text | default: "加入 LINE，接收課程消息" }}</a>
-        {% elsif c.show_buy_button and c.url and c.url != "" %}
-          <a href="{{ c.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ c.button_text | default: "前往課程" }}</a>
-        {% elsif c.status == "free" and c.url and c.url != "" %}
-          <a href="{{ c.url }}" class="link" target="_blank" rel="noopener">{{ c.button_text | default: "觀看課程" }} →</a>
-        {% endif %}
       </article>
       {% endfor %}
     </div>
   </section>
 </div>
 
-{% include line-cta.html heading="加入 LINE，接收課程消息" body="完整課程仍在規劃中，重要進度與開放消息會優先透過LINE通知。" btn="加入 LINE，接收課程消息" %}
+<section class="line-section">
+  <div class="wrap">
+    <div class="beginner-line-cta">
+      <div><p class="eyebrow">課程更新通知</p><h2>加入官方 LINE，接收課程更新</h2><p>新的免費短片公開時，可以從官方 LINE 收到更新通知。</p></div>
+      <a href="https://lin.ee/P3hMk4B" class="line-btn" target="_blank" rel="noopener">加入官方 LINE，接收課程更新</a>
+    </div>
+  </div>
+</section>
