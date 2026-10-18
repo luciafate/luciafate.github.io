@@ -18,11 +18,6 @@ title: 輕鬆入門紫微斗數
 
 <div class="wrap">
   <section class="beginner-course-section">
-    <div class="beginner-course-sequence" aria-label="課程觀看順序">
-      {% for lesson in beginner_lessons %}
-      <a href="#lesson-{{ lesson.order }}" class="beginner-course-chip"><span>第 {{ lesson.order }} 課</span><strong>{{ lesson.title }}</strong></a>
-      {% endfor %}
-    </div>
     <div class="beginner-course-list">
       {% for lesson in beginner_lessons %}
       <article class="beginner-lesson-card" id="lesson-{{ lesson.order }}">
@@ -40,11 +35,21 @@ title: 輕鬆入門紫微斗數
   </section>
 </div>
 
-<section class="line-section">
+<section class="line-section course-update-section">
   <div class="wrap">
     <div class="beginner-line-cta">
-      <div><p class="eyebrow">課程更新通知</p><h2>加入官方 LINE，接收課程更新</h2><p>新的免費短片公開時，可以從官方 LINE 收到更新通知。</p></div>
-      <a href="https://lin.ee/P3hMk4B" class="line-btn" target="_blank" rel="noopener">加入官方 LINE，接收課程更新</a>
+      <div>
+        <p class="eyebrow">課程更新通知</p>
+        <h2>想接著學？讓下一課來找你。</h2>
+        <p>加入官方 LINE，新課上架就收到通知。</p>
+      </div>
+      <div class="course-line-actions">
+        <div class="qr-box qr-desktop-only">
+          <img src="{{ site.data['site-settings'].line.qr_image | relative_url }}" alt="{{ site.data['site-settings'].line.qr_alt }}" class="qr-img">
+          <div class="course-line-id">LINE ID：{{ site.data['site-settings'].line.official_id }}</div>
+        </div>
+        <a href="https://lin.ee/P3hMk4B" class="line-btn" target="_blank" rel="noopener">加入 LINE，接收課程更新</a>
+      </div>
     </div>
   </div>
 </section>
