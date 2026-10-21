@@ -667,7 +667,7 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 /* ===========================================================
    輕鬆入門紫微斗數｜公開免費影片系列
    =========================================================== */
-#lesson-1,#lesson-2{scroll-margin-top:150px;}
+.beginner-lesson-card{scroll-margin-top:150px;}
 .beginner-course-header{max-width:820px;}
 .beginner-course-header>p:not(.eyebrow){max-width:72ch;}
 .beginner-course-header>p+p{margin-top:6px;}
@@ -693,4 +693,53 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 .free-course-offer{background:var(--teal-pale);}
 .free-course-offer:hover{background:var(--white);}
 @media(max-width:1080px) and (min-width:861px){.navlinks{gap:18px;font-size:13.5px;}.beginner-lesson-card{grid-template-columns:minmax(250px,1fr) minmax(0,1.3fr);}}
-@media(max-width:820px){#lesson-1,#lesson-2{scroll-margin-top:120px;}.beginner-lesson-card{grid-template-columns:1fr;gap:20px;padding:20px;}.beginner-line-cta{grid-template-columns:1fr;gap:20px;padding:30px 0;}.course-line-actions{display:block;}.course-line-actions .qr-box{display:none!important;}.course-line-actions .line-btn{width:100%;}}
+@media(max-width:820px){.beginner-lesson-card{scroll-margin-top:120px;}.beginner-lesson-card{grid-template-columns:1fr;gap:20px;padding:20px;}.beginner-line-cta{grid-template-columns:1fr;gap:20px;padding:30px 0;}.course-line-actions{display:block;}.course-line-actions .qr-box{display:none!important;}.course-line-actions .line-btn{width:100%;}}
+
+/* 首頁以電子書、免費課程為主要入口；沿用既有品牌色與字體 */
+.home-learning-hero{max-width:860px;padding:56px 24px 36px;}
+.home-learning-hero h1{font-size:clamp(30px,4vw,44px);line-height:1.45;}
+.home-learning-hero .lead{max-width:44ch;}
+.home-learning-hero .hero-ctas{margin-top:24px;}
+.home-learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:0 0 64px;}
+.home-book-panel,.home-course-panel{min-width:0;padding:32px;border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;align-items:flex-start;}
+.home-book-panel{background:var(--white);}
+.home-course-panel{background:var(--teal-pale);}
+.home-learning-grid h2{font-size:clamp(24px,2.6vw,31px);}
+.home-panel-intro{font-size:14.5px;line-height:1.9;margin:16px 0 22px;}
+.home-book-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;margin:0 0 26px;}
+.home-book-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;min-width:0;font-size:13px;font-weight:700;}
+.home-book-item img{display:block;width:100%;max-width:158px;height:214px;object-fit:contain;filter:drop-shadow(0 8px 8px rgba(7,25,82,.12));transition:transform .2s;}
+.home-book-item:hover img{transform:translateY(-4px);}
+.home-book-preview{font-size:12px;color:var(--teal-deep);}
+.home-series-name{font-family:'Noto Serif TC',serif;color:var(--teal-deep);font-size:18px;font-weight:700;margin:10px 0 0;}
+.home-course-list{list-style:none;width:100%;margin:0;padding:0;border-top:1px solid var(--line);}
+.home-course-list li{border-bottom:1px solid var(--line);}
+.home-course-list a{display:grid;grid-template-columns:56px minmax(0,1fr) 14px;gap:12px;align-items:center;min-height:78px;padding:16px 0;font-size:15px;font-weight:700;color:var(--navy);}
+.home-course-list a:hover{color:var(--teal-deep);}
+.home-course-number{font-size:12px;color:var(--teal-deep);}
+.home-course-note{font-size:12.5px;color:var(--ink);margin:20px 0 24px;}
+.home-panel-button{margin-top:auto;justify-content:center;}
+.home-reading-section{display:flex;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid var(--line);padding:36px 0 52px;}
+.home-reading-section h2{font-size:24px;}
+.home-reading-section p:last-child{font-size:14px;margin-bottom:0;}
+.home-reading-section .btn{flex:none;}
+.beginner-youtube-link{display:inline-block;font-size:13px;font-weight:700;color:var(--teal-deep);margin-top:10px;}
+.home-learning-grid a:focus-visible,.beginner-youtube-link:focus-visible{outline:3px solid var(--teal-deep);outline-offset:5px;}
+@media(max-width:820px){
+  .home-learning-grid{grid-template-columns:1fr;gap:20px;padding-bottom:44px;}
+  .home-book-pair{max-width:420px;align-self:center;}
+}
+@media(max-width:700px){
+  .home-learning-hero{padding:32px 24px 28px;}
+  .home-learning-hero h1{font-size:clamp(27px,7.4vw,34px);}
+  .home-learning-hero .eyebrow{font-size:11px;letter-spacing:.08em;}
+  .home-learning-hero .hero-ctas{flex-direction:row;gap:10px;}
+  .home-learning-hero .hero-ctas .btn{min-width:0;width:auto;flex:1;padding:0 14px;font-size:14px;}
+  .home-book-panel,.home-course-panel{padding:24px;}
+  .home-book-pair{gap:14px;}
+  .home-book-item img{height:180px;}
+  .home-panel-button{width:100%;}
+  .home-reading-section{align-items:stretch;flex-direction:column;}
+  .home-reading-section .btn{justify-content:center;}
+}
+@media(prefers-reduced-motion:reduce){.home-book-item:hover img{transform:none;}}

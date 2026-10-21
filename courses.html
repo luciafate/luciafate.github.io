@@ -12,6 +12,7 @@ title: 輕鬆入門紫微斗數
     <p>沒學過紫微斗數，也可以從這裡開始。</p>
     <p>我是 Lucia，透過簡單易懂的影片，帶你逐步認識宮位、星曜與命盤的基本觀念。</p>
     <p>建議從第一課依序觀看，每集幾分鐘，持續更新。</p>
+    <p>影片公開免費觀看，不需要登入或加入 LINE。</p>
     <div class="beginner-course-actions"><a href="#lesson-1" class="btn btn-primary">從第一課開始</a></div>
   </div>
 </div>
@@ -23,11 +24,12 @@ title: 輕鬆入門紫微斗數
       <article class="beginner-lesson-card" id="lesson-{{ lesson.order }}">
         <div class="beginner-lesson-copy">
           <p class="beginner-lesson-kicker">第 {{ lesson.order }} 課</p>
-          <h2>{{ lesson.title }}</h2>
-          <p>{{ lesson.summary }}</p>
+          <h2>{{ lesson.title | escape }}</h2>
+          <p>{{ lesson.summary | escape }}</p>
+          <a href="{{ lesson.youtube_url }}" class="beginner-youtube-link" target="_blank" rel="noopener">在 YouTube 觀看 ↗</a>
         </div>
         <div class="beginner-video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/{{ lesson.youtube_id }}" title="第 {{ lesson.order }} 課｜{{ lesson.title }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ lesson.youtube_id }}?playsinline=1&amp;autoplay=0" title="第 {{ lesson.order }} 課｜{{ lesson.title | escape }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </article>
       {% endfor %}
@@ -48,7 +50,7 @@ title: 輕鬆入門紫微斗數
           <img src="{{ site.data['site-settings'].line.qr_image | relative_url }}" alt="{{ site.data['site-settings'].line.qr_alt }}" class="qr-img">
           <div class="course-line-id">LINE ID：{{ site.data['site-settings'].line.official_id }}</div>
         </div>
-        <a href="https://lin.ee/P3hMk4B" class="line-btn" target="_blank" rel="noopener">加入 LINE，接收課程更新</a>
+        <a href="https://lin.ee/P3hMk4B" class="line-btn" target="_blank" rel="noopener">加入官方 LINE，接收課程更新</a>
       </div>
     </div>
   </div>

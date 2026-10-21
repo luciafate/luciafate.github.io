@@ -6,36 +6,52 @@ title: false
 {% assign s = site.data['site-settings'] %}
 {% assign publishedPosts = site.posts | where: "published", true %}
 
-<!-- HERO -->
-<div class="wrap hero home-hero">
-  <p class="eyebrow">{{ s.hero.eyebrow }}</p>
-  <h1>{{ s.hero.title }}</h1>
-  <p class="lead">{{ s.hero.lead }}</p>
-  <p class="hero-emotional">{{ s.hero.emotional_line }}</p>
+<!-- 首屏：電子書與公開免費影片兩個主要入口 -->
+<div class="wrap hero home-hero home-learning-hero">
+  <p class="eyebrow">Lucia 紫微斗數・電子書與免費課程</p>
+  <h1>從生活出發，<br>一步一步讀懂紫微斗數</h1>
+  <p class="lead">沒學過，先看免費影片；想深入理解星曜與宮位，從電子書開始。</p>
   <div class="hero-ctas">
-    <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ s.line.hero_primary_btn_text }}</a>
-    <a href="#start-here" class="btn btn-ghost">{{ s.line.hero_secondary_btn_text }}</a>
+    <a href="{{ '/ebook.html' | relative_url }}" class="btn btn-primary">試讀電子書</a>
+    <a href="{{ '/courses.html' | relative_url }}#lesson-1" class="btn btn-ghost">免費看課程</a>
   </div>
 </div>
 
-<!-- 品牌三特色 -->
-<div class="wrap home-pillars">
-  <section class="tight">
-    <div class="section-head">
-      <div>
-        <h2>{{ s.brand_pillars.heading }}</h2>
-        <p>{{ s.brand_pillars.subheading }}</p>
+<div class="wrap" id="learning">
+  <section class="home-learning-grid" aria-label="電子書與免費課程">
+    <article class="home-book-panel" id="ebook">
+      <p class="eyebrow">電子書系列</p>
+      <h2>紫微斗數不是算命，<br>是演算法</h2>
+      <p class="home-panel-intro">星曜背了、宮位懂了，打開命盤卻還是解釋不出來？從星曜本義出發，把命盤讀成生活裡看得懂的行為與關係。</p>
+      <div class="home-book-pair">
+        {% for book in site.data.ebooks limit:2 %}
+        <a href="{{ book.preview_url | relative_url }}" class="home-book-item">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt | escape }}" width="200" height="280">
+          <span>{% if forloop.first %}Vol.1 地位與權力{% else %}Vol.2 情感與連結{% endif %}</span>
+          <span class="home-book-preview">線上試讀 →</span>
+        </a>
+        {% endfor %}
       </div>
-    </div>
-    <div class="pillar-grid">
-      {% for item in s.brand_pillars.items %}
-      <div class="pillar-card">
-        <h3>{{ item.title }}</h3>
-        <p class="pillar-question">{{ item.question }}</p>
-        <p class="pillar-body">{{ item.body }}</p>
-      </div>
-      {% endfor %}
-    </div>
+      <a href="{{ '/ebook.html' | relative_url }}" class="btn btn-primary home-panel-button">試讀・選購電子書</a>
+    </article>
+
+    <article class="home-course-panel" id="course">
+      <p class="eyebrow">公開免費影片・持續更新</p>
+      <h2>免費學紫微斗數</h2>
+      <p class="home-series-name">輕鬆入門紫微斗數</p>
+      <p class="home-panel-intro">沒學過也沒關係，每集幾分鐘，從生活出發，一步一步認識命盤。</p>
+      {% assign beginner_lessons = site.data['beginner-course'] | sort: "order" %}
+      <ol class="home-course-list">
+        {% for lesson in beginner_lessons %}
+        <li><a href="{{ '/courses.html' | relative_url }}#lesson-{{ lesson.order }}">
+          <span class="home-course-number">第 {{ lesson.order }} 課</span>
+          <span>{{ lesson.title | escape }}</span><span aria-hidden="true">↗</span>
+        </a></li>
+        {% endfor %}
+      </ol>
+      <p class="home-course-note">不需登入或加入 LINE，即可觀看。</p>
+      <a href="{{ '/courses.html' | relative_url }}#lesson-1" class="btn btn-primary home-panel-button">從第一課開始</a>
+    </article>
   </section>
 </div>
 
@@ -48,7 +64,7 @@ title: false
   <section class="tight home-start-section">
     <div class="section-head">
       <div>
-        <h2>第一次來，建議從這裡開始</h2>
+        <h2>先讀幾篇，認識 Lucia 的觀點</h2>
         <p>從這些文章開始，認識 Lucia 的紫微斗數觀點。</p>
       </div>
     </div>
@@ -112,42 +128,36 @@ title: false
   </section>
 </div>
 
-<!-- 電子書／線上課程／論命 -->
-<div class="wrap" id="offers">
-  <section>
+<!-- 品牌三特色 -->
+<div class="wrap home-pillars">
+  <section class="tight">
     <div class="section-head">
-      <div><h2>電子書・免費課程・論命</h2><p>文章是起點，如果想走得更深，這裡有三種方式。</p></div>
-    </div>
-
-    {% assign firstBook = site.data.ebooks | first %}
-    {% assign secondBook = site.data.ebooks | slice: 1, 1 | first %}
-    <a href="{{ '/ebook.html' | relative_url }}" class="ebook-feature" id="ebook">
-      <div class="ebook-cover">
-        <img src="{{ firstBook.cover | relative_url }}" alt="{{ firstBook.cover_alt }}">
+      <div>
+        <h2>{{ s.brand_pillars.heading }}</h2>
+        <p>{{ s.brand_pillars.subheading }}</p>
       </div>
-      <div class="ebook-info">
-        <div class="oflabel">電子書系列</div>
-        <h3>紫微斗數不是算命，是演算法</h3>
-        <p class="ebook-series">十四主星行為邏輯系列</p>
-        <p class="ebook-volume">Vol.1 地位與權力｜Vol.2 情感與連結</p>
-        <span class="link">線上試讀・購買電子書 →</span>
-      </div>
-    </a>
-
-    <div class="offers offers-2col">
-      <a href="{{ '/courses.html#lesson-1' | relative_url }}" class="offer free-course-offer" id="course">
-        <div class="oflabel">免費學紫微斗數</div>
-        <h3>輕鬆入門紫微斗數</h3>
-        <p>沒學過也沒關係，每集幾分鐘，從生活出發，一步一步認識命盤。</p>
-        <span class="link">從第一課開始 →</span>
-      </a>
-      <a href="{{ '/reading.html' | relative_url }}" class="offer" id="readings">
-        <div class="oflabel">{{ s.reading.title }}</div>
-        <h3>{{ s.reading.teaser_description }}</h3>
-        <p class="reading-price">{{ s.reading.subtitle }}</p>
-        <span class="link">前往論命頁 →</span>
-      </a>
     </div>
+    <div class="pillar-grid">
+      {% for item in s.brand_pillars.items %}
+      <div class="pillar-card">
+        <h3>{{ item.title }}</h3>
+        <p class="pillar-question">{{ item.question }}</p>
+        <p class="pillar-body">{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<!-- 個別諮詢放在學習內容之後 -->
+<div class="wrap" id="offers">
+  <section class="home-reading-section">
+    <div>
+      <p class="eyebrow">個別諮詢</p>
+      <h2>{{ s.reading.title }}</h2>
+      <p>{{ s.reading.teaser_description }}</p>
+    </div>
+    <a href="{{ '/reading.html' | relative_url }}" class="btn btn-ghost" id="readings">了解論命服務</a>
   </section>
 </div>
 
