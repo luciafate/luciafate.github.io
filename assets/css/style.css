@@ -743,3 +743,25 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
   .home-reading-section .btn{justify-content:center;}
 }
 @media(prefers-reduced-motion:reduce){.home-book-item:hover img{transform:none;}}
+
+/* 恢復全站關鍵字搜尋入口與搜尋頁樣式 */
+.navlinks{gap:22px;flex:none;}
+.navlinks a{white-space:nowrap;}
+.nav-search-link{display:inline-flex;align-items:center;gap:5px;}
+.search-wrap{max-width:860px;}
+.search-page h1{font-size:clamp(26px,4vw,36px);}
+.search-intro{font-size:15px;max-width:60ch;margin:18px 0 26px;}
+.search-box{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1.5px solid var(--line-strong);border-radius:var(--radius);background:var(--white);}
+.search-box>span{font-size:26px;color:var(--teal-deep);line-height:1;}
+.search-box:focus-within{outline:3px solid var(--teal-deep);outline-offset:3px;}
+.search-box input{min-width:0;width:100%;font:inherit;font-size:16px;border:0;outline:0;background:transparent;color:var(--ink);}
+.search-status{font-size:14px;color:var(--teal-deep);margin:18px 0;}
+.search-results{display:grid;gap:16px;}
+.search-result-card{display:block;padding:24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow-wrap:anywhere;}
+.search-result-card:hover{background:var(--teal-pale);border-color:var(--teal-deep);}
+.search-result-card:focus-visible{outline:3px solid var(--teal-deep);outline-offset:3px;}
+.search-result-meta{display:flex;justify-content:space-between;gap:16px;font-size:12px;color:var(--teal-deep);margin-bottom:10px;}
+.search-result-card h2{font-size:20px;line-height:1.6;}
+.search-result-card p{font-size:14px;margin:10px 0 0;}
+@media(min-width:861px) and (max-width:1080px){.navlinks{gap:14px;font-size:13px;}.nav-cta{padding:10px 12px;}.brand-word{font-size:15px;}.brand-mark{width:42px;height:42px;}}
+@media(max-width:700px){.search-page{padding:36px 0;}.search-result-card{padding:20px;}.search-result-card h2{font-size:18px;}}

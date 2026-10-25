@@ -37,7 +37,7 @@ permalink: /search.html
   ];
   const labels = {
     learn: '學懂紫微', relationship: '感情與關係', career: '職涯與財富',
-    wellbeing: '身心與成長', destiny: '命運與選擇', culture: '人文與異聞'
+    wellbeing: '身心與成長', fate: '命運與選擇', culture: '人文與異聞'
   };
   const input = document.getElementById('siteSearchInput');
   const status = document.getElementById('searchStatus');
@@ -49,8 +49,9 @@ permalink: /search.html
     const q = normalize(raw);
     results.innerHTML = '';
     if(!q){ status.textContent = '輸入關鍵字後開始搜尋。'; return; }
-    const matches = posts.filter(post => normalize(post.title + post.excerpt + post.content).includes(q)).slice(0,60);
-    status.textContent = matches.length ? `找到 ${matches.length} 篇相關文章` : '沒有找到符合的文章，請換一個關鍵字。';
+    const allMatches = posts.filter(post => normalize(post.title + ' ' + post.excerpt + ' ' + post.content).includes(q));
+    const matches = allMatches.slice(0,60);
+    status.textContent = allMatches.length ? `找到 ${allMatches.length} 篇相關文章${allMatches.length > 60 ? '，先顯示前 60 篇，請加長關鍵字縮小範圍。' : ''}` : '沒有找到符合的文章，請換一個關鍵字。';
     results.innerHTML = matches.map(post => `
       <a class="search-result-card" href="${post.url}">
         <div class="search-result-meta"><span>${escapeHtml(labels[post.category] || '文章')}</span><time>${escapeHtml(post.date)}</time></div>
