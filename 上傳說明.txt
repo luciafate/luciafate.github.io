@@ -1,0 +1,5 @@
+本檔包含第一課至第六課完整清單。
+解壓縮後，把 _data 裡的 beginner-course.yml 上傳至 GitHub 儲存庫原本的 _data 資料夾，覆蓋同名檔案並提交。
+官網讀取的正確位置是根目錄下的 _data/beginner-course.yml。
+不用另外建立「網站更新檔」資料夾，也不用上傳本說明。
+提交並完成 GitHub Pages 建置後，首頁和課程總覽會顯示 L5、L6。
