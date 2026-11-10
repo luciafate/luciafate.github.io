@@ -1,5 +1,10 @@
-本檔包含第一課至第六課完整清單。
-解壓縮後，把 _data 裡的 beginner-course.yml 上傳至 GitHub 儲存庫原本的 _data 資料夾，覆蓋同名檔案並提交。
-官網讀取的正確位置是根目錄下的 _data/beginner-course.yml。
-不用另外建立「網站更新檔」資料夾，也不用上傳本說明。
-提交並完成 GitHub Pages 建置後，首頁和課程總覽會顯示 L5、L6。
+L7 官網更新包
+
+請解壓縮，把 _data 資料夾內的 beginner-course.yml 上傳至 GitHub 儲存庫原本的 _data 資料夾，覆蓋同名檔案，再按 Commit changes。
+正確位置：根目錄下的 _data/beginner-course.yml。
+不要另外建立「網站更新檔」資料夾。此說明不用上傳。
+
+本檔含第1至第7課；前6課完整保留。第7課標題依提供文字，簡介依YouTube說明濃縮，未加入第8課預告。
+官網首頁與courses.html會自動讀取此檔案。
+已檢查YAML格式、課次順序、影片代碼與網址、既有資料不變及Git差異。沒有改動搜尋功能或樣式。
+正式官網尚未更新，需上傳提交後等待GitHub Pages建置。
