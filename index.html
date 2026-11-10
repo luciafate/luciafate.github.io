@@ -36,21 +36,21 @@ title: false
     </article>
 
     <article class="home-course-panel" id="course">
-      <p class="eyebrow">公開免費影片・持續更新</p>
+      <p class="eyebrow">公開免費影片・最新三課</p>
       <h2>免費學紫微斗數</h2>
       <p class="home-series-name">輕鬆入門紫微斗數</p>
       <p class="home-panel-intro">沒學過也沒關係，每集幾分鐘，從生活出發，一步一步認識命盤。</p>
-      {% assign beginner_lessons = site.data['beginner-course'] | sort: "order" %}
+      {% assign beginner_lessons = site.data['beginner-course'] | sort: "order" | reverse %}
       <ol class="home-course-list">
-        {% for lesson in beginner_lessons %}
+        {% for lesson in beginner_lessons limit:3 %}
         <li><a href="{{ '/courses.html' | relative_url }}#lesson-{{ lesson.order }}">
           <span class="home-course-number">第 {{ lesson.order }} 課</span>
           <span>{{ lesson.title | escape }}</span><span aria-hidden="true">↗</span>
         </a></li>
         {% endfor %}
       </ol>
-      <p class="home-course-note">不需登入或加入 LINE，即可觀看。</p>
-      <a href="{{ '/courses.html' | relative_url }}#lesson-1" class="btn btn-primary home-panel-button">從第一課開始</a>
+      <p class="home-course-note">不需登入或加入 LINE，即可觀看。<br><a href="{{ '/courses.html' | relative_url }}#lesson-1" class="home-book-preview">第一次看？從第一課開始 →</a></p>
+      <a href="{{ '/courses.html' | relative_url }}" class="btn btn-primary home-panel-button">查看全部課程</a>
     </article>
   </section>
 </div>
