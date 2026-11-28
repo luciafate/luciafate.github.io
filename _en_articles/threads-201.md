@@ -22,10 +22,10 @@ There are many kinds of scams, and some charts really are especially prone to fa
 4\. The charge-to-the-end type (who even yells at the police): the Resolute Star (Qi Sha) family, especially Wu Qu–Qi Sha (the Treasurer with the Resolute Star)
 → Once they've made up their mind, they push through to the end and won't listen to anyone's advice, feeling "you're blocking my road to riches"
 5\. Wanting more (the greedy type): the Seeker with Hua Ji + Sha stars (want it, want it, still want it)
-→ Thrilled at the sight of prey, and with Sha stars and Hua Ji coming from the environment, the chance of being fooled multiplies!
+→ Excited by an enticing opportunity, and with Sha stars and Hua Ji coming from the environment, the chance of being fooled multiplies!
 
 When these stars appear in: the Self–Outer World axis (personality and abilities, judgment), the Palace of Money Management and the Palace of Inner Life and Fortune (money-management ability and values, how money comes in, and wealth luck), the Partnership–Daily Focus axis (life focus),
-together with: Sha stars and Hua Ji, guan fei, a poor Siblings–Friends axis, useless teammates in your circle of connections,
+together with: Sha stars and Hua Ji, legal trouble, a poor Siblings–Friends axis, useless teammates in your circle of connections,
 and then a sign of financial loss on top… be very careful!
 
 Zi Wei Dou Shu can warn you of the "risks" in your fortune. Losing money to a scam doesn't mean your fate is bad; it means it's time to wake up!

@@ -125,7 +125,7 @@ The Seeker is the intersection of "information flow + network flow."
 
 ║ The Star of Restraint (Lian Zhen): self-managed, good-looking peach blossom, with fatal attraction
 The Star of Restraint's core quality is "qiu" (confinement), standing for self-restraint and self-management.
-Its element, Yin Fire, isn't a peach blossom star, but its "peach blossom constitution" is extremely strong.
+Although its element is Yin Fire and it isn't a peach blossom star, its "peach blossom constitution" is extremely strong.
 People with the Star of Restraint:
 • are clever, flexible, quick to react
 • are very likely to be good-looking
@@ -172,7 +172,7 @@ where are your inborn networking abilities?
 In what position are you suited to letting your peach blossom traits shine?
 
 Is it the Blessing Star's goodwill?
-The Keeper of the Seal's matchmaking?
+The Keeper of the Seal's ability to connect the right people?
 The Moon's attention to detail?
 The Star of Depletion's creativity and style?
 The Seeker's broad knowledge and flexibility?

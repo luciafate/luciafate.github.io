@@ -32,10 +32,10 @@ Her first big task after being parachuted in was presiding over Qin Keqing's fun
 "If a single cup is broken, the culprit can be caught right away and must pay for it at once, no excuses."
 This project-management ability makes her an ancient master PM. Barely in her early twenties, she built order through systems, punishments and rewards, a classic authoritarian leader: quick results, clear discipline, very high obedience from the team. And this made her name in one stroke.
 
-3\. A financial expert: lending public money at high interest, skilled at compounding it
-Wang Xifeng didn't just know how to manage people; she was very good at managing money too. Her hidden method was diverting public funds to lend out at interest:
+3\. A financial expert: lending household funds at high interest, skilled at compounding it
+Wang Xifeng didn't just know how to manage people; she was very good at managing money too. Her hidden method was diverting household funds to lend out at interest:
 
-The money that should have gone each month to the servants and to public expenses, she first lent out at high interest, keeping the interest for herself and making up the accounts at the end of the month. This kind of operation is more seasoned than many modern bosses.
+The money that should have gone each month to the servants and to household expenses, she first lent out at high interest, keeping the interest for herself and making up the accounts at the end of the month. This kind of operation is more seasoned than many modern bosses.
 She even forged documents and took bribes for meddling in lawsuits, an ancient expert in risk arbitrage.
 
 4\. Purging the mistress

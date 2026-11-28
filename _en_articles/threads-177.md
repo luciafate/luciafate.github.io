@@ -57,7 +57,7 @@ In Zi Wei Dou Shu, there are three keys that correspond closely to "micro-decisi
 
 The Self–Outer World axis (Palace of Self, Palace of the Outer World): the rhythm and style of your decision-making. Quick, ruthless and precise? Or going back and forth? When facing changes in your environment, do you choose stability or challenge?
 
-The Money–Inner Life axis (Palace of Money Management, Palace of Inner Life and Fortune): how do you use and allocate resources? Shrewd with the abacus, or emotionally generous? How do you define "worth it"? What's your outlook on life?
+The Money–Inner Life axis (Palace of Money Management, Palace of Inner Life and Fortune): how do you use and allocate resources? Shrewd with the abacus, or emotionally generous? How do you define "worth it"? What are your worldview, outlook on life and values?
 
 The Partnership–Daily Focus axis (Palace of Love and Partnership, Palace of Daily Focus): in relationships and career, do you prefer relying on cooperation, or leading and controlling? Do you choose safety, or risk and breakthrough?
 

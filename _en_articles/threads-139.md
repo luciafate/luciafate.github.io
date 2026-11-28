@@ -23,10 +23,10 @@ Born with a trustworthy friendliness and a power to bring people together; knows
 This combination on the Self–Outer World axis makes her especially bold and skillful in dealing with the outside world.
 The daring of the Star of Depletion and the shrewdness of the Star of Restraint make her able to see through rules quickly, operate flexibly, and even act against the rules. At work, a person like this makes their move without hesitation at the critical moment, and is good at working gray areas, able both to flatter and to turn hostile, leaving people both respecting and fearing them.
 This kind of person will "pick your pocket with a smile," keeping up appearances in public while not holding back behind the scenes. She uses the system to cover herself and relationships to expand her power: a master at playing politics.
-So when Sister Feng's temper flares, she's high-handed and rough, ruthless with the servants, and things like diverting public funds to earn high interest for her own pocket come as no surprise.
+So when Sister Feng's temper flares, she's high-handed and rough, ruthless with the servants, and things like diverting household funds to earn high interest for her own pocket come as no surprise.
 
 [Palace of Inner Life and Fortune: Zi Wei–Qi Sha (the Emperor with the Resolute Star) in the same palace]
-Spiritually extremely proud and firm, with a clear sense of mission and ambition. The emperor star in the Palace of Inner Life and Fortune gives off a "royal" air from the bones out: proud inside, concerned with vision and scale, with a sense of mission and responsibility. Under pressure this combination is even more resolute; it doesn't fear challenges, and meeting resistance only makes it fight harder, with a ruthless edge.
+Inwardly extremely proud and firm, with a clear sense of mission and ambition. The emperor star in the Palace of Inner Life and Fortune gives off a "royal" air from the bones out: proud inside, concerned with vision and scale, with a sense of mission and responsibility. Under pressure this combination is even more resolute; it doesn't fear challenges, and meeting resistance only makes it fight harder, with a ruthless edge.
 
 [Palace of Money Management: the Chancellor (Tian Fu)]
 An extremely strong ability to control money, resources and connections. She understands investment and risk management, and knows well the logic of hiding wealth "in herself" and of "controlling resources through the system." Wang Xifeng's ability to control the Jia household's accounts office is a display of exactly this.

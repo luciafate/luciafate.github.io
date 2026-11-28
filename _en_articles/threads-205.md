@@ -24,6 +24,5 @@ Do you have the constitution? Share your paranormal experiences in the comments!
 <div class="post-video-list">
 
 <video controls preload="metadata" playsinline src="/assets/media/threads/18333324730095288.mp4">Your browser does not support video playback.</video>
-<p class="lang-tag">Video content in Chinese.</p>
 
 </div>

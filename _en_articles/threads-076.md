@@ -89,8 +89,8 @@ Note: if that direction happens to be a bathroom, kitchen, storeroom or similar 
 On the 12 squares of a Zi Wei Dou Shu chart, each square is marked with its corresponding Earthly Branch direction. These branches symbolize not only time but also directions in space.
 This is the spatial energy configuration you were born with, showing that in this life you're especially attuned to certain directions and settings. If you can make use of these directions and energies, together with concrete action, you'll naturally attract good romantic prospects into your life.
 
-For the detailed concepts, see this article (in Chinese):
-👉 [Revealing the Secret of Changing Your Fortune with Feng Shui] <https://reurl.cc/VWGqLb>
+For the detailed concepts, see this article:
+👉 [Revealing the Secret of Changing Your Fortune with Feng Shui]({{ '/en/articles/threads-173/' | relative_url }})
 
 ║ Love isn't down to luck; there's a method
 Love matters because it's a journey of seeing yourself, understanding others, and practicing loving and being loved.

@@ -13,7 +13,7 @@ readingTime: 2
 translation_status: draft
 ---
 Many Zi Wei Dou Shu beginners get stuck on the concept of "san fang si zheng" and don't understand why reading one palace means referring to so many places.
-Actually it's very intuitive: in real life, a person's behavior is never determined by "personality" alone; it's shaped jointly by many factors, such as their outlook on life, their attitude to money, and what they care about.
+Actually it's very intuitive: in real life, a person's behavior is never determined by "personality" alone; it's shaped jointly by many factors, such as their worldview, outlook on life and values, their attitude to money, and what they care about.
 In the chart, these interwoven inner and outer sides are exactly the "small team" formed by four palaces: the Palace of Self, the Outer World, Money Management and Daily Focus:
 •	Palace of Self: inborn personality and abilities
 •	Palace of the Outer World: your inner thoughts, how you present yourself, how others see you
