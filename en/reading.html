@@ -1,0 +1,125 @@
+---
+lang: en
+ref: reading
+layout: default
+permalink: /en/reading.html
+title: Chart Readings
+description: "A one-on-one written Imperial Astrology (Zi Wei Dou Shu) chart reading in English: three questions, a PDF report in about 3–5 working days, NT$1,500 in total."
+---
+{% assign s = site.data['site-settings'] %}
+{% assign e = site.data.en.site %}
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia · One-on-one written chart reading</p>
+    <h1>When life presents a hard question, use your chart to see the problem, and the possibilities of different choices, more clearly</h1>
+    <p>An Imperial Astrology (Zi Wei Dou Shu) chart is drawn from your time of birth. It shows the resources, habits, and life lessons you carry with you.</p>
+    <p>When something in life just won't make sense, or you are stuck between choices and can't decide, I'll look at your chart together with your real circumstances to help you see the core of the problem, how things might develop, and what to watch out for, and I'll offer my suggestions for your consideration.</p>
+    <p class="brand-line">I don't decide the answer for you. I help you see where different choices may lead, so you can make your own decision on firmer ground.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>Break down the problem in front of you, and see the possibilities of different choices</h2>
+        <p>You can ask three specific questions. Based on your chart and your real circumstances, I'll help you see the core of each problem, how different directions might develop, and what to watch out for, and offer my suggestions for your consideration.</p>
+      </div>
+    </div>
+
+    <div class="reading-card">
+      <div class="oflabel">{{ e.reading.title }}</div>
+      <h3>{{ e.reading.subtitle }}</h3>
+      <ul class="reading-points">
+        {% for p in e.reading.points %}<li>{{ p }}</li>{% endfor %}
+      </ul>
+      <a href="{{ s.line.add_friend_url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ e.line.reading_btn_text }}</a>
+    </div>
+
+    <div class="fee-block">
+      <h3>Written chart reading | NT$1,500 in total</h3>
+      <div class="fee-row"><span>Reading fee</span><strong>NT$1,000</strong></div>
+      <div class="fee-row"><span>Charity donation</span><strong>NT$500</strong></div>
+      <p class="fee-note">
+        The NT$1,000 reading fee is paid to Lucia in two parts: a NT$500 deposit once your details and questions have been confirmed, and the remaining NT$500 after the PDF report has been delivered.<br><br>
+        The other NT$500 is a donation you make in your own name to a charity of your choice. You don't need to provide proof of the donation; just let Lucia know once it's done.<br><br>
+        <strong>Lucia does not collect this NT$500 donation. You choose the charity and make the donation yourself.</strong>
+      </p>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div><h2>From your questions to your written report</h2></div>
+    </div>
+
+    <ol class="step-list">
+      <li>
+        <div class="step-body">
+          <h4>Send your details and questions</h4>
+          <p>Please provide:</p>
+          <ul class="step-sublist">
+            <li>Your date of birth (Gregorian calendar)</li>
+            <li>Your place of birth: city and country, plus state or province if needed</li>
+            <li>Your time of birth as local clock time at your birthplace, to the hour and minute if possible</li>
+            <li>Whether that time is exact, approximate, or unknown</li>
+            <li>Your sex at birth</li>
+            <li>The name you'd like to be called</li>
+            <li>The three questions you'd like to ask</li>
+          </ul>
+          <p><strong>Please give the local clock time recorded at your birthplace. Do not convert it to Taiwan time.</strong></p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Confirm your details and questions</h4>
+          <p>Lucia will first confirm your chart details and questions. If a question needs more background or a clearer focus, she will check with you first.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Pay the deposit</h4>
+          <p>Once your details and three questions are confirmed, pay the NT$500 deposit. After receiving it, Lucia will set up your chart and begin writing your report.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Receive your report</h4>
+          <p>The report takes about 3–5 working days. When it's finished, Lucia will send you the full written report in English as a PDF.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Read the report and pay the balance</h4>
+          <p>After you've read the PDF report, pay the remaining NT$500 of the reading fee.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Make your charity donation</h4>
+          <p>Donate the other NT$500 in your own name to a charity of your choice. You don't need to provide proof; just let Lucia know once it's done.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h4>Ask a follow-up question</h4>
+          <p>If anything in the analysis is still unclear, you may ask one follow-up question about this reading within one week of receiving the report.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="tip-box">
+      <p class="tip-title">The more specific your questions, the more the analysis can focus on what you really need to deal with</p>
+      <p>Think your three questions through first. Where possible, describe your current situation, what has already happened, and the options you're considering.</p>
+      <div class="tip-example">
+        <p class="bad">✕ Is my career luck good?</p>
+        <p class="good">✓ I've been in my current role for three years and recently received another job offer. The new job pays more but is less stable. I'd like to understand what developments and risks I might face if I stay, and if I switch.</p>
+      </div>
+      <p style="margin-top:14px;">The more focused your questions, the more specific and useful Lucia's analysis of your real situation can be.</p>
+    </div>
+  </section>
+</div>
+
+{% include line-cta.html heading="Ask or book on LINE" body="To book a written chart reading, or to ask first whether it suits your question, send Lucia a message on LINE." btn=e.line.reading_btn_text %}

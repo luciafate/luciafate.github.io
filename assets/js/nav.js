@@ -2,11 +2,13 @@
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('mobileMenu');
   if(!toggle || !menu) return;
+  const labelOpen = toggle.dataset.labelOpen || '開啟導覽選單';
+  const labelClose = toggle.dataset.labelClose || '關閉導覽選單';
 
   function openMenu(){
     menu.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', '關閉導覽選單');
+    toggle.setAttribute('aria-label', labelClose);
     document.body.classList.add('menu-open');
     const firstLink = menu.querySelector('a');
     if(firstLink) firstLink.focus();
@@ -15,7 +17,7 @@
   function closeMenu(returnFocus){
     menu.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', '開啟導覽選單');
+    toggle.setAttribute('aria-label', labelOpen);
     document.body.classList.remove('menu-open');
     if(returnFocus) toggle.focus();
   }

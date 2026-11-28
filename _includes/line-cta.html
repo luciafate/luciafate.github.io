@@ -1,4 +1,4 @@
-{% assign s = site.data['site-settings'] %}
+{% assign s = site.data['site-settings'] %}{% assign lang_key = page.lang | default: 'zh' %}{% assign t = site.data.i18n[lang_key] %}{% if lang_key == 'en' %}{% assign qr_alt = site.data.en.site.line.qr_alt %}{% else %}{% assign qr_alt = s.line.qr_alt %}{% endif %}
 {% if include.heading %}
   {% assign ctaHeading = include.heading %}
 {% else %}
@@ -10,15 +10,15 @@
   <div class="wrap">
     <section class="line-cta">
       <div>
-        <p class="eyebrow">加入LINE好友</p>
+        <p class="eyebrow">{{ t.line_eyebrow }}</p>
         <h2>{{ ctaHeading }}</h2>
         <p class="lead">{{ ctaBody }}</p>
       </div>
       <div>
         <div class="line-btn-group">
           <div class="qr-box">
-            <img src="{{ s.line.qr_image | relative_url }}" alt="{{ s.line.qr_alt }}" class="qr-img">
-            <div style="font-size:12.5px;color:var(--navy);">LINE ID：{{ s.line.official_id }}<br>桌機版可掃描加入</div>
+            <img src="{{ s.line.qr_image | relative_url }}" alt="{{ qr_alt }}" class="qr-img">
+            <div style="font-size:12.5px;color:var(--navy);">{{ t.line_id_label }}{{ s.line.official_id }}<br>{{ t.line_qr_note }}</div>
           </div>
           <a href="{{ s.line.add_friend_url }}" class="line-btn" target="_blank" rel="noopener">{{ ctaBtn }}</a>
         </div>

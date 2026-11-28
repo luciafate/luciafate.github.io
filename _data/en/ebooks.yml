@@ -1,0 +1,51 @@
+# ===========================================================
+# 英文電子書介紹。書本身目前只有繁體中文版；試讀頁與購買平台皆為中文。
+# 順序與 _data/ebooks.yml 相同。文字中的 [[鍵名]] 會換成 terms.yml 的英文術語。
+# ===========================================================
+
+- id: "vol1-14zhuxing"
+  label: "Vol.1 Status and Power"
+  title_zh: "紫微斗數不是算命，是演算法"
+  series: "The Behavioral Logic of the Fourteen Major Stars"
+  volume: "Vol.1 · Status and Power: the [[star_zi_wei]] (Zi Wei), the [[star_tian_fu]] (Tian Fu), and the [[star_qi_sha]] (Qi Sha)"
+  cover: "/assets/images/ebook-cover-vol1.jpg"
+  cover_alt: "Cover of Vol.1, Status and Power (Chinese edition)"
+  description: "Starting from three major stars, the [[star_zi_wei]], the [[star_tian_fu]], and the [[star_qi_sha]], this volume examines the behavioral logic behind position, resources, control, and decisive action."
+  preview_url: "/preview/vol1/"
+  preview_label: "Preview Vol.1 online (Chinese)"
+  price_note: ""
+  fit_reader_points:
+    - "Rebuild each star's meaning from character origins, [[core_qualities]], and the classical texts: see where the [[star_zi_wei]]'s [[cq_zi_wei]], the [[star_tian_fu]]'s [[cq_tian_fu]], and the [[star_qi_sha]]'s [[cq_qi_sha]] come from, instead of memorizing personality labels."
+    - "Understand how star configurations work: a two-star pairing is more than the sum of its parts. See how stars sharing a palace, the opposite palace, and the wider star system shape a distinct combined quality when stars interact."
+    - "Bring the chart back to real-life decisions: from position, resources, and risk to knowing when to cut your losses, see the behavioral patterns that keep showing up at work, with money, and under pressure."
+  stores:
+    - name: "Google Play Books"
+      url: "https://pse.is/8y48y8"
+    - name: "Readmoo (Taiwan)"
+      url: "https://pse.is/8y489t"
+    - name: "Rakuten Kobo"
+      url: "https://pse.is/92cjuk"
+
+- id: "vol2-peach-stars"
+  label: "Vol.2 Emotion and Connection"
+  title_zh: "紫微斗數不是算命，是演算法"
+  series: "Vol.2 · Emotion and Connection: The Six [[group_connection]]"
+  volume: "From partners and children to friends: how you move toward another person"
+  cover: "/assets/images/ebook-cover-vol2.png"
+  cover_alt: "Cover of Vol.2, Emotion and Connection: The Six Connection Stars (Chinese edition)"
+  description: "Through the six [[group_connection]], the [[star_tai_yin]], the [[star_tian_tong]], the [[star_tian_xiang]], the [[star_po_jun]], the [[star_tan_lang]], and the [[star_ju_men]], this volume explores closeness, needs, support, boundaries, and connection with partners, children, and friends."
+  description_extra: "In this teaching framework, the six [[group_connection]] share an association with Water in the Five Phases (Wu Xing). Each has a distinct core quality and character, shaping a different way of sensing others, expressing needs, responding within relationships, and navigating closeness and distance."
+  preview_url: "/preview/vol2/"
+  preview_label: "Preview Vol.2 online (Chinese)"
+  price_note: "Prices shown on Google Play Books may vary slightly because of platform taxes and pricing."
+  fit_reader_points:
+    - "Reread the six [[group_connection]] through the Five Phases, [[core_qualities]], and cultural context: these stars are not only about romantic appeal, but about how a person senses others, expresses needs, responds within relationships, and builds connection."
+    - "Place the stars in different relationships: the [[p_love]] for partners, the [[p_children]] for parent–child relationships, and the [[p_friends]] for friendship and the support networks you build over time. The same star brings different lessons to different relationships."
+    - "See what is really stuck in a relationship: from expectations, support, and responsibility to boundaries and stepping away, understand why people draw close, and why differences can turn into conflict."
+  stores:
+    - name: "Readmoo (Taiwan)"
+      url: "https://readmoo.com/book/210501725000101"
+    - name: "Rakuten Kobo"
+      url: "https://www.kobo.com/tw/zh/ebook/vol-2-86"
+    - name: "Google Play Books"
+      url: "https://play.google.com/store/books/details?id=rQ0aEgAAQBAJ"

@@ -1,0 +1,50 @@
+# ===========================================================
+# 英文版全站設定（對應中文的 site-settings.yml）
+# LINE 網址、QR Code 圖片、社群連結沿用中文設定檔，不在這裡重複。
+# ===========================================================
+
+brand:
+  name: "Lucia Zi Wei Dou Shu"
+  tagline: "Share · Teach · Chart Readings · Shape Your Future"   # 對應「推廣・教學・論命改運」，待定
+  logo: "/assets/images/logo.png"
+  logo_alt: "Lucia Zi Wei Dou Shu logo"
+
+line:
+  nav_btn_text: "Message on LINE"
+  reading_btn_text: "Ask or book on LINE"
+  qr_alt: "QR code for Lucia's official LINE account"
+
+notice:
+  content_language: "All e-books and videos are currently in Chinese. The videos are in Mandarin, without English subtitles."
+
+intro:
+  heading: "What is Imperial Astrology?"
+  body:
+    - "Imperial Astrology (Zi Wei Dou Shu) is a traditional Chinese system of natal chart interpretation. It uses symbolic stars, twelve palaces, and timing cycles to explore how personal tendencies interact with relationships, circumstances, and change."
+    - "Its name comes from Zi Wei, the Emperor star, which Chinese tradition associates with the imperial center of the heavens. It reads individual birth charts, not the affairs of the imperial court."
+    - "A star describes a tendency you bring into a particular area of life. Its meaning depends on its configuration, the opposite palace, the timing layer, and your circumstances. It does not define your whole personality or guarantee a particular ability or outcome."
+
+brand_pillars:
+  heading: "Understand Yourself | See Your Choices | See the Trends"
+  subheading: "From understanding the past and handling the present to preparing for the future."
+  items:
+    - title: "Understand Yourself"
+      question: "How did I end up here?"
+      body: "Rather than labeling you by a single star, we look at how thoughts become actions, how actions become habits, and how those habits keep appearing in your personality, relationships, and choices."
+    - title: "See Your Choices"
+      question: "What do I actually need to deal with right now?"
+      body: "Going back to the conditions set out in the classical texts, and drawing on modern perspectives such as psychology, neurophysiology, and behavioral science, we untangle a knotted problem layer by layer to see what really shapes your choice."
+    - title: "See the Trends"
+      question: "What timing and risks lie ahead?"
+      body: "Recognize possible timing, trends, and risks, so you know when to act and when to hold back. A chart shows signs, not verdicts; the choice is still yours."
+
+reading:
+  title: "Written Chart Reading"
+  teaser_description: "Break down the problem in front of you and see where different choices might lead. Reports are written in English."
+  subtitle: "NT$1,500 in total · Three questions"
+  points:
+    - "A written report in PDF, in English"
+    - "Completed in about 3–5 working days"
+    - "Reading fee: NT$1,000"
+    - "Plus a NT$500 donation you make yourself to a charity of your choice"
+    - "One follow-up question on this reading within a week of delivery"

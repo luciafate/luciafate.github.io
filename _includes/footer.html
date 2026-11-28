@@ -1,24 +1,20 @@
-{% assign s = site.data['site-settings'] %}
+{% assign s = site.data['site-settings'] %}{% assign lang_key = page.lang | default: 'zh' %}{% assign t = site.data.i18n[lang_key] %}
+{% if lang_key == 'en' %}{% assign b = site.data.en.site.brand %}{% else %}{% assign b = s.brand %}{% endif %}
 <footer>
   <div class="wrap">
     <div class="foot-row">
-      <a href="{{ '/' | relative_url }}" class="brand">
-        <span class="brand-mark"><img src="{{ s.brand.logo | relative_url }}" alt="{{ s.brand.logo_alt }}"></span>
-        <span class="brand-word">{{ s.brand.name }}<small>{{ s.brand.tagline }}</small></span>
+      <a href="{{ t.home_url | relative_url }}" class="brand">
+        <span class="brand-mark"><img src="{{ b.logo | relative_url }}" alt="{{ b.logo_alt }}"></span>
+        <span class="brand-word">{{ b.name }}<small>{{ b.tagline }}</small></span>
       </a>
-      <ul class="foot-links" aria-label="頁尾導覽">
-        <li><a href="{{ '/' | relative_url }}">首頁</a></li>
-        <li><a href="{{ '/blog.html' | relative_url }}">文章</a></li>
-        <li><a href="{{ '/ebook.html' | relative_url }}">電子書</a></li>
-        <li><a href="{{ '/courses.html' | relative_url }}">線上課程</a></li>
-        <li><a href="{{ '/reading.html' | relative_url }}">論命</a></li>
-        <li><a href="{{ '/search.html' | relative_url }}">搜尋文章</a></li>
-        <li><a href="{{ s.social.threads }}" target="_blank" rel="noopener">Threads</a></li>
-        <li><a href="{{ s.social.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+      <ul class="foot-links" aria-label="{{ t.footer_aria }}">
+        {% for item in t.footer %}<li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>
+        {% endfor %}<li><a href="{{ s.social.threads }}" target="_blank" rel="noopener">Threads{{ t.social_suffix }}</a></li>
+        <li><a href="{{ s.social.instagram }}" target="_blank" rel="noopener">Instagram{{ t.social_suffix }}</a></li>
         <li><a href="{{ s.line.add_friend_url }}" target="_blank" rel="noopener">LINE {{ s.line.official_id }}</a></li>
       </ul>
     </div>
-    <p class="foot-copy">© 2026 {{ s.brand.name }}. #紫微斗數 #命理分析 #理性決策</p>
+    <p class="foot-copy">© 2026 {{ b.name }}.{{ t.copyright_tail }}</p>
   </div>
 </footer>
 <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>

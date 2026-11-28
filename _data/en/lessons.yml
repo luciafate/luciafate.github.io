@@ -1,0 +1,27 @@
+# ===========================================================
+# 《輕鬆入門紫微斗數》英文標題（工作譯法，影片本身為中文、無英文字幕）
+# 依 order 對應 _data/beginner-course.yml。新增課程時請在這裡補一筆；
+# 沒有補的課，英文首頁只會顯示「Lesson N」，不會出錯。
+# 文字中的 [[鍵名]] 會換成 _data/en/terms.yml 的英文術語。
+# ===========================================================
+
+- order: 1
+  title: "Why Learn Zi Wei Dou Shu?"
+- order: 2
+  title: "Why Does One Person Need Twelve Palaces?"
+- order: 3
+  title: "Which Part of the Chart Speaks to Your Worry?"
+- order: 4
+  title: "A Fortune-Teller Said My [[p_love]] Is Bad. Will I Be Alone Forever?"
+- order: 5
+  title: "Do the Stars in My Chart Describe My Personality?"
+- order: 6
+  title: "Same Major Star, So Why Are You and I Different?"
+- order: 7
+  title: "Meet the Fourteen Major Stars (Part 1)"
+- order: 8
+  title: "Meet the Fourteen Major Stars (Part 2)"
+- order: 9
+  title: "Two Major Stars in One Palace: Do I Have Two Personalities?"
+- order: 10
+  title: "Palaces with No Major Stars: When Borrowing Is Allowed"

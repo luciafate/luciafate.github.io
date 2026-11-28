@@ -1,0 +1,7 @@
+{%- comment -%}把文字中的 [[鍵名]] 換成 _data/en/terms.yml 的英文術語。用法：{% include en-terms.html text=某段文字 %}{%- endcomment -%}
+{%- assign en_out = include.text -%}
+{%- for pair in site.data.en.terms -%}
+{%- assign en_key = '[[' | append: pair[0] | append: ']]' -%}
+{%- assign en_out = en_out | replace: en_key, pair[1] -%}
+{%- endfor -%}
+{{- en_out -}}

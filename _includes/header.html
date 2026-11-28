@@ -1,24 +1,26 @@
-{% assign s = site.data['site-settings'] %}
+{% assign s = site.data['site-settings'] %}{% assign lang_key = page.lang | default: 'zh' %}{% assign t = site.data.i18n[lang_key] %}
+{% if lang_key == 'en' %}{% assign b = site.data.en.site.brand %}{% assign line_btn = site.data.en.site.line.nav_btn_text %}{% else %}{% assign b = s.brand %}{% assign line_btn = s.line.nav_btn_text %}{% endif %}
+{% capture switch_href %}{% include lang-switch-url.html %}{% endcapture %}
 <header class="site">
   <div class="wrap">
-    <nav aria-label="主要導覽">
-      <a href="{{ '/' | relative_url }}" class="brand" aria-label="返回 Lucia 紫微斗數首頁">
-        <span class="brand-mark"><img src="{{ s.brand.logo | relative_url }}" alt="{{ s.brand.logo_alt }}"></span>
-        <span class="brand-word">{{ s.brand.name }}<small>{{ s.brand.tagline }}</small></span>
+    <nav aria-label="{{ t.nav_aria }}">
+      <a href="{{ t.home_url | relative_url }}" class="brand" aria-label="{{ t.brand_aria }}">
+        <span class="brand-mark"><img src="{{ b.logo | relative_url }}" alt="{{ b.logo_alt }}"></span>
+        <span class="brand-word">{{ b.name }}<small>{{ b.tagline }}</small></span>
       </a>
 
       <ul class="navlinks" id="navlinksDesktop">
-        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>首頁</a></li>
-        <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} class="active" aria-current="page"{% endif %}>電子書</a></li>
-        <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} class="active" aria-current="page"{% endif %}>免費學紫微斗數</a></li>
-        <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' or page.layout == 'post' %} class="active" aria-current="page"{% endif %}>文章</a></li>
-        <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} class="active" aria-current="page"{% endif %}>論命</a></li>
-        <li><a href="{{ '/search.html' | relative_url }}" class="nav-search-link{% if page.url == '/search.html' %} active{% endif %}"{% if page.url == '/search.html' %} aria-current="page"{% endif %}><span aria-hidden="true">⌕</span> 搜尋</a></li>
+        {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
+        {% if item.search %}<li><a href="{{ item.url | relative_url }}" class="nav-search-link{% if is_active %} active{% endif %}"{% if is_active %} aria-current="page"{% endif %}><span aria-hidden="true">⌕</span> {{ item.label }}</a></li>
+        {% else %}<li><a href="{{ item.url | relative_url }}"{% if is_active %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endif %}{% endfor %}
       </ul>
 
-      <a href="{{ s.line.add_friend_url }}" class="nav-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
+      <a href="{{ switch_href }}" class="lang-switch" lang="{{ t.switch_lang }}" aria-label="{{ t.switch_aria }}">{{ t.switch_label }}</a>
 
-      <button type="button" id="navToggle" class="navtoggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="開啟導覽選單">
+      <a href="{{ s.line.add_friend_url }}" class="nav-cta" target="_blank" rel="noopener">{{ line_btn }}</a>
+
+      <button type="button" id="navToggle" class="navtoggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="{{ t.menu_open }}" data-label-open="{{ t.menu_open }}" data-label-close="{{ t.menu_close }}">
         <span class="navtoggle-icon" aria-hidden="true"></span>
       </button>
     </nav>
@@ -26,13 +28,11 @@
 
   <div id="mobileMenu" class="mobile-menu" hidden>
     <ul class="mobile-menu-links">
-      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首頁</a></li>
-      <li><a href="{{ '/ebook.html' | relative_url }}"{% if page.url == '/ebook.html' %} aria-current="page"{% endif %}>電子書</a></li>
-      <li><a href="{{ '/courses.html' | relative_url }}"{% if page.url == '/courses.html' %} aria-current="page"{% endif %}>免費學紫微斗數</a></li>
-      <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' or page.layout == 'post' %} aria-current="page"{% endif %}>文章</a></li>
-      <li><a href="{{ '/reading.html' | relative_url }}"{% if page.url == '/reading.html' %} aria-current="page"{% endif %}>論命</a></li>
-      <li><a href="{{ '/search.html' | relative_url }}"{% if page.url == '/search.html' %} aria-current="page"{% endif %}>搜尋文章</a></li>
+      {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
+      <li><a href="{{ item.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>{{ item.mobile_label | default: item.label }}</a></li>
+      {% endfor %}
+      <li><a href="{{ switch_href }}" lang="{{ t.switch_lang }}">{{ t.switch_aria }}</a></li>
     </ul>
-    <a href="{{ s.line.add_friend_url }}" class="line-btn mobile-menu-cta" target="_blank" rel="noopener">{{ s.line.nav_btn_text }}</a>
+    <a href="{{ s.line.add_friend_url }}" class="line-btn mobile-menu-cta" target="_blank" rel="noopener">{{ line_btn }}</a>
   </div>
 </header>

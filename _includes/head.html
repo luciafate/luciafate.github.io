@@ -1,7 +1,11 @@
+{% assign lang_key = page.lang | default: 'zh' %}{% assign t = site.data.i18n[lang_key] %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if page.title %}{{ page.title }}｜{% endif %}{{ site.title }}</title>
-<meta name="description" content="{% if page.excerpt and page.excerpt != empty %}{{ page.excerpt | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ site.description }}{% endif %}">
+<title>{% if page.title %}{{ page.title }}｜{% endif %}{{ t.site_title }}</title>
+<meta name="description" content="{% if page.excerpt and page.excerpt != empty %}{{ page.excerpt | strip_html | strip_newlines | truncate: 120 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+{% if page.ref %}{% assign versions = site.pages | where: "ref", page.ref %}{% for v in versions %}{% assign vt = site.data.i18n[v.lang] %}
+<link rel="alternate" hreflang="{{ vt.hreflang }}" href="{{ v.url | absolute_url }}">{% if v.lang == 'zh' %}
+<link rel="alternate" hreflang="x-default" href="{{ v.url | absolute_url }}">{% endif %}{% endfor %}{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

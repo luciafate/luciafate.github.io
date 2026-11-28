@@ -1,0 +1,46 @@
+# ===========================================================
+# 英文術語集中檔（依《紫微斗數中英術語對照 v0.4》工作譯名）
+# 英文頁面文字中寫 [[鍵名]]，會自動換成這裡的英文。
+# 改這一檔，全英文站同步更新。名稱不含開頭的 the，由句子自己加。
+# 標示「待定」者為尚未由 Lucia 定稿的工作譯名。
+# ===========================================================
+
+system: "Imperial Astrology (Zi Wei Dou Shu)"   # 系統名稱（Lucia 2026-11-28 確認）；每頁第一次提到用全稱，之後可簡稱 Zi Wei Dou Shu
+book_title: "Zi Wei Dou Shu: An Algorithm, Not Fortune-Telling"   # 書名英文對照，待定
+core_qualities: "core qualities (hua qi)"
+group_connection: "Connection Stars"     # 桃花星（已確認）
+
+# 十四主星
+star_zi_wei: "Emperor"
+star_tian_fu: "Chancellor"
+star_qi_sha: "Resolute Star"
+star_tai_yang: "Sun"
+star_tai_yin: "Moon"
+star_tian_tong: "Blessing Star"
+star_tian_liang: "Guardian"
+star_tian_ji: "Strategist"
+star_wu_qu: "Treasurer"
+star_tian_xiang: "Keeper of the Seal"
+star_lian_zhen: "Star of Restraint"      # 待定
+star_po_jun: "Star of Depletion"         # 待定
+star_ju_men: "Star of Obscurity"         # 待定
+star_tan_lang: "Seeker"
+
+# 化氣（英文概念標籤，小寫，用於句中）
+cq_zi_wei: "dignity and standing"
+cq_tian_fu: "control and allocation"
+cq_qi_sha: "decisiveness and resolve"
+
+# 十二宮
+p_self: "Palace of Self"
+p_siblings: "Palace of Siblings"
+p_love: "Palace of Love and Partnership"
+p_children: "Palace of Children and Creation"
+p_money: "Palace of Money Management"
+p_body: "Palace of Body and Health"
+p_outer: "Palace of the Outer World"
+p_friends: "Palace of Friends and Associates"
+p_daily: "Palace of Daily Focus"
+p_home: "Palace of Home and Property"
+p_inner: "Palace of Inner Life and Fortune"
+p_parents: "Palace of Parents and Elders"

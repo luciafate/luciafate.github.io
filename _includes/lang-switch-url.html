@@ -1,0 +1,5 @@
+{%- comment -%}輸出另一語言的對應網址；沒有對應頁面時，回到另一語言的首頁，避免失效連結。{%- endcomment -%}
+{%- assign other_key = 'en' -%}{%- if lang_key == 'en' -%}{%- assign other_key = 'zh' -%}{%- endif -%}
+{%- assign switch_url = site.data.i18n[other_key].home_url -%}
+{%- if page.ref -%}{%- assign alt_pages = site.pages | where: "ref", page.ref | where: "lang", other_key -%}{%- if alt_pages.size > 0 -%}{%- assign switch_url = alt_pages[0].url -%}{%- endif -%}{%- endif -%}
+{{- switch_url | relative_url -}}

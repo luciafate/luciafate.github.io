@@ -765,3 +765,15 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 .search-result-card p{font-size:14px;margin:10px 0 0;}
 @media(min-width:861px) and (max-width:1080px){.navlinks{gap:14px;font-size:13px;}.nav-cta{padding:10px 12px;}.brand-word{font-size:15px;}.brand-mark{width:42px;height:42px;}}
 @media(max-width:700px){.search-page{padding:36px 0;}.search-result-card{padding:20px;}.search-result-card h2{font-size:18px;}}
+
+/* ===== 中英文切換與英文版提示（2026-11 新增） ===== */
+.lang-switch{font-size:13px; font-weight:700; letter-spacing:.04em; color:var(--navy); border:1px solid var(--line); border-radius:999px; padding:6px 12px; white-space:nowrap; flex:none;}
+.lang-switch:hover{border-color:var(--teal-deep); color:var(--teal-deep);}
+@media(max-width:860px){ .lang-switch{margin-left:auto; margin-right:6px;} }
+.lang-notice{display:inline-block; margin:14px 0 0; padding:8px 14px; border-radius:10px; background:var(--teal-pale); color:var(--navy); font-size:.86rem; line-height:1.55;}
+.lang-tag{font-size:.78em; font-weight:600; opacity:.7; white-space:nowrap;}
+.home-intro{max-width:760px;}
+.home-intro p{margin:0 0 12px;}
+.step-list .step-sublist{margin:6px 0 10px; padding-left:1.2em; list-style:disc;}
+.step-list .step-sublist li{display:list-item; counter-increment:none; font-size:.95em; line-height:1.7; color:inherit;}
+.step-list .step-sublist li::before{content:none; display:none;}

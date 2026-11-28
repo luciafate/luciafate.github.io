@@ -1,0 +1,74 @@
+---
+lang: en
+ref: ebook
+layout: default
+permalink: /en/ebook.html
+title: E-books
+description: "An Imperial Astrology (Zi Wei Dou Shu) e-book series on the behavioral logic of the fourteen major stars. Currently available in Chinese."
+---
+{% assign e = site.data.en.site %}
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia's E-books</p>
+    <h1>{% include en-terms.html text="[[book_title]]" %}</h1>
+    <p>A series on the behavioral logic of the fourteen major stars. Rather than memorizing star labels, it returns to each star's underlying behavioral structure: where a person stands, what pressures they face, how they make choices, and what consequences they bear.</p>
+    <p class="brand-line"><strong>Vol.1 looks at position, resources, and decisive action; Vol.2 looks at emotion, relationships, and connection.</strong></p>
+    <p class="lang-notice">These e-books are currently available in Traditional Chinese only. The online previews and the stores below are in Chinese.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head">
+      <div>
+        <h2>The Series</h2>
+        <p>Preview first, then buy the full Chinese edition from the platform you prefer.</p>
+      </div>
+    </div>
+
+    {% for book in site.data.en.ebooks %}
+    <div class="ebook-block">
+      <div class="ebook-detail">
+        <div class="ebook-detail-cover">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt }}">
+        </div>
+        <div class="ebook-detail-info">
+          <h3>{% include en-terms.html text="[[book_title]]" %}</h3>
+          <p class="ebook-series" lang="zh-Hant">《{{ book.title_zh }}》<span class="lang-tag" lang="en"> Chinese title</span></p>
+          <p class="ebook-series">{% include en-terms.html text=book.series %}</p>
+          <p class="ebook-volume">{% include en-terms.html text=book.volume %}</p>
+          <p class="ebook-desc">{% include en-terms.html text=book.description %}</p>
+          {% if book.description_extra %}<p class="ebook-desc">{% include en-terms.html text=book.description_extra %}</p>{% endif %}
+
+          {% if book.preview_url and book.preview_url != "" %}
+          <div style="margin:18px 0 22px;">
+            <a href="{{ book.preview_url | relative_url }}" class="btn btn-primary">{{ book.preview_label }} →</a>
+          </div>
+          {% endif %}
+
+          <div class="fit-reader-box">
+            <p class="fit-reader-title">What will this book help you understand?</p>
+            <ul>
+              {% for p in book.fit_reader_points %}<li>{% include en-terms.html text=p %}</li>{% endfor %}
+            </ul>
+          </div>
+
+          <p class="store-lead">Buy the full edition · Chinese-language e-book</p>
+          <div class="store-links-buttons">
+            {% for st in book.stores %}
+              {% if st.url and st.url != "" %}
+                <a href="{{ st.url }}" class="btn btn-primary" target="_blank" rel="noopener">{{ st.name }} →</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if book.price_note and book.price_note != "" %}
+          <p style="margin:10px 0 0;font-size:.82rem;line-height:1.6;color:#6f6a61;">※ {{ book.price_note }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</div>
+
+{% include line-cta.html heading="Questions? Message Lucia on LINE" body="If you have questions about the e-books or would like a written chart reading in English, send Lucia a message on LINE." btn=e.line.nav_btn_text %}

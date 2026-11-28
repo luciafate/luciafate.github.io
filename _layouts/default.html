@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+{% assign lang_key = page.lang | default: 'zh' %}{% assign t = site.data.i18n[lang_key] %}<!DOCTYPE html>
+<html lang="{{ t.html_lang }}">
 <head>
 {% include head.html %}
 </head>

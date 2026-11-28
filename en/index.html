@@ -1,0 +1,106 @@
+---
+lang: en
+ref: home
+layout: default
+permalink: /en/
+title: false
+description: "Learn to read an Imperial Astrology (Zi Wei Dou Shu) chart step by step, through e-books, free video lessons, and written chart readings by Lucia."
+---
+{% assign s = site.data['site-settings'] %}
+{% assign e = site.data.en.site %}
+
+<!-- 首屏：電子書與免費影片兩個主要入口 -->
+<div class="wrap hero home-hero home-learning-hero">
+  <p class="eyebrow">Lucia Zi Wei Dou Shu · E-books &amp; Free Lessons</p>
+  <h1>Start from everyday life,<br>and learn to read a Zi Wei Dou Shu chart step by step</h1>
+  <p class="lead">New to it? Start with the free videos. Want to go deeper into the stars and palaces? Start with the e-books.</p>
+  <div class="hero-ctas">
+    <a href="{{ '/en/ebook.html' | relative_url }}" class="btn btn-primary">Preview the e-books</a>
+    <a href="#course" class="btn btn-ghost">Watch the free lessons</a>
+  </div>
+  <p class="lang-notice">{{ e.notice.content_language }}</p>
+</div>
+
+<!-- 系統簡介：英文讀者多數第一次接觸紫微斗數 -->
+<div class="wrap">
+  <section class="tight home-intro">
+    <h2>{{ e.intro.heading }}</h2>
+    {% for para in e.intro.body %}<p>{{ para }}</p>
+    {% endfor %}
+  </section>
+</div>
+
+<div class="wrap" id="learning">
+  <section class="home-learning-grid" aria-label="E-books and free lessons">
+    <article class="home-book-panel" id="ebook">
+      <p class="eyebrow">E-book series <span class="lang-tag">(Chinese)</span></p>
+      <h2>{% include en-terms.html text="[[book_title]]" %}</h2>
+      <p class="home-panel-intro">You've memorized the stars and learned the palaces, yet when you open a chart you still can't explain it? These books start from what each star originally means and read the chart as behavior and relationships you can recognize in daily life.</p>
+      <div class="home-book-pair">
+        {% for book in site.data.en.ebooks limit:2 %}
+        <a href="{{ book.preview_url | relative_url }}" class="home-book-item">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.cover_alt | escape }}" width="200" height="280">
+          <span>{{ book.label }}</span>
+          <span class="home-book-preview">Preview online (Chinese) →</span>
+        </a>
+        {% endfor %}
+      </div>
+      <a href="{{ '/en/ebook.html' | relative_url }}" class="btn btn-primary home-panel-button">About the e-books</a>
+    </article>
+
+    <article class="home-course-panel" id="course">
+      <p class="eyebrow">Free videos · Latest three lessons</p>
+      <h2>Learn Zi Wei Dou Shu for Free</h2>
+      <p class="home-series-name">An Easy Introduction to Zi Wei Dou Shu</p>
+      <p class="home-panel-intro">No background needed. Each episode is a few minutes long and starts from everyday situations.</p>
+      {% assign beginner_lessons = site.data['beginner-course'] | sort: "order" | reverse %}
+      <ol class="home-course-list">
+        {% for lesson in beginner_lessons limit:3 %}
+        {% assign en_lesson = site.data.en.lessons | where: "order", lesson.order | first %}
+        <li><a href="{{ lesson.youtube_url }}" target="_blank" rel="noopener">
+          <span class="home-course-number">Lesson {{ lesson.order }}</span>
+          <span>{% if en_lesson %}{% include en-terms.html text=en_lesson.title %}{% else %}Lesson {{ lesson.order }}{% endif %} <span class="lang-tag">(Mandarin)</span></span><span aria-hidden="true">↗</span>
+        </a></li>
+        {% endfor %}
+      </ol>
+      {% assign first_lesson = site.data['beginner-course'] | where: "order", 1 | first %}
+      <p class="home-course-note">Free on YouTube, no sign-up needed. In Mandarin, without English subtitles.<br><a href="{{ first_lesson.youtube_url }}" class="home-book-preview" target="_blank" rel="noopener">New here? Start with Lesson 1 →</a></p>
+      <a href="{{ '/courses.html' | relative_url }}" class="btn btn-primary home-panel-button" hreflang="zh-Hant">All lessons <span class="lang-tag">(Chinese page)</span></a>
+    </article>
+  </section>
+</div>
+
+<!-- 品牌三特色 -->
+<div class="wrap home-pillars">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>{{ e.brand_pillars.heading }}</h2>
+        <p>{{ e.brand_pillars.subheading }}</p>
+      </div>
+    </div>
+    <div class="pillar-grid">
+      {% for item in e.brand_pillars.items %}
+      <div class="pillar-card">
+        <h3>{{ item.title }}</h3>
+        <p class="pillar-question">{{ item.question }}</p>
+        <p class="pillar-body">{{ item.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<!-- 個別諮詢 -->
+<div class="wrap" id="offers">
+  <section class="home-reading-section">
+    <div>
+      <p class="eyebrow">One-on-one consultation</p>
+      <h2>{{ e.reading.title }}</h2>
+      <p>{{ e.reading.teaser_description }}</p>
+    </div>
+    <a href="{{ '/en/reading.html' | relative_url }}" class="btn btn-ghost" id="readings">About chart readings</a>
+  </section>
+</div>
+
+{% include line-cta.html heading="Questions or bookings? Message Lucia on LINE" body="To book a written chart reading, or to ask whether it suits your question, send Lucia a message on LINE." btn=e.line.reading_btn_text %}
