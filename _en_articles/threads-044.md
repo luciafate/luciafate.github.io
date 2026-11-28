@@ -16,7 +16,7 @@ Recently a student asked me about "Di Kong and Di Jie,"
 so I'm taking this chance to share my own thoughts on them from these past few years.
 → If you can't get a grip on Di Kong and Di Jie while you're still learning, it's fine not to use them.
 
-Di Kong and Di Jie in the same palace in the Si and Hai positions,
+Di Kong and Di Jie in the same palace at either Si or Hai,
 or facing each other across the Yin–Shen axis:
 the sign in the timing charts is "in the end, left with nothing."
 (These two combinations are actually the easier ones to understand.)
@@ -31,7 +31,8 @@ these two Di Kong and Di Jie combinations are actually the most useful stars whe
 This is an article I wrote before.
 If you want to understand Di Kong and Di Jie more fully, you can refer to it:
 
-[Physics says: if your force goes in the wrong direction, the work done is zero; Zi Wei Dou Shu calls this Di Kong and Di Jie]({{ '/en/articles/threads-176/' | relative_url }})
+[Physics says: if your force goes in the wrong direction, the work done is zero; Zi Wei Dou Shu calls this Di Kong and Di Jie]
+<https://luciafate.github.io/en/articles/threads-176/>
 
 Lately I've been writing my e-book like crazy
 (writing the 14 major stars from their most fundamental essence, from which their derived qualities unfold quite naturally, along with the behavioral tendencies they show under environmental pressure).
