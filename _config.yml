@@ -10,8 +10,16 @@ permalink: /articles/:slug/
 collections:
   posts:
     output: true
+  en_articles:
+    output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: en_articles
+    values:
+      layout: en-article
+      lang: en
   - scope:
       path: ""
       type: posts

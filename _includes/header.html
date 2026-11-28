@@ -10,7 +10,7 @@
       </a>
 
       <ul class="navlinks" id="navlinksDesktop">
-        {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
+        {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.en_articles and page.layout == 'en-article' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
         {% if item.search %}<li><a href="{{ item.url | relative_url }}" class="nav-search-link{% if is_active %} active{% endif %}"{% if is_active %} aria-current="page"{% endif %}><span aria-hidden="true">⌕</span> {{ item.label }}</a></li>
         {% else %}<li><a href="{{ item.url | relative_url }}"{% if is_active %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {% endif %}{% endfor %}
@@ -28,7 +28,7 @@
 
   <div id="mobileMenu" class="mobile-menu" hidden>
     <ul class="mobile-menu-links">
-      {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
+      {% for item in t.nav %}{% assign is_active = false %}{% if page.url == item.url %}{% assign is_active = true %}{% endif %}{% if item.posts and page.layout == 'post' %}{% assign is_active = true %}{% endif %}{% if item.en_articles and page.layout == 'en-article' %}{% assign is_active = true %}{% endif %}{% if item.anchor %}{% assign is_active = false %}{% endif %}
       <li><a href="{{ item.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>{{ item.mobile_label | default: item.label }}</a></li>
       {% endfor %}
       <li><a href="{{ switch_href }}" lang="{{ t.switch_lang }}">{{ t.switch_aria }}</a></li>

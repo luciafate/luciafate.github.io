@@ -1,0 +1,47 @@
+---
+lang: en
+ref: articles
+layout: default
+permalink: /en/articles.html
+title: Articles
+description: "English translations of Lucia's articles on Imperial Astrology (Zi Wei Dou Shu): stars, palaces, relationships, careers and the choices you still have."
+---
+{% assign enArticles = site.en_articles | sort: "date" | reverse %}
+<div class="wrap">
+  <div class="page-header">
+    <p class="eyebrow">Lucia's Articles</p>
+    <h1>Understand the chart, and the choices you are making</h1>
+    <p>Starting from the principles of Imperial Astrology (Zi Wei Dou Shu) and drawing on psychology, health science and the humanities, these articles break down real problems in love, work and life, and look for next steps you can actually take.</p>
+    <p class="lang-notice">These are English translations of Lucia's original Chinese articles. More are being translated and added in batches; {{ enArticles.size }} are available so far.</p>
+  </div>
+
+  {% for c in site.categories_order %}
+  {% assign catArticles = enArticles | where: "category", c.key %}
+  {% if catArticles.size > 0 %}
+  {% assign catEn = site.data.en.categories[c.key] %}
+  <section class="tight" id="{{ c.key }}">
+    <div class="section-head">
+      <div>
+        <h2>{{ catEn.label }}</h2>
+        <p>{{ catEn.tagline }}</p>
+      </div>
+    </div>
+    <div class="blog-grid">
+      {% for a in catArticles %}
+      <a href="{{ a.url | relative_url }}" class="blog-card">
+        {% if a.image and a.image != "" %}
+        <div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title | escape }}" loading="lazy"></div>
+        {% endif %}
+        <span class="tag">{{ catEn.label }}</span>
+        <h3>{{ a.title }}</h3>
+        <p class="excerpt">{{ a.excerpt }}</p>
+        <p class="meta">{{ a.readingTime }} min read</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  {% endfor %}
+</div>
+
+{% include line-cta.html heading="Questions or bookings? Message Lucia on LINE" body="To book a written chart reading in English, or to ask whether it suits your question, send Lucia a message on LINE." btn=site.data.en.site.line.reading_btn_text %}

@@ -777,3 +777,5 @@ footer{border-top:1px solid var(--line); padding:48px 0 60px;}
 .step-list .step-sublist{margin:6px 0 10px; padding-left:1.2em; list-style:disc;}
 .step-list .step-sublist li{display:list-item; counter-increment:none; font-size:.95em; line-height:1.7; color:inherit;}
 .step-list .step-sublist li::before{content:none; display:none;}
+.post-body .translation-note{margin-top:40px; padding:14px 18px; border-radius:12px; background:var(--teal-pale); font-size:.88rem; line-height:1.7;}
+.post-body .lang-tag{display:block; margin-top:6px;}

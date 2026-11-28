@@ -73,6 +73,9 @@ en:
     - url: "/en/#course"
       label: "Free Lessons"
       anchor: true
+    - url: "/en/articles.html"
+      label: "Articles"
+      en_articles: true
     - url: "/en/reading.html"
       label: "Chart Readings"
   footer:
@@ -82,6 +85,8 @@ en:
       label: "E-books"
     - url: "/en/#course"
       label: "Free Lessons"
+    - url: "/en/articles.html"
+      label: "Articles"
     - url: "/en/reading.html"
       label: "Chart Readings"
   social_suffix: " (in Chinese)"

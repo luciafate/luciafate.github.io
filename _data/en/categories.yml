@@ -1,0 +1,22 @@
+# ===========================================================
+# 英文文章分類名稱（對應 _config.yml 的 categories_order，key 不可更改）
+# 待 Lucia 確認的工作譯名
+# ===========================================================
+learn:
+  label: "Learning Zi Wei Dou Shu"
+  tagline: "From stars and palaces to the structure of the chart: understand how each judgment is made."
+relationship:
+  label: "Love and Relationships"
+  tagline: "Understand attraction, needs and boundaries in love, intimacy, friendship and family."
+career:
+  label: "Career and Wealth"
+  tagline: "From work, talents, money and patterns of action, find choices that suit you better."
+wellbeing:
+  label: "Body, Mind and Growth"
+  tagline: "Drawing on psychology, health and the life sciences to understand the body and yourself more deeply."
+fate:
+  label: "Fate and Choice"
+  tagline: "Recognize timing, trends and risks in life, and prepare for the choices you still have."
+culture:
+  label: "Culture and the Unexplained"
+  tagline: "Rethinking how people understand fate, through history, culture, religion and the unknown."

@@ -70,6 +70,35 @@ description: "Learn to read an Imperial Astrology (Zi Wei Dou Shu) chart step by
   </section>
 </div>
 
+<!-- 英文文章：首頁精選三篇的英文版，未翻譯者自動略過 -->
+{% assign pin_urls = "/articles/threads-005/,/articles/threads-039/,/articles/threads-176/" | split: "," %}
+{% assign pinned_en = "" | split: "" %}
+{% for u in pin_urls %}{% assign a = site.en_articles | where: "zh_url", u | first %}{% if a %}{% assign pinned_en = pinned_en | push: a %}{% endif %}{% endfor %}
+{% if pinned_en.size > 0 %}
+<div class="wrap" id="start-here">
+  <section class="tight">
+    <div class="section-head">
+      <div>
+        <h2>Start with these articles</h2>
+        <p>English translations of Lucia's original Chinese articles.</p>
+      </div>
+      <a href="{{ '/en/articles.html' | relative_url }}" class="see-all">All articles →</a>
+    </div>
+    <div class="blog-grid">
+      {% for a in pinned_en %}{% assign catEn = site.data.en.categories[a.category] %}
+      <a href="{{ a.url | relative_url }}" class="blog-card">
+        {% if a.image and a.image != "" %}<div class="card-thumb"><img src="{{ a.image | relative_url }}" alt="{{ a.imageAlt | default: a.title | escape }}" loading="lazy"></div>{% endif %}
+        {% if catEn %}<span class="tag">{{ catEn.label }}</span>{% endif %}
+        <h3>{{ a.title }}</h3>
+        <p class="excerpt">{{ a.excerpt }}</p>
+        <p class="meta">{{ a.readingTime }} min read</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endif %}
+
 <!-- 品牌三特色 -->
 <div class="wrap home-pillars">
   <section class="tight">
