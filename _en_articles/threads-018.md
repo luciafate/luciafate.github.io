@@ -35,10 +35,10 @@ Look mainly at the Children–Home axis, and these benefits will be related to t
 That is, a certain degree of acceptance of gray areas, or even illegal acts.
 
 Chart analysis
-1. From the natal chart
-1. Tian Tong–Tian Liang with Hua Ke, which can also be borrowed by the opposite palace; the Palace of Inner Life and Fortune has the Sun, Ling Xing and Wen Chang; the Partnership–Daily Focus axis has Tian Ji and Ju Men facing each other. This is a combination that's good at studying to begin with.
+1\. From the natal chart
+1\. Tian Tong–Tian Liang with Hua Ke, which can also be borrowed by the opposite palace; the Palace of Inner Life and Fortune has the Sun, Ling Xing and Wen Chang; the Partnership–Daily Focus axis has Tian Ji and Ju Men facing each other. This is a combination that's good at studying to begin with.
 
-2. The Self–Outer World axis is secretly combined with the Children–Home axis, so the person is strongly influenced by their family of origin.
+2\. The Self–Outer World axis is secretly combined with the Children–Home axis, so the person is strongly influenced by their family of origin.
 The Children–Home axis has Lian Zhen–Tan Lang with Tuo Luo; the Siblings–Friends axis has Tian Xiang with Qing Yang; the Parents–Body axis has Wu Qu–Qi Sha with Huo Xing, opposite Tian Fu.
 → Family relationships look harmonious, but there's actually a tendency to sidestep rules and boundaries for the sake of surface harmony.
 The rules of upbringing his mother gave were decided at her discretion and also carried a concern for face; his father was hard, forceful and devoted to the family.
@@ -49,10 +49,10 @@ Add to this that the Palace of Self and Shen Gong are in the same palace, and th
 The structure of the Money–Inner Life axis makes the person's mental state rather unsettled, and easily disturbed by status, money, peers and other factors.
 (Tian Fu and Wu Qu–Qi Sha with Huo Xing on the Parents–Body axis are secretly combined with the Money–Inner Life axis → all 3 wealth stars are here!! And there are stars associated with legal trouble too.)
 
-4. The Zi–Wu and Chou–Wei axes are also ones that need special attention in the timing cycles.
+4\. The Zi–Wu and Chou–Wei axes are also ones that need special attention in the timing cycles.
 
-2. The timing charts: the sixth ten-year cycle
-1. The ten-year Self–Outer World axis overlaps the natal Parents–Body axis, the Tian Fu – Wu Qu–Qi Sha with Huo Xing axis.
+2\. The timing charts: the sixth ten-year cycle
+1\. The ten-year Self–Outer World axis overlaps the natal Parents–Body axis, the Tian Fu – Wu Qu–Qi Sha with Huo Xing axis.
 It is also secretly combined with the ten-year Parents–Body axis, which overlaps the natal Money–Inner Life axis, where the Moon has the ten-year Hua Lu.
 This combination in itself carries the nature of legal trouble, and this also stems from his own personality and values.
 
@@ -66,15 +66,15 @@ Tian Xiang with a double Qing Yang: the signs of legal trouble caused by the wor
 In addition, this axis is secretly combined with the ten-year Children–Home axis overlapping the natal Partnership–Daily Focus axis, where there is Ju Men with the ten-year Hua Ji, Tian Ji with the ten-year Hua Ke, and the ten-year Lu Cun.
 Besides signs of an increase in property, there are also benefits and assets coming from his job and its duties.
 
-3. Once the ten-year chart already has these structures, what follows is waiting for the annual cycles to fill in the conditions.
+3\. Once the ten-year chart already has these structures, what follows is waiting for the annual cycles to fill in the conditions.
 In other words, whenever the Chen–Xu, Mao–You, Zi–Wu and Chou–Wei positions overlap the relevant palaces again and add Sha stars and Hua Ji, trouble very easily follows.
 
 Summary
-1. Authority at work
+1\. Authority at work
 A power structure, and a position within the system from which benefits can be exchanged.
-2. Benefits flowing in during the timing cycles, related to his duties
+2\. Benefits flowing in during the timing cycles, related to his duties
 The Chen–Xu, Mao–You, Zi–Wu and Chou–Wei axes all show signs of assets and benefits related to his position at work.
-3. Values with very loose boundaries on gray areas
+3\. Values with very loose boundaries on gray areas
 He isn't the type with hard boundaries whose principles never give way.
 Instead, he is more prone to loosening his boundaries step by step among face, ease, relationships, benefits and rationalization.
 (Judgments about values like this must, by their nature, be read from the natal chart and each timing chart, to see how they are triggered, amplified and pushed forward.)

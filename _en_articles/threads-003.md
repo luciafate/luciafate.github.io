@@ -60,7 +60,7 @@ If I say no, will it damage the family relationship?
 
 Here are the different responses of six Lian Zhen configurations.
 
-1. Lian Zhen–Tian Fu (the Star of Restraint with the Chancellor) in the Palace of Home and Property, the Resolute Star (Qi Sha) opposite
+1\. Lian Zhen–Tian Fu (the Star of Restraint with the Chancellor) in the Palace of Home and Property, the Resolute Star (Qi Sha) opposite
 Qiu blended with the quality of quan (control), expressed through the Resolute Star
 
 This configuration first assesses whether the household as a whole can bear it. It thinks:
@@ -84,7 +84,7 @@ Lian Zhen–Tian Fu places family boundaries within its overall control.
 Its core response is:
 It's not that I won't help family, but it has to be within what I can control, what I can bear, and what keeps the household running.
 
-2. Lian Zhen–Qi Sha (the Star of Restraint with the Resolute Star) in the Palace of Home and Property, the Chancellor (Tian Fu) opposite
+2\. Lian Zhen–Qi Sha (the Star of Restraint with the Resolute Star) in the Palace of Home and Property, the Chancellor (Tian Fu) opposite
 Qiu blended with the quality of sha (decisiveness), taking shape through the Chancellor
 
 The focus here isn't weighing things up first, but settling on a principle first.
@@ -108,7 +108,7 @@ The Chancellor opposite leads it to uphold this principle through resources, arr
 Lian Zhen–Qi Sha's core response is:
 Even family can't cross the bottom line I've set; I can find ways to arrange resources, but the principle doesn't give.
 
-3. Lian Zhen–Tian Xiang (the Star of Restraint with the Keeper of the Seal) in the Palace of Home and Property, the Star of Depletion (Po Jun) opposite
+3\. Lian Zhen–Tian Xiang (the Star of Restraint with the Keeper of the Seal) in the Palace of Home and Property, the Star of Depletion (Po Jun) opposite
 Qiu blended with the quality of yin (the Seal), taking shape through the Star of Depletion
 
 This configuration particularly cares whether this family responsibility is recognized and made clear.
@@ -131,7 +131,7 @@ It might say:
 Lian Zhen–Tian Xiang's core response is:
 I can spend time, money and effort helping you, but this responsibility must be made clear, acknowledged, and able to hold up.
 
-4. Lian Zhen–Po Jun (the Star of Restraint with the Star of Depletion) in the Palace of Home and Property, the Keeper of the Seal (Tian Xiang) opposite
+4\. Lian Zhen–Po Jun (the Star of Restraint with the Star of Depletion) in the Palace of Home and Property, the Keeper of the Seal (Tian Xiang) opposite
 Qiu blended with the quality of hao (depletion), taking shape through the Keeper of the Seal
 
 The core of this configuration is:
@@ -149,7 +149,7 @@ The Keeper of the Seal opposite shows that, in the end, it still wants this boun
 Lian Zhen–Po Jun's core response is:
 If this family boundary is worth defending, I can pay the price; if necessary, I'll even change the existing way the family interacts (and with the Keeper of the Seal opposite, it will seek the family's recognition and family norms).
 
-5. Lian Zhen–Tan Lang (the Star of Restraint with the Seeker) together in the Palace of Home and Property, the opposite palace empty and borrowing Lian Zhen–Tan Lang
+5\. Lian Zhen–Tan Lang (the Star of Restraint with the Seeker) together in the Palace of Home and Property, the opposite palace empty and borrowing Lian Zhen–Tan Lang
 Qiu blended with the quality of peach blossom
 The family boundaries of this configuration are blended with feelings, closeness, needs and exchange.
 
@@ -175,7 +175,7 @@ Rules between family members aren't fixed; they change with how close the relati
 When mature, this is understanding human relationships.
 When under strain, it easily turns into making rules to suit the person and applying uneven standards.
 
-6. Lian Zhen alone in the Palace of Home and Property, the Seeker (Tan Lang) opposite
+6\. Lian Zhen alone in the Palace of Home and Property, the Seeker (Tan Lang) opposite
 Qiu, taking shape through the Seeker
 
 This configuration is different from Lian Zhen and Tan Lang sharing a palace.

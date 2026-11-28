@@ -26,7 +26,7 @@ as four stars?
 The answer is actually simple: they aren't.
 Because the way the old texts describe things is different from the logic of modern writing.
 
-1. In the old texts, "star" is often just a general term
+1\. In the old texts, "star" is often just a general term
 In the Complete Book of Zi Wei Dou Shu, "star" sometimes doesn't refer to a specific star at all.
 Often it's more of a functional label, used to describe a certain effect or symbol.
 For example, expressions common in the book: the blessing star, the noble star, the benevolent star, the official star.
@@ -38,7 +38,7 @@ actually comes closer to meaning
 the effect of lu,
 the image of lu.
 
-2. The Four Transformations are changes in the stars
+2\. The Four Transformations are changes in the stars
 The Four Transformations are changes that stars undergo because of "stimuli from the setting of time and place."
 For example:
 the Sun (Tai Yang) with Hua Lu
@@ -50,7 +50,7 @@ If Hua Lu, Hua Quan, Hua Ke and Hua Ji were each a star, there would be a proble
 each would need a fixed position.
 But you've never seen a "Hua Lu star" appear in a palace, have you!
 
-3. The fourteen major stars are roles; the Four Transformations are motives and behavior
+3\. The fourteen major stars are roles; the Four Transformations are motives and behavior
 Understood from a modern systems perspective, it becomes clearer:
 the fourteen major stars
 are "personality roles"

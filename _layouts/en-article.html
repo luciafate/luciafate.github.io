@@ -31,6 +31,22 @@
     <p class="translation-note">This article is an English translation of Lucia's original Chinese article, published on {{ page.date | date: "%B %-d, %Y" }}. <a href="{{ page.zh_url | relative_url }}" hreflang="zh-Hant">Read the original (Chinese)</a></p>
   </div>
 
+  {% if page.series and page.series != "" %}
+  {% assign seriesPosts = site.en_articles | where: "series", page.series | sort: "seriesOrder" %}
+  {% assign firstSeriesPost = seriesPosts | first %}
+  <div class="series-guide">
+    <div><strong>Series: {{ page.series_title | default: page.series }}{% if page.seriesOrder %} | Part {{ page.seriesOrder }} of {{ seriesPosts.size }}{% endif %}</strong><br>This article can be read on its own, or you can read the full series in order.</div>
+    <div class="series-guide-links">
+      <a href="{{ firstSeriesPost.url | relative_url }}">Start from Part 1</a>
+      <a href="#series-directory">See the full series</a>
+    </div>
+  </div>
+  <div class="series-directory" id="series-directory">
+    <h2>Full series</h2>
+    <ol>{% for sp in seriesPosts %}<li{% if sp.url == page.url %} class="current"{% endif %}><a href="{{ sp.url | relative_url }}">{{ sp.title }}</a></li>{% endfor %}</ol>
+  </div>
+  {% endif %}
+
   {% assign related = site.en_articles | where: "category", page.category | where_exp: "a", "a.url != page.url" | sort: "date" | reverse %}
   {% if related.size > 0 %}
   <div class="related-wrap">

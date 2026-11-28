@@ -119,7 +119,7 @@ or at least
 a position that can't easily be replaced.
 
 ║ Four "types of responsibility-bearing" in the AI era
-1. The interpretive type | bearers of meaning
+1\. The interpretive type | bearers of meaning
 What they bear: the consequences of recognized standing, legitimacy and order
 These fields include:
 literature, history and philosophy; law; management consulting; some business disciplines; institutional design.
@@ -152,7 +152,7 @@ Corresponding major stars:
 
 •  The Emperor (Zi Wei; zun, dignity): the Emperor is the star of "recognized standing and position." It isn't arguing about right and wrong, but guarding order and dignity: who has the final say, who must take responsibility, whether this account can hold up.
 
-2. The evidential type | bearers of truth
+2\. The evidential type | bearers of truth
 What they bear: the consequences of whether something is verified
 These fields include:
 the sciences, basic medicine, the social sciences, data analysis.
@@ -178,7 +178,7 @@ Corresponding major stars:
 
 •  The Chancellor (Tian Fu; quan, control): the Chancellor's "quan" isn't about throwing its weight around; it's about "holding resources and risks." It's good at turning evidence into decisions that can be put into practice, and bearing the responsibility those decisions bring.
 
-3. The constructive type | bearers of systems
+3\. The constructive type | bearers of systems
 What they bear: who is responsible when the system fails
 These fields include:
 software engineering, civil engineering, mechanical engineering, architecture, systems operations.
@@ -204,7 +204,7 @@ Corresponding major stars:
 
 •	The Sun (Tai Yang; gui, esteem): the Sun is the star that "stands in front of everyone and lights the way." It's willing to take responsibility on itself, coordinating people and processes so the system can be trusted by many and keep running.
 
-4. The communicative type | bearers of emotion
+4\. The communicative type | bearers of emotion
 What they bear: whether empathy, resonance and trust are established
 These fields include:
 media, advertising, art and design, psychological counseling, marketing.

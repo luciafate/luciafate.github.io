@@ -28,7 +28,7 @@ and whether an exchange is worth it doesn't depend only on objective numbers, bu
 In behavioral economics, this ruler is called the "reference point."
 In Zi Wei Dou Shu, this ruler can be understood through the Palace of Inner Life and Fortune.
 
-1. The Palace of Money Management isn't only about attitudes to money, but about "how you see exchanges of value"
+1\. The Palace of Money Management isn't only about attitudes to money, but about "how you see exchanges of value"
 When many people talk about the Palace of Money Management, they immediately think:
 Can I make money?
 Can I save money?
@@ -61,7 +61,7 @@ So the Palace of Money Management can be extended from the surface level of atti
 It describes how a person, facing the world, converts their time, abilities, risks, resources and position into returns.
 What the Palace of Money Management shows is how you take part in the flow of resources in this world.
 
-2. But here's the question: on what basis do you judge whether an exchange is worth it?
+2\. But here's the question: on what basis do you judge whether an exchange is worth it?
 The same salary feels stable to one person and like a trap to another.
 The same bonus feels like recognition to one person and like being brushed off to another.
 The same investment loss feels like a reasonable cost to one person and like their life collapsing to another.
@@ -87,7 +87,7 @@ What counts as not betraying your spiritual needs?
 The Palace of Money Management can't answer these on its own; you have to consult the Palace of Inner Life and Fortune at the same time:
 does this exchange measure up to the ruler inside me?
 
-3. Prospect theory: people don't look at absolute values, but at reference points
+3\. Prospect theory: people don't look at absolute values, but at reference points
 Here we can borrow a well-known idea from behavioral economics: prospect theory.
 
 In 1979, Daniel Kahneman and Amos Tversky jointly proposed Prospect Theory (rendered in Chinese as 前景理論 or 展望理論), which later became one of the key foundations for Kahneman's Nobel Prize in economics.
@@ -120,7 +120,7 @@ It points to something deeper:
 people aren't simply animals that pursue gain.
 People are animals that [guard their reference points].
 
-4. Looking back at the Palace of Inner Life and Fortune through prospect theory
+4\. Looking back at the Palace of Inner Life and Fortune through prospect theory
 If we bring prospect theory back into Zi Wei Dou Shu, we can understand more precisely
 why the palace opposite the Palace of Money Management is always the Palace of Inner Life and Fortune.
 Because the Palace of Money Management handles exchange,

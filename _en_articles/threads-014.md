@@ -40,7 +40,7 @@ What is the moment of success?
 The hard part of "everything is ready; all that's missing is the east wind" is
 how do you know when the east wind will come?
 
-1. Hard constraints
+1\. Hard constraints
 Before talking about timing, let me first explain something more fundamental: hard constraints.
 Hard constraints are the limiting conditions that won't automatically give way just because you want something badly, work hard, or are full of passion.
 
@@ -74,7 +74,7 @@ You can't force a person with free will to change their mind by "trying harder."
 So timing isn't where mysticism begins.
 It's a more mature response to reality, made after a person understands hard constraints.
 
-2. So-called "timing" is, in essence, the world's hard constraints temporarily loosening a little
+2\. So-called "timing" is, in essence, the world's hard constraints temporarily loosening a little
 When we talk about timing or a "window period," we're not actually talking about some mysterious force,
 but about this: the limiting conditions that originally held you back have, for a certain period, relatively loosened.
 
@@ -122,7 +122,7 @@ So we can understand timing like this:
 Timing = external conditions are workable + internal structures can bear it + the leverage of action starts to grow.
 Missing any one, and it isn't truly "the moment" yet.
 
-3. Why is "timing" so often described as mystical?
+3\. Why is "timing" so often described as mystical?
 Because it sits at the boundary of two states:
 on one side, structures that can be analyzed;
 on the other, complex changes that can't yet be fully quantified.
@@ -152,7 +152,7 @@ Reason three: humans are especially sensitive to what they can't control.
 More than ability, timing is what most easily gives people a sense of fate.
 Because it is, by nature, an experiential term standing at the boundary between structure and uncertainty.
 
-4. Real timing isn't the perfect moment, but the point where resistance begins to turn
+4\. Real timing isn't the perfect moment, but the point where resistance begins to turn
 Many people understand timing as that perfect moment:
 the day when everything is ready,
 or waiting until there's no risk at all before making a move.
@@ -174,7 +174,7 @@ But if you understand timing as "resistance has dropped enough to be worth actin
 The value of timing isn't letting you work less,
 but keeping you from wasting your effort at points in time when nothing can be moved.
 
-5. So how do you know the "right timing" has arrived?
+5\. So how do you know the "right timing" has arrived?
 There's no 100% method, but there are five indicators to watch.
 
 1. The same action suddenly meets less resistance
@@ -202,7 +202,7 @@ someone picks up your work,
 the team starts running on its own.
 This kind of "stronger echo after testing" is often more credible than any grand declaration.
 
-6. Why are people so fixated on predicting timing?
+6\. Why are people so fixated on predicting timing?
 Besides the fact that people can't stand "pure randomness," on a deeper level:
 people don't only want to know the future.
 What people truly want to avoid is wasting their precious resources on people and things that will never succeed.
@@ -228,7 +228,7 @@ I think this is what really makes the question of "timing" so fascinating.
 It isn't romance;
 it's really a problem of allocating resources within a limited life.
 
-7. How does Zi Wei Dou Shu anticipate "timing"?
+7\. How does Zi Wei Dou Shu anticipate "timing"?
 If "the right timing" means that, during a certain period, the conditions limiting something relatively loosen, so that action can begin to borrow force,
 
 then where Zi Wei Dou Shu can truly help isn't only explaining things after the fact, but anticipating in advance:

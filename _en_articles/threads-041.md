@@ -20,7 +20,7 @@ This question stopped being answered by fortune-telling long ago; it's answered 
 
 Today I'll tell two stories that are "uncomfortable, but very important," from Malcolm Gladwell's book Talking to Strangers.
 
-1. The harsh data of the Golden Gate Bridge
+1\. The harsh data of the Golden Gate Bridge
 The Golden Gate Bridge in San Francisco was once a world-famous suicide hotspot. At the time, people who opposed installing a safety net said:
 "It's useless. People who want to die will find another way even if they don't jump off the bridge."
 
@@ -32,7 +32,7 @@ A psychologist followed up 515 people who were stopped from jumping at the Golde
 Why?
 Because the Golden Gate Bridge offered a "low-resistance, highly lethal" option. When this option is removed, the suicidal impulse of that moment often falls apart.
 
-2. Sylvia Plath and Britain's switch from coal gas to natural gas
+2\. Sylvia Plath and Britain's switch from coal gas to natural gas
 When the famous poet Sylvia Plath died by suicide, she used the gas oven at home. British household coal gas at the time contained carbon monoxide; it was odorless, fast and highly lethal, a typical "low-resistance, highly effective and clean means of suicide."
 
 Later, Britain replaced household coal gas entirely with natural gas (which is almost never lethal), and something even more striking happened: Britain's overall suicide rate fell in step with the progress of the switch to natural gas.
@@ -43,7 +43,7 @@ It isn't that people's pain suddenly disappeared, but that "the means of suicide
 This tells us a jarring truth:
 what people do is determined not only by "the person," but also by the environment they're in at the moment.
 
-3. Gladwell gave this pattern an engineering term: coupling
+3\. Gladwell gave this pattern an engineering term: coupling
 In Talking to Strangers, Gladwell introduces a concept from engineering, coupling:
 it means that major behaviors usually don't happen for a single reason, but because several conditions happen to line up at the same time.
 (This is also that mystical-sounding phrase: "the time has come.")
@@ -65,7 +65,7 @@ Gladwell points out that extreme behavior often isn't a personality attribute, b
 
 So many problems don't require changing "the person" first, but dealing with "the structure of the environment" first. This is also why policy, spatial design and availability management are far more effective than moral exhortation.
 
-4. The connection to feng shui
+4\. The connection to feng shui
 Where feng shui is truly useful has never been some mysterious force, but whether "the environment keeps pushing you toward a certain behavior."
 
 The same person:
@@ -75,7 +75,7 @@ in another space, naturally enters a state of focus and action.
 It isn't that their willpower suddenly got stronger; it's often the setting shaping their reactions.
 Behavioral science has long confirmed that people are led along by "low-friction paths" in their environment.
 
-5. Put in scientific language, feng shui is actually doing this:
+5\. Put in scientific language, feng shui is actually doing this:
 removing high-risk, low-friction paths of behavior,
 and raising the probability that helpful behaviors are set off.
 

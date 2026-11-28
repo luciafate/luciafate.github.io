@@ -88,12 +88,12 @@ Tian Tong + Ju Men in the same palace: big emotional swings, often struggling to
 
 06 | Ju Men's behavior patterns
 Common patterns for Ju Men:
-1. Ju Men, ruler of ranking things: because of insecurity, this easily turns into a habit of storing things away.
+1\. Ju Men, ruler of ranking things: because of insecurity, this easily turns into a habit of storing things away.
 Hoarding → collecting both things and knowledge
 (a chart with the Sun in a strong position + good fortunes = what's collected then tends to be valuable; a fallen Sun = prone to hoarding useless things)
-2. Loves learning → because of the fear of "not knowing"
-3. Lots of mental theater → over-simulating situations
-4. Extremely sensitive to information → can read meaning in wording, tone and expressions
+2\. Loves learning → because of the fear of "not knowing"
+3\. Lots of mental theater → over-simulating situations
+4\. Extremely sensitive to information → can read meaning in wording, tone and expressions
 
 07 | The palace Ju Men falls in shows where you feel insecure
 ①	In a relationship palace (Love and Partnership / Parents and Elders / Siblings / Friends and Associates / Home and Property / Children and Creation)

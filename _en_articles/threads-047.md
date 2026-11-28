@@ -15,7 +15,7 @@ translation_status: draft
 When many people hear "Ju Men," they think of darkness, treachery, disputes and gossip.
 But what the [Complete Book of Zi Wei Dou Shu] really talks about isn't good or bad character, but incomplete information.
 
-1. An isn't black; it's "opaque"
+1\. An isn't black; it's "opaque"
 The world keeps running as usual; it's just that because of an, obscurity, you can't see clearly.
 Ju Men, the Star of Obscurity: its core quality is an.
 "An" isn't psychological darkness, but a state like this:
@@ -36,7 +36,7 @@ an, obscurity, isn't evil, but what is not apparent, not clear, not transparent.
 "Overseeing the ranking of all things" isn't ruling over them, but distinguishing, appraising, judging.
 The world isn't black; it's that you "can't see the whole picture right now."
 
-2. What does opacity immediately trigger?
+2\. What does opacity immediately trigger?
 Incomplete information triggers a physiological-level reaction: uncertainty, feeling unsafe.
 So Ju Men naturally starts three instinctive actions:
 
@@ -63,7 +63,7 @@ Caught between advancing and retreating: you don't dare act rashly, yet you can'
 
 Sometimes it isn't "overthinking," but "survival."
 
-3. What is the core ability of an?
+3\. What is the core ability of an?
 Not suspicion, but recognizing gray areas and building judgment.
 
 This is actually the most important set of abilities in modern society:
@@ -82,7 +82,7 @@ ranking = evaluating, comparing, distinguishing
 right and wrong = boundaries, criteria, what is or isn't workable
 Ju Men's real function is building judgment in gray areas.
 
-4. Why do the old texts keep writing about gossip and disputes?
+4\. Why do the old texts keep writing about gossip and disputes?
 Because in an environment of incomplete information, what appears first isn't disaster, but:
 •	misunderstanding
 •	speculation
@@ -108,7 +108,7 @@ The ancients wrote it up so miserably because, in different palaces, it shows th
 •	struggles over ownership of resources
 •	blurred responsibility in roles
 
-5. What does "if no strong, favorable stars shine on it, disaster wherever it goes" mean?
+5\. What does "if no strong, favorable stars shine on it, disaster wherever it goes" mean?
 The Complete Book says: "Among the twelve palaces, if no stars in strong, favorable placements shine on it, it brings disaster wherever it is, with toil and running about."
 This line isn't about a good or bad outcome,
 but about a precondition.
@@ -125,7 +125,7 @@ As long as these conditions are absent,
 an (opacity of information) spills over completely,
 and wherever it falls, problems easily arise.
 
-6. The dark star and the Sun: a common source of support
+6\. The dark star and the Sun: a common source of support
 In practical chart reading, people often look further at where the Sun (Tai Yang) is.
 The Sun, a star of the central heavens, is bright, and is one source that supports an.
 Not because the Sun decides everything,
@@ -145,7 +145,7 @@ A common pattern is:
 → it easily shows as suspicion, gossip, defensiveness, checking again and again
 Whether there's enough light to support the system of an.
 
-7. Why does Ju Men "fear the Sha stars and Hua Ji"?
+7\. Why does Ju Men "fear the Sha stars and Hua Ji"?
 Because Ju Men is already bearing three things:
 •	the pressure of judgment
 •	uncertainty

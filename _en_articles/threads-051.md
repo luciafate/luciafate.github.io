@@ -29,7 +29,7 @@ what relates most directly to "resources" are the wealth stars, especially Wu Qu
 
 Today I want to talk in depth about the true nature of the Treasurer.
 
-1. The essence of its core quality: what is "cai"?
+1\. The essence of its core quality: what is "cai"?
 The Treasurer's core quality is cai, wealth, but cai has never been money itself.
 
 The essence of cai comes down to two lines:
@@ -44,7 +44,7 @@ all counts as "cai" in the broad sense.
 To put it even more plainly:
 the most fundamental function of cai is turning "can I survive?" into "how much freedom of choice do I have?"
 
-2. Taking the character apart: 財 (cai) = 貝 + 才
+2\. Taking the character apart: 財 (cai) = 貝 + 才
 From the origin of the character, 財 says it very clearly by itself.
 貝 (bei, a cowrie shell): ancient currency and valuables, symbolizing "external resources that can be exchanged."
 才 (cai): the ability to grasp, obtain and use; not "having" but "being able to use."
@@ -69,7 +69,7 @@ but something that can be exchanged for other resources, choices and possibiliti
 So money, land, houses, stored food, connections, skills, shares and copyrights
 all count as "cai" in the broad sense.
 
-3. Why is the Treasurer the "main wealth star"?
+3\. Why is the Treasurer the "main wealth star"?
 Because in human evolutionary history, cai could only be built up bit by bit.
 Think about how early humans survived:
 hunting had to be built up one strike at a time,
@@ -93,7 +93,7 @@ But the real point is that being practical isn't the essence of cai;
 it's the strategy humans most often use to obtain cai.
 The essence of cai is always just one line: external resources you can command.
 
-4. The Four Transformations
+4\. The Four Transformations
 If we look at the Four Transformations through "cai = external resources you can command and exchange," the structure becomes very clear.
 → The Treasurer with Hua Lu
 resources increase and flow more smoothly; there's a sense of correspondence between what you put in and what you get back
@@ -104,7 +104,7 @@ the way you use resources is seen and highlighted; your ability to manage money,
 → The Treasurer with Hua Ji
 the structure of resource exchange falls out of balance: what you put in and what you get back don't line up, or the return lacks certainty and predictability
 
-5. The Treasurer with Hua Ji in a relationship palace: why are arguments so likely?
+5\. The Treasurer with Hua Ji in a relationship palace: why are arguments so likely?
 The essence of the relationship palaces is "relationships," which by nature allow room for feelings, expectations and ambiguity.
 But once the Treasurer comes in, the relationship is forced to face real exchanges: money, responsibility, effort, and how results are divided.
 Add Hua Ji, and it means the structure of exchange is out of balance, and this imbalance is noticed again and again.
@@ -121,7 +121,7 @@ On the surface the conflict is an argument about money and responsibility; under
 
 It isn't because the person is practical that they argue; it's that time and circumstance push the relationship into the realm of reality, and Hua Ji makes the imbalance visible. Being practical is only a means of self-protection; conflict happens only when the two people can't jointly take on reality.
 
-6. The Treasurer with Hua Ji in your own palaces: where does your survival anxiety come from?
+6\. The Treasurer with Hua Ji in your own palaces: where does your survival anxiety come from?
 ① The Palace of Self: unease in the structure of survival
 "I have to survive, and my sense of security rests on whether resources are under control."
 Typical states include:
